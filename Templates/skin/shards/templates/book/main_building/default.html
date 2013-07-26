@@ -1,0 +1,66 @@
+<div class="MainBuildingPageTmpl book-tmpl">
+    <!-- ko if: $root.book.loader.left -->
+    <div style="position: absolute; left: 15%; top: 40%;">
+        <img src="img/interface/ajax-loader.gif" class="animate">
+    </div>
+    <!-- /ko -->
+    <!-- ko if: $root.book.loader.right -->
+    <div style="position: absolute; left: 70%; top: 40%;">
+        <img src="img/interface/ajax-loader.gif" class="animate">
+    </div>
+    <!-- /ko -->
+    <div class="span50 ko-book-column column-left main-build-page">
+        <!-- ko ifnot: $root.book.redraw.reloadLeft -->
+        <div class="categories main-build-categories"
+             data-bind="style:{opacity: $root.book.loader.left()?'0':1}">
+            <h3 class="text-corners-title span100" data-bind="text:$root.lang().TITLE_MAIN_BUILDING"></h3>
+
+            <div class="scroll-pane">
+                <ul class="news scroll-content span100 active">
+                    <!-- ko template: {name:'BuildingItemTmpl', data: building} -->
+                    <!-- /ko -->
+                </ul>
+            </div>
+
+        </div>
+        <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="main-build-categories">
+            <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+            <div class="scroll-bar"></div>
+            <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="span50 ko-book-column column-right main-build-page">
+
+        <!-- ko ifnot: $root.book.redraw.reloadRight -->
+        <div class="description main-build-description"
+             data-bind="style:{opacity: $root.book.loader.right()?'0':1}">
+            <div class="scroll-pane">
+                <div class="scroll-content active">
+                    <div data-bind="template: {name:'TabItemTmpl', data: $data}"></div>
+
+                    <!-- ko ifnot: improve.open() || unit.open()  -->
+                    <div data-bind="with: selected">
+                        <div class="description-container tab-content"
+                             data-bind="template: {name: tab().template, data: building }"></div>
+                    </div>
+                    <!-- /ko -->
+                    <!-- ko if: improve.open -->
+                    <div data-bind="template: {name: improve.template, data: selected.improve}"></div>
+                    <!-- /ko -->
+                    <!-- ko if: unit.open -->
+                    <div data-bind="template: {name: unit.template, data: selected.unit}"></div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+        <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="main-build-description">
+            <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+            <div class="scroll-bar"></div>
+            <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+        </div>
+        <!-- /ko -->
+    </div>
+</div>

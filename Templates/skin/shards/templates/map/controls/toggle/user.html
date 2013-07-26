@@ -1,0 +1,31 @@
+<h2><span data-bind="text: city_name"></span>  <i>ур. <span  data-bind="text: level"></span></i></h2>
+<div class="main-content">
+    <div class="name2 bb">
+        <img class="left" src="img/interface/map_toggle/avatar.png">
+        <button class="unit_name left"><span class="left"></span><span class="right"></span><span class="main_bg"><span
+                class="main_bg" data-bind="text: nick"></span></span></button>
+    </div>
+    <ul class="info">
+        <li>союз: <i data-bind="text: guild"></i></li>
+        <li>симпатия: <i data-bind="text: sympathy"></i></li>
+        <li>координаты: <i>х <span data-bind="text: pos.x"></span> у <span data-bind="text: pos.y"></span></i></li>
+    </ul>
+    <div class="arrow-right" data-bind="click: $parent.action.details"></div>
+</div>
+<div class="buttons-box">
+    <div class="dropdown l">
+        <a href='#' class="game_btn dropdown-toggle" data-toggle="dropdown"><span class="left"></span><span class="right"></span><span class="bottom_arrow">Действие</span></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li><a tabindex="-1" href="#"
+                   data-bind="click: function(){ $root.map.move.movePersonage($data)}"
+                    >Перейти</a></li>
+            <li><a tabindex="-1" href="#"
+                   data-bind="click: function(){ $root.map.move.onMoveClick($data, $root.map.moveTypes.protection)}"
+                    >Защищать локацию</a></li>
+			<span></span>
+        </ul>
+    </div>
+    <div class="l">
+        <button class="game_btn r" data-bind="click: $parent.action.show"><span class="left"></span><span class="right"></span>ОК</button>
+    </div>
+</div>

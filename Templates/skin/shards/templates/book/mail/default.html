@@ -1,0 +1,68 @@
+<div class="MainBuildingPageTmpl book-tmpl">
+    <!-- ko if: $root.book.loader.left -->
+    <div style="position: absolute; left: 15%; top: 40%;">
+        <img src="img/interface/ajax-loader.gif" class="animate">
+    </div>
+    <!-- /ko -->
+    <!-- ko if: $root.book.loader.right -->
+    <div style="position: absolute; left: 70%; top: 40%;">
+        <img src="img/interface/ajax-loader.gif" class="animate">
+    </div>
+    <!-- /ko -->
+    <div class="span50 ko-book-column column-left main-build-page">
+        <!-- ko ifnot: $root.book.redraw.reloadLeft -->
+        <div class="btn50" style="top: 101%; margin-left: -28%">
+            <a href="#" class="span50 btn-flex" data-bind="click: sendMessage.openPage">
+                Отправить сообщение
+                <em></em>
+            </a>
+        </div>
+        <div class="categories main-build-categories" data-bind="style:{opacity: $root.book.loader.left()?'0':1}">
+            <h3 class="text-corners-title span100"> Почта </h3>
+            <div>
+                <ul class="nav nav-tabs tabs-3" data-bind="foreach: tab.items">
+                    <li data-bind="attr: { 'class': $data == $parent.selected.tab() ? 'active' : '' }">
+                        <a data-bind="click: $parent.tab.onclick, text: name"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="scroll-pane">
+                <ul class="news scroll-content span100 active">
+                    <!-- ko template: {name: selected.tab().template, data: $data} -->
+                    <!-- /ko -->
+                </ul>
+            </div>
+        </div>
+        <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="main-build-categories">
+            <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+            <div class="scroll-bar"></div>
+            <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="span50 ko-book-column column-right main-build-page">
+
+        <!-- ko ifnot: $root.book.redraw.reloadRight -->
+        <div class="description main-build-description"
+             data-bind="style:{opacity: $root.book.loader.right()?'0':1}">
+            <div class="scroll-pane">
+                <div class="scroll-content active">
+                    <!-- ko ifnot: sendMessage.isOpen -->
+                    <div data-bind="template: {name: 'privateMailTmpl', data: $data}"></div>
+                    <!-- /ko -->
+                    <!-- ko if: sendMessage.isOpen -->
+                    <div data-bind="template: {name: 'sendMailTmpl', data: $data}"></div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+        <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="main-build-description">
+            <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+            <div class="scroll-bar"></div>
+            <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+        </div>
+        <!-- /ko -->
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<!-- ko foreach: map.items -->
+<a data-bind="
+        click: $parent.map.onclick,
+        style:{
+          width: $parent.map.setting.cellSize()+'px',
+          height: $parent.map.setting.cellSize()+'px',
+          top: drawY +'px',
+          left: drawX +'px'
+       },
+       attr: {alt: function(){$parent.map.getLocationName(p)}, class: 'map-block texture_0_'+ p }">
+
+    <!-- ko if: typeof my_city != 'undefined' -->
+    <div class="map-my">
+        <span class="map-my-city-lvl" data-bind="text: level"></span>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: typeof my_location != 'undefined' -->
+        <div class="map-my"></div>
+    <!-- /ko -->
+
+    <!-- ko if: typeof my_location == 'undefined' && typeof my_city == 'undefined' -->
+       <span class="map-fraction" data-bind="style:{color: $parent.fractionColor(fraction)}"></span>
+    <!-- /ko -->
+</a>
+<!-- /ko -->

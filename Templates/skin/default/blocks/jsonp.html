@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    function GetJSONP(url, data) {
+        $.getJSON("{$JSON_Server}" + url + "?callback=?", data, function(result) {
+            console.log(result); //md5
+        });
+    }
+
+    $(document).ready(function() {
+        //get digest
+        GetJSONP("user/digest.json",{'login':'admin'});
+        //var url =  "{$JSON_Server}user/login.json?callback=?";
+    });
+</script>

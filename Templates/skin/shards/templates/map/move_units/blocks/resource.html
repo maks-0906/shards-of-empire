@@ -1,0 +1,28 @@
+<li class="span100 news-item">
+    <a href="#">
+        <span class="span20">
+
+            <div class="corners slot main-slot square" data-block-height="50" data-block-width="50">
+                <img class="res-icon" data-bind="attr:{'src':'img/icons/resource/'+name_image+'50.png'}" alt=""
+                     width="32" height="32">
+
+                <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+        </span>
+        <span class="span70 offset5">
+            <ul class="resourses-list">
+                <li>
+                    <span class="span40 offset10" data-bind="text: name_resource"></span>
+                    <label for="amount" class="max-resourses" data-bind="text: available"></label>
+                    <input type="text" id="amount" class="current-resourses" data-bind="value: count" />
+                </li>
+                <li>
+                    <div id="slider-tree" class="polzunok slide-this">
+                        <span class="slider-left-bg"></span>
+                        <span class="slider-right-bg"></span>
+                    </div>
+                </li>
+            </ul>
+        </span>
+    </a>
+</li>

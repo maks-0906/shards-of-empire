@@ -1,0 +1,128 @@
+<div class="desc">
+    <h4 class="improve text res-header">
+        <a href='#' data-bind="click: $root.book.selected().unit.hire" class="btn-arrow"></a>
+        <span data-bind="text: unit.name"></span>
+    </h4>
+
+    <table style="margin-bottom: 22px;">
+        <tbody>
+        <tr>
+            <td>
+                <div class="corners slot main-slot square" data-block-height="26" data-block-width="26"
+                     style="height: 83px; width: 83px;">
+                    <div class="tr"></div>
+                    <div class="bl"></div>
+                    <div class="br"></div>
+                </div>
+                <p style="text-align: left; margin: 0;" data-bind="text: unit.description"></p></td>
+
+        </tr>
+        <tr>
+            <td>
+                <!-- ko if: isAvailable-->
+                Кол-во юнитов: <span data-bind="text: available"></span>
+                <!-- /ko -->
+                <!-- ko ifnot: isAvailable -->
+                <div class="btn-hidden">Недоступно</div>
+                <!-- /ko -->
+            </td>
+        </tr>
+        <tr>
+            <th>Характеристики</th>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td><strong>Атака</strong><br class="clear"><span data-bind="text: damage"></span></td>
+                        <td><strong>Защита</strong><br class="clear"><span data-bind="text: defence"></span></td>
+                        <td><strong>Жизнь</strong><br class="clear"><span data-bind="text: health"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Кол-во переносимого груза</strong><br class="clear"><span
+                                data-bind="text: volume"></span></td>
+                        <td><strong>Стоимость содержания</strong><br class="clear"><span
+                                data-bind="text: cost"></span></td>
+                        <td><strong>Занимает места в казарме</strong><br class="clear"><span
+                                data-bind="text: size"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <ul class="nav nav-tabs tabs-2" style="margin-bottom: 0" data-bind="with: $root.book.unit">
+        <li data-bind="css:{'active':tabOpen()=='hire'}">
+            <a style="text-align: center;" data-bind=" click: function(){tabClick('hire')}">Нанять</a>
+        </li>
+        <li data-bind="visible: $parent.hired()>0, css:{'active':tabOpen()=='demote'}">
+            <a style="text-align: center;" data-bind=" click: function(){tabClick('demote')}">Распустить</a>
+        </li>
+    </ul>
+    <!-- ko if: $root.book.unit.tabOpen()=='hire' -->
+    <table class="build-table-general" style="margin-top: 0;">
+        <tbody>
+        <tr>
+            <td>Название</td>
+            <td>Необходимо</td>
+            <td>В наличии</td>
+        </tr>
+        <!-- ko foreach: resource -->
+        <tr>
+            <td><img class="res-icon" data-bind="attr:{'src':'img/icons/resource/'+name_image+'25.png'}" alt=""
+                     width="32" height="32"> <span data-bind="text:name_resource"></span></td>
+            <td data-bind="text: required"></td>
+            <td data-bind="text: has, css:{red: !enough}"></td>
+        </tr>
+        <!-- /ko -->
+        </tbody>
+    </table>
+    <div data-bind="visible: $root.validation.resourcesEnough(resource)">
+        <ul class="hire-control">
+            <li>
+                <!-- ko if: time -->
+                <div data-bind="template:{name: 'TimeItemTmpl', data: $data}"></div>
+                <!-- /ko -->
+                <div class="slider-horizontal">
+                    <div class="user-slider"><span class="slider-left-bg"></span><span class="slider-right-bg"></span></div>
+                </div>
+            </li>
+            <li>
+                <input type="text" data-bind="value: count">
+            </li>
+        </ul>
+
+        <a href="#" id="learn" style="width:26%;" class="btn-flex"
+           data-bind="visible: available()>0, click: $root.book.selected().unit.add">
+            Нанять
+            <em></em>
+        </a>
+        <!-- ko if: available()==0 -->
+        <h5 class="btn-hidden">Нет юнитов для найма</h5>
+        <!-- /ko -->
+    </div>
+    <!-- ko ifnot: $root.validation.resourcesEnough(resource) -->
+    <h5 class="btn-hidden">Недостаточно ресурсов</h5>
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: $root.book.unit.tabOpen()=='demote' && hired()>0  -->
+    <ul class="hire-control">
+        <li style="width:15%; text-align:center;">
+            <span data-bind="text: count"></span> |
+        </li>
+        <li style="width:82%; position:inherit; padding-right:3%;">
+            <div class="slider-horizontal">
+                <div class="user-slider"><span class="slider-left-bg"></span><span class="slider-right-bg"></span>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <a href="#" id="learn" style="width:26%;" class=" btn-flex"
+       data-bind="click: $root.book.selected().unit.removeN">
+        Распустить
+        <em></em>
+    </a>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,12 @@
+<ul data-bind="attr:{class: 'nav nav-tabs tabs-'+ (tab.items.length==3? selected.building().hasUnits && selected.building().hasUnits()?3:2:tab.items.length)}, foreach: tab.items">
+    <!-- ko if:  template!='UnitsTabTmpl' -->
+    <li data-bind="attr: { 'class': $data == $parent.selected.tab() ? 'active' : '' }">
+        <a data-bind="click: $parent.tab.onclick, text: name"><em></em></a>
+    </li>
+    <!-- /ko -->
+    <!-- ko if:  template=='UnitsTabTmpl' && $parent.selected.building().hasUnits && $parent.selected.building().hasUnits() -->
+    <li data-bind="attr: { 'class': $data == $parent.selected.tab() ? 'active' : '' }">
+        <a data-bind="click: $parent.tab.onclick, text: name"><em></em></a>
+    </li>
+    <!-- /ko -->
+</ul>

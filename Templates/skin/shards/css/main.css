@@ -1,0 +1,745 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+ @import url("grid.css");
+ @import url("jquery-ui-1.10.2.custom.min.css");
+ @import url("interface.css?v1.4");
+  @import url("world.css");
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #4d443a;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+:focus{
+    outline: 0!important;
+}
+a, a:hover {
+   color: #4d443a;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+/* jquery slider */
+.slider-horizontal{
+    padding: 0 13px;
+}
+.hire-control{
+    display: block;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+    white-space: nowrap;
+    position: relative;
+}
+.hire-control li{
+    display: inline-block;
+    *z-index: 1;
+    position: relative;
+    *display: inline;
+}
+.hire-control li h5{
+    margin: 0 0 10px;
+}
+.hire-control li:first-child{
+    width: 66.6%;
+}
+.hire-control li:last-child{
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    width: 20%;
+    margin-top: -18px;
+}
+.hire-control.retire li:first-child {
+    width:15%;
+    text-align:center;
+    line-height: 30px;
+}
+
+.hire-control.retire li:last-child {
+    width: 82%;
+    top: auto;
+    margin-top: 0;
+    padding-right: 3%;
+}
+.user-slider.ui-widget-content {
+    border: 0 none;
+    background: url(../img/interface/slider/slider-repeat-bg.jpg) 0 0 repeat-x;
+    height: 30px;
+}
+.user-slider .ui-slider-range{
+    border: 0 none;
+    background: url(../img/interface/slider/slider-repeat-bg_hover.jpg) 0 0 repeat-x;
+    color: #eaf5f7;
+    font-weight: bold;
+}
+
+.user-slider.slider-green .ui-slider-range{
+    background: url(../img/interface/slider/slider-green-repeat-bg.jpg) 0 0 repeat-x;
+}
+.user-slider.slider-green .ui-slider-range:after{
+    content: ' ';
+    position: absolute;
+    width: 12px;
+    right: -2px;
+    height: 30px;
+    z-index: 100;
+    background: url(../img/interface/slider/slider-green-repeat-center-bg.jpg) 0 0 repeat-x;
+}
+.user-slider .ui-state-default {
+    border: 0 none;
+    background: url(../img/interface/slider/book-slider-new.png) 0 0 no-repeat;
+    font-weight: normal;
+    color: #ffffff;
+    width: 42px;
+    height: 45px;
+    margin-top: -3px;
+}
+.user-slider .text{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.7em;
+    line-height: 30px;
+    z-index: 200;
+}
+input[type="email"], input[type="number"],   input[type="password"], input[type="search"],
+input[type="tel"],   input[type="text"],     input[type="url"],      input[type="color"],
+input[type="date"],  input[type="datetime"], input[type="datetime-local"],
+input[type="month"], input[type="time"],     input[type="week"], textarea{
+    background: url("../img/interface/input-text-bg.png") 0 0 repeat;
+    width: 100%;
+    outline-style: none;
+    border: none;
+    height: 1.5em;
+	margin-top: 0.1em;
+    font-size: 1.2em;
+    text-align: center;
+    color: #5a3a30;
+    border-radius: 8px;
+    box-shadow: inset 0 0 16px rgba(0, 0, 0, .36), 0 2px rgba(225, 222, 206, .6);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -khtml-border-radius: 8px;
+}
+.user-slider .slider-left-bg,
+.user-slider .slider-right-bg {position: absolute; top: 0; width: 13px; height: 30px;}
+.user-slider .slider-left-bg {left: -13px; background: url('../img/interface/slider/slider-left-bg.png') no-repeat 0 0;}
+.user-slider .slider-right-bg {right: -13px; background: url('../img/interface/slider/slider-right-bg.png') no-repeat 100% 0;}
+.amount {font-size: 24px; font-family: Arial; width: 3%; color: #54362d; margin-right: 45px; padding-right: 40px; float: left;background: url('../img/interface/slider/amount-bg.jpg') no-repeat 100% 0;}
+
+.slider-green .slider-left-bg,
+.slider-green .slider-left-bg {left: -13px; background: url('../img/interface/slider/slider-green-left-bg.png') no-repeat 0 0;}
+
+.clear {clear: both; height: 0; font-size: 0;}
+.have {font-size: 0.6em; position: absolute; right: 3%; top: 10%;}
+.my_units tr td {position: relative;}
+
+.main-sidebar .square{
+    margin-bottom: 38%!important
+
+}
+
+.toggler{
+    position: absolute;
+    z-index: 10000;
+}
+
+#toggle{
+    display: none;
+}
+
+.left {float: left;}
+.right {float: right;}
+.clear {
+    clear: both;
+    height: 0px;
+    font-size: 0;
+}
+
+/*my styles*/
+.l {float: left;}
+.r {float: right;}
+.clearfix {clear: both; height: 0; font-size: 0;}
+.mt0 {margin-top: 0}
+.absolute {position: absolute;}
+.green {	color: #005e20;}
+.brown {color: #54362d;}
+.ml20 {
+    margin-left: 20% !important;
+}
+.ml30 {
+    margin-left: 30% !important;
+}
+.ml40 {
+    margin-left: 40% !important;
+}
+.have {font-size: 0.6em; position: absolute; right: 3%; top: 10%;}
+.my_units tr td {position: relative;}
+.book .btn-back {
+
+}
+
+.book .categories {
+    color: #292421;
+}
+.book .categories .event-date {
+    font-style: italic;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+.book .c {text-align: center;}
+.book div.btn33 {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    margin-left: -15%;
+}
+.book div.btn50 {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    margin-left: -25%;
+}
+.book .from {height: 3em; margin-top: 3em;}
+.book .from .vert {padding-top:.5em;}
+.book table.mail-content .mail-body {font-size: 0.75em; padding: 0.5em; background-color: #cbc9be;}
+.book table.mail-content .mail-body p {margin: 0.5em;}
+
+.book h2.brn {color: #54362d;}
+.book h2.norm {font-weight: normal;}
+
+.book .war-report-units,
+.book .war-report-rounds {
+    margin-top: 1em;
+}
+.book .war-report-units ul,
+.book .war-report-rounds ul {
+    padding: 0 1em;
+    margin: 0;
+    font-size: .9em;
+    list-style: none;
+}
+.book .war-report-units ul li,
+.book .war-report-rounds ul li {
+    text-align: left;
+    line-height: 1.5em;
+}
+.book .war-report-units ul li span,
+.book .war-report-rounds ul li span {
+    float: right;
+}
+.book .war-report-status tr td {
+    border: 0 none;
+    background: none;
+}
+.book .war-report-status tr td .red {
+    color: #ed1c24;
+}
+
+.book .war-report-resurses {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.book .war-report-resurses li {
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book .war-report-resurses-items {
+    list-style: none;
+    padding: 10px 0 0 70px;
+}
+.book .war-report-resurses-items li {
+    margin: 0;
+}
+.book .war-report-info-hitter,
+.book .war-report-info-defender {
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+}
+.book .war-report-info-hitter table,
+.book .war-report-info-defender table {
+    margin-top: 0;
+}
+.book .war-report-info-hitter table tr td,
+.book .war-report-info-defender table tr td {
+    padding: 0;
+    background: none;
+    border: 0 none;
+}
+.book .war-report-info-hitter li,
+.book .war-report-info-defender li {
+    width: 100%;
+    clear: both;
+}
+.book .war-report-info-hitter li span em,
+.war-report-info-defender li span em {
+    font-style: italic;
+}
+.book .blocked{
+    opacity: 0.25;
+}
+.mg-top-none{
+    margin-top: 0;
+}
+.artefact-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.artefact-content>ul {
+    margin: 1em;
+}
+.artefact-content>ul>li {
+    border-bottom: .1em solid #8b8878;
+    margin-bottom: 2em;
+    height: 8em;
+    position: relative;
+}
+.artefact-content>ul>li>ul h2 {
+    margin: 0 0 0 15%;
+    color: #54362d;
+    font-weight: normal;
+}
+.artefact-info li {
+    height: 1.5em;
+    line-height: 100%;
+}
+.artefact-info li strong {
+    padding-top: .5em;
+}
+.artefact-buttons .btn-flex {
+    margin-top: 0 !important;
+}
+.paper-corners > .corners-content {
+    top: 0;
+}
+.btn-hidden{
+    color: #9d1903;
+    display: block;
+    text-align: center;
+    font-size: 1em!important;
+}
+.game_btn {
+    background: url('../img/interface/map_toggle/button_bg.png') no-repeat 0 0;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    border: 0 none;
+    color: #f3e8dc;
+    margin: 0;
+    font-size: 1em;
+    text-align: center;
+    /*text-transform: UPPERCASE;*/
+    font-weight: bold;
+    height: 54px;
+    width: 150px;
+}
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+.fancybox-overlay {
+    z-index: 1201291!important;
+}
+.fancybox-inner{
+    width: 800px!important;
+    max-width: none!important;
+    max-height: none!important;
+    overflow: hidden!important;
+    padding: 0 5px 5px 0!important;
+}
+.fancybox-close{
+    top: 1.3em;
+    z-index: 10000!important;
+}
+.fancybox-inner .bottom-buttons{
+    height: 3em!important;
+    padding: 1em 2em 1em!important;
+}
+
+.fancybox-inner .bottom-buttons .settings-btn-container{
+    position: static!important;
+    float: right!important;
+    height: auto!important;
+}
+
+.fancybox-inner .bottom-buttons .settings{
+    left: auto!important;
+    margin-right: 1em!important;
+    margin-left: 0!important;
+    height: 3em!important;
+    width: auto!important;
+    margin-top: 0.5em!important;
+}
+
+.fancybox-inner .fancy-body{
+    height: 400px;
+}
+.fancybox-inner .fancy-body .wish-paper-corners{
+    height: 100%;
+}
+.fancybox-inner .fancy-body .wish-paper-corners .corners-content{
+    position: static!important;
+}
+.fancybox-inner .wrap-corners{
+    position: relative;
+    min-height: 0!important;
+    max-height: none!important;
+    min-width: 0!important;
+    max-width: none!important;
+
+}
+.units-manager{
+    padding-right: 19px!important;
+    padding-bottom: 19px!important;
+}
+.units-manager > .wrap-corners{
+    width: auto!important;
+    height: auto!important;
+}
+.fancy-body .fancy-main-content{
+    width: 94%;
+}
+.fancy-body .scroll-bar-wrap{
+    position: absolute;
+    top: 40px;
+    left: 98%;
+    height: 80%;
+}
+.fancy-body-item{
+    height: 360px;
+}
+
+.fancy-body-item{
+    overflow: visible!important;
+    height: 100%!important;
+}
+.fancy-body .scroll-pane
+{
+    height: 360px;
+    overflow: hidden;
+}
+.fancy-body .res-icon{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.fancybox-skin {
+    top: 0!important;
+}
+
+.fancy-body .news-item:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+.fancy-body .news-item{
+    height: auto!important;
+}
+.fancy-body .units-in-garnizon{
+    float:right!important;
+    text-align: right;
+}
+.fancy-main-content{
+    padding-right: 1.5em!important;
+}
+.fancy-main-content .news {
+    padding-right: 0!important;
+}
+.fancy-main-content .brown {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.fancy-main-content .scroll-bar-wrap {
+    left: 93%;
+    top: 25%;
+    height: 58%;
+}
+
+.scroll-bar .ui-slider-handle-inner > i{
+    margin-top: 130%;
+}

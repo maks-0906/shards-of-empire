@@ -1,0 +1,138 @@
+{include="blocks/header"}
+{include="blocks/navbar"}
+    <div class="container-fluid">
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('option[value="{$aEntity.lang_id}"]','select[name="lang_id"]').prop("selected", true);
+                $('input[name="status"]:eq({$aEntity.status})').prop('checked',true);
+                //set default pattern
+                var current_pattern = '0';
+                $('input[name="pattern"]:eq(0)').prop('checked',true);
+
+                var DataMap = '{$aEntity.map_template|htmlspecialchars}';
+                //fill object
+                var PATTERN_SIZE = {$PATTERN_SIZE};
+                var ResultMap = new Array(PATTERN_SIZE*PATTERN_SIZE);
+                //map
+                var ul = $('<ul></ul>').appendTo('.map_template');
+                for (var y=0; y < PATTERN_SIZE; y++) {
+                   for (var x=0; x < PATTERN_SIZE; x++) {
+                       var MapPoint = DataMap.charAt(x+y*PATTERN_SIZE);
+                       var li = $('<li></li>')
+                                   .appendTo(ul)
+                                   .addClass('pattern'+MapPoint)
+                                   .data('x',x)
+                                   .data('y',y)
+                                   .data('pattern',MapPoint)
+                                   //.html()
+                                   ;
+                       ResultMap[x+y*PATTERN_SIZE] = MapPoint;
+                   }
+                }
+                $('.map_pad input[name="pattern"]').change(function(){
+                    current_pattern = $('.map_pad input[name="pattern"]:checked').val();
+                });
+                $('.map_template ul li').live('click',function(){
+                    $(this)
+                        .removeAttr('class')
+                        .addClass('pattern'+current_pattern)
+                        .data('pattern',current_pattern)
+                        $(this).mouseover();
+                        ResultMap[$(this).data('x')+$(this).data('y')*PATTERN_SIZE] = current_pattern;
+
+                });
+                $('.map_template ul').live('mouseenter',function(){
+                    $('.map_helper').show();
+                });
+                $('.map_template ul').live('mouseleave',function(){
+                    $('.map_helper').hide();
+                });
+                $('.map_template ul').live('mousemove',function(e){
+                    $('.map_helper')
+                        .css('top',e.pageY)
+                        .css('left',e.pageX)
+                });
+                $('.map_template ul li').live('mouseover',function(e){
+                   var cur = $(this).data('pattern');
+                    var name = $('input[name="pattern"]:eq('+cur+')').data('name');
+                    $('.map_helper')
+                        .html(name)
+                });
+                $('#entity').submit(function(){
+                    $('input[name="map_template"]').val(ResultMap.join(''));
+                });
+            });
+        </script>
+        <form action="/{$sAction}" method="post" id="entity">
+        <input type="hidden" name="action" value="edit"/>
+        <table class="table  table-bordered table-striped ">
+            <caption><h2>Карточка мира</h2></caption>
+            <tbody>
+                <tr>
+                    <td>ID:</td>
+                    <td><input type="hidden" name="id" value="{$aEntity.id}"/>{$aEntity.id}</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input required type="text" name="name" value="{$aEntity.name|htmlspecialchars}"/></td>
+                </tr>
+                <tr>
+                    <td>Language:</td>
+                    <td>
+                        <select name="lang_id">
+                            {loop="$langlist"}
+                            <option value="{$value.id}">{$value.name|htmlspecialchars}</option>
+                            {/loop}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Max Users:</td>
+                    <td><input required type="text" name="max_users" value="{$aEntity.max_users|htmlspecialchars}"/></td>
+                </tr>
+                <tr>
+                    <td>JSONP Server:</td>
+                    <td><input required type="text" name="server" value="{$aEntity.server|htmlspecialchars}"/></td>
+                </tr>
+                    <td>Status</td>
+                    <td>
+                            <label class="label label-warning">
+                                Off
+                                <input type="radio" name="status" value="0" />
+                            </label>
+                            <label class="label label-success">
+                                On
+                                <input type="radio" name="status" value="1" />
+                            </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Map template:</td>
+                    <td>
+                        <div class="map_helper img-polaroid"></div>
+                        <div class="map_pad">
+                            <ul>
+                            {loop="$patternlist"}
+                                <li>
+                                    <label class="btn pattern{$value.id}">
+                                        {$value.name}
+                                        <input type="radio" data-name="{$value.name}" name="pattern" value="{$value.id}" />
+                                    </label>
+                                </li>
+                            {/loop}
+                            </ul>
+                        </div>
+                        <div class="map_template"></div>
+                        <input type="hidden" name="map_template" value=""/>
+                    </td>
+                </tr>
+                <tr>
+            </tbody>
+        </table>
+        <div class="form-actions">
+                <button type="submit" class="btn btn-success" data-target="bodyframe"><i class="icon-pencil"></i> Применить</button>
+                <a href="/{$sAction}" class="btn btn-warning" data-target="bodyframe"><i class="icon-share-alt"></i> Назад</a>
+        </div>
+        </form>
+    </div> <!-- /container -->
+{include="blocks/footer"}

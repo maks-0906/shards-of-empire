@@ -1,0 +1,32 @@
+.resource-i-1 {
+    background: forestgreen; /*лес*/
+}
+.resource-i-2 {
+    background: azure; /*горы*/
+}
+.resource-i-3 {
+    background: silver; /*камни*/
+}
+.resource-i-4 {
+    background: wheat; /*пшеница*/
+}
+.resource-i-5 {
+    background: goldenrod; /*лен*/
+}
+.resource-i-6 {
+    background: greenyellow; /*цветущие луга*/
+}
+.resource-i-7 {
+    background: violet; /*дикий виноград*/
+}
+.resource-i-8 {
+    background: blanchedalmond; /*ячменные поля*/
+}
+.resource-i-9 {
+    background: darkorange; /*руины*/
+}
+.btn-selected {
+    font-weight: bold;
+    margin-top: -7px;
+    outline: none;
+}

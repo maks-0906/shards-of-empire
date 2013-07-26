@@ -1,0 +1,9 @@
+<Files not_attend_game.php>
+    order allow,deny
+    deny from all
+</Files>
+
+<Files message_not_attend_game.html>
+    order allow,deny
+    deny from all
+</Files>

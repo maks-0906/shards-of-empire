@@ -1,0 +1,22 @@
+<!-- ko if: mail.items().length == 0 -->
+<h5 class="btn-hidden">Нет сообщений</h5>
+<!-- /ko -->
+<!-- ko foreach: mail.items -->
+<li class="span100 news-item" data-bind="click: $parent.mail.onclick, css:{'news-item-active': selected, 'green': !isRead()}">
+    <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+        <div class="tr"></div><div class="bl"></div><div class="br"></div>
+    </div>
+    <h4 class="text res-header" style="word-wrap: break-word;
+margin-left: 30%;" data-bind="text: subject"></h4>
+    <span data-bind="text: is_notice!='0'? 'Уведамление': from==null? 'Отправленное' : from.nick "></span>
+    <span class="event-date" data-bind="text: create_date"></span>
+</li>
+<!-- /ko -->
+<!-- ko if: mail.items().length > 0 -->
+<div class="pagination inline">
+    <!-- ko foreach: paginator.pages-->
+    <a href="#" class="page" data-bind="text: $data, css:{'active':$data == $parent.paginator.page()}, click: $parent.paginator.onclick">
+    </a>
+    <!-- /ko -->
+</div>
+<!-- /ko -->

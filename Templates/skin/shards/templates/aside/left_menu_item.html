@@ -1,0 +1,25 @@
+<!-- ko if: typeof text != 'undefined'-->
+<div class="slot main-slot square center sidebar-icon" data-block-height="82" data-block-width="82"
+     data-bind="click: onclick ? onclick : function(){} ">
+    <div class='corners-content'>
+        <img data-bind="attr:{src: icon}">
+
+        <div class="desc center" data-bind="text: text"></div>
+    </div>
+    <div class="tr"></div>
+    <div class="bl"></div>
+    <div class="br"></div>
+</div>
+<!-- /ko -->
+<!-- ko if: typeof text == 'undefined'-->
+<div class="slot main-slot square center sidebar-icon hidden" data-block-height="82" data-block-width="82">
+    <div class='corners-content'>
+        <img>
+
+        <div class="desc center"></div>
+    </div>
+    <div class="tr"></div>
+    <div class="bl"></div>
+    <div class="br"></div>
+</div>
+<!-- /ko -->

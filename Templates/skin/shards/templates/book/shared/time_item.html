@@ -1,0 +1,17 @@
+<h5 class="research-time" data-bind="visible: isFinished">
+    <span data-bind="text:$root.lang().LANG_RESEARCH_TIME_FOR_RESEARCH"></span>: <span class="hours" data-bind="text: time.hours"></span>
+    <span data-bind="text:$root.lang().LANG_TIME_HOURS"></span>
+                <span class="mins" data-bind="text: time.min">
+                </span> <span
+        data-bind="text:$root.lang().LANG_TIME_MINUTES"></span><span class="secs" data-bind="text: time.secs"></span>
+    <span data-bind="text:$root.lang().LANG_TIME_SECONDS"></span>
+</h5>
+<h5 class="research-countdown" data-bind="visible: !isFinished()">
+    <span data-bind="text:$root.lang().LANG_RESEARCH_TIME_FOR_RESEARCH_LEFT"></span>
+    : <span class="hours" data-bind="text: processTime.hours"></span>
+    <span data-bind="text:$root.lang().LANG_TIME_HOURS"></span>
+    <span class="mins" data-bind="text: processTime.min"></span>
+    <span data-bind="text:$root.lang().LANG_TIME_MINUTES"></span>
+    <span class="secs" data-bind="text: processTime.secs"></span>
+    <span data-bind="text:$root.lang().LANG_TIME_SECONDS"></span>
+</h5>

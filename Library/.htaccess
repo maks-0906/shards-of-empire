@@ -1,0 +1,13 @@
+AddDefaultCharset UTF-8
+
+<Files ~ "\.(git|gitignore|log)$">
+    Order deny,allow
+    Deny from all
+</Files>
+
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule !\.(js|ico|txt|gif|jpg|png|css|JPG)$ index.php [E=PATH_INFO:$1]

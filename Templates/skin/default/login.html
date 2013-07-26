@@ -1,0 +1,15 @@
+{include="blocks/header"}
+<form class="form-signin" method="post" action="/admin/auth">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    {if="isset($error)"}
+        <div class="alert alert-error">
+            Auth failed! Try again.
+            <a class="close" data-dismiss="alert" href="#">×</a>
+        </div>
+    {/if}
+    <input type="hidden" name="callback" value="{if="isset($callback)"}{$callback}{/if}" />
+    <input type="text" name="email" class="input-block-level" placeholder="Login" />
+    <input type="password" name="password" class="input-block-level" placeholder="Password" />
+    <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+</form>
+{include="blocks/footer"}

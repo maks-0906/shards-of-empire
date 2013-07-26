@@ -1,0 +1,94 @@
+<div id="main-build-tabs-general" data-bind="with: detail">
+    <div class="header block-height" data-block-height="10">
+        <h4 class="text res-header">
+            <!-- ko if: typeof $root.book.selected().newBuilding != 'undefined' && $root.book.selected().newBuilding.detail() -->
+            <a href="#" class="btn-arrow" data-bind="click: $parent.$parent.$parent.building.onclick"></a>
+            <!-- /ko -->
+            <span data-bind="text: $parent.name"></span>
+        </h4>
+        <span data-bind="text:$root.lang().LANG_LEVEL"></span> <span data-bind="text: $parent.current_level"></span>
+
+        <div class="corners slot main-slot square" data-block-height="24"
+             data-block-width="24">
+            <div class="tr"></div>
+            <div class="bl"></div>
+            <div class="br"></div>
+        </div>
+    </div>
+    <div class="desc">
+        <!-- ko if: typeof $root.book.selected().state != 'undefined' -->
+        <h5>Статус</h5>
+
+        <div class="state" data-bind="with: $root.book.selected()">
+            <span data-bind="text: selected.building().isActive() ?
+                                    $root.lang().LANG_RESEARCH_STATE_MAKING:
+                                    $root.lang().LANG_RESEARCH_STATE_WAIT"></span>
+
+            <a href="#" id="stop" class="span33 btn-flex auto"
+               data-bind="visible: selected.building().isActive,
+                          click: state.activate">Остановить<em></em></a>
+            <a href="#" id="continue" class="span33 btn-flex auto"
+               data-bind="visible: !selected.building().isActive(),
+                          click: state.activate">Возобновить<em></em></a>
+        </div>
+        <!-- /ko -->
+        <p><strong data-bind="text:$root.lang().LANG_DESCRIPTION"></strong>: <span
+                data-bind="text: $parent.description"></span>.</p>
+        <h5>Следующий уровень "<span data-bind="text: name_level_building"></span>"</h5>
+        <span data-bind="text:$root.lang().LANG_BONUS_IMPROVEMENT"></span>:
+        <ul data-bind="foreach: renderBonus">
+            <li><span data-bind="text: bonus"></span> <span data-bind="text: improve"></span> <span
+                    data-bind="text: measure"></span></li>
+        </ul>
+        <h5 data-bind="text:$root.lang().LANG_REQUIRED_FOR_IMPROVE"></h5>
+        <table class="build-table-general">
+            <tr>
+                <th data-bind="text:$root.lang().LANG_NAME"></th>
+                <th data-bind="text:$root.lang().LANG_REQUIRED"></th>
+                <th data-bind="text:$root.lang().LANG_HAS"></th>
+            </tr>
+            <tr data-bind="with: building">
+                <td data-bind="text:name_resource"></td>
+                <td data-bind="text: required"></td>
+                <td data-bind="text: has, css:{red: !enough}"></td>
+            </tr>
+            <!-- ko foreach: renderResource -->
+            <tr>
+                <td><img class="res-icon" data-bind="attr:{'src':'img/icons/resource/'+name_image+'25.png'}" alt=""
+                         width="32" height="32"> <span data-bind="text:name_resource"></span></td>
+                <td data-bind="text: required"></td>
+                <td data-bind="text: has, css:{red: !enough()}"></td>
+            </tr>
+            <!-- /ko -->
+        </table>
+        <!-- ko if: time -->
+        <div data-bind="template:{name: 'TimeItemTmpl', data: {time: $parent.time, processTime:$parent.processTime, isFinished:$parent.isFinished }}"></div>
+        <!-- /ko -->
+        <!-- ko ifnot: typeof $root.book.selected().state != 'undefined' && $root.location.interface.process.new_buildings().length > 0 -->
+        <div class="description-buttons" data-bind = "with: $parent" >
+            <a href="#" id="learn" class="span33 btn-flex"
+               data-bind="visible: !$root.location.interface.helpers.canUpdateBuildings($root.book.selected().building.items()) == 0 && detail().enough(), click: $root.book.selected().building.update">
+
+                <span data-bind="text: current_level != '0' ? 'Улучшить' : 'Построить' "></span>
+
+                <em></em>
+            </a>
+            <a href="#" id="stop-learn" class="span33 btn-flex"
+               data-bind="visible: !isFinished(), click: $root.book.selected().building.update">
+                Остановить
+                <em></em>
+            </a>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: !enough() -->
+        <h5 class="btn-hidden">Недостаточно ресурсов!</h5>
+        <!-- /ko -->
+        <!-- ko if: typeof $root.book.selected().state != 'undefined' -->
+        <a href="#" class="span33 btn-flex" data-bind="click: $root.book.selected().building.remove">
+            Удалить
+            <em></em>
+        </a>
+        <!-- /ko -->
+        <div class="clear"></div>
+    </div>
+</div>

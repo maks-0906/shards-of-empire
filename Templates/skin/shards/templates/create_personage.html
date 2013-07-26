@@ -1,0 +1,192 @@
+<div class="overlay message-box start-data corners popup-corners unresizable proportion hidden" data-proportion="1.32">
+    <div class="row-fluid">
+    <div class="logo span50 center block-height" data-block-height="12"></div>
+    <div class="span100 top-bar">
+        <div class="row-fluid">
+            <div class="span100 block">
+                <div class="corners block-corners block-simple" data-block-height="6">
+                    <div class="span100 corners wood-simple settings-btn-container" data-block-height="4.8">
+                        <!-- <a href="#" class="btn close vcenter"></a>                          -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span100 top-bar">
+        <div class="row-fluid">
+            <div class="span100 block">
+                <div class="corners block-corners block-simple" data-block-height="6">
+                    <div class="span100 corners wood-simple settings-btn-container steps" data-block-height="4.8">
+                        <a href="#"
+                           class="span24 offset1 corners block-height btn-enter block-corners wood-corners-btn-small vcenter active step0"
+                           data-block-height="4" data-target="0">
+                            <div class="btn-text center vcenter text-gradient">{{TITLE_FRACTIONS}}</div>
+                        </a>
+
+                        <div class="arrow vcenter"></div>
+                        <a href="#"
+                           class="span24 corners block-height btn-enter block-corners wood-corners-btn-small vcenter disabled step1"
+                           data-block-height="4" data-target="1">
+                            <div class="btn-text center vcenter text-gradient">{{TITLE_IMAGE}}</div>
+                        </a>
+
+                        <div class="arrow vcenter"></div>
+                        <a href="#"
+                           class="span24 corners block-height btn-enter block-corners wood-corners-btn-small vcenter disabled step2"
+                           data-block-height="4" data-target="2">
+                            <div class="btn-text center vcenter text-gradient">{{TITLE_RELIGION}}</div>
+                        </a>
+
+                        <div class="arrow vcenter"></div>
+                        <a href="#"
+                           class="span24 corners block-height btn-enter block-corners wood-corners-btn-small vcenter disabled step3"
+                           data-block-height="4" data-target="3">
+                            <div class="btn-text center vcenter text-gradient">{{TITLE_CITY}}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span100 block">
+        <div class="corners block-corners wish-paper-corners block-height" data-block-height="60">
+            <div class="corners paper-corners block-height" data-block-height="54">
+                <!-- PAGE 0 -->
+                <div class="row-fluid fractions start-data-page page0">
+                    {{#fractions}}
+                        <a href="#" class="span25 fraction" data-fraction="{{id}}">
+                            <div class="corners text-corners">
+                                <ul class="news span100">
+                                    <li class="span100 news-item title"><strong>{{name}}</strong></li>
+                                    <li class="span100 news-item news-block pic block-height" data-block-height="15">
+                                        <img src="{{image}}/icons/{{name_image}}.png" alt="">
+                                    </li>
+                                    <li class="span100 news-item news-block desc">
+                                        <strong>{{LANG_DESCRIPTION}}:</strong> {{description}}
+                                    </li>
+                                    <li class="span100 news-item bonus"><strong>{{LANG_BONUS}}:</strong> {{ARMY_ATTACK}} +{{bonus}}%</li>
+                                </ul>
+                            </div>
+                        </a>
+                    {{/fractions}}
+                </div>
+                <!-- PAGE 1 -->
+                <div class="row-fluid avatars start-data-page page1" style="display:none">
+                    <div class="span100 corners text-corners">
+                        <div class="row-fluid block-height" data-block-height="40">
+                            <h3>{{LANG_START_DATA_SELECT_CHARACTER_IMAGE}}</h3>
+                            {{#renderTypes}}
+                                <div class="span45 avatar-block male hidden" data-fraction="{{fraction_id}}">
+                                    <a href="#" class="start-data-avatar top left" data-avatar="{{id_0}}"></a>
+                                    <a href="#" class="start-data-avatar right v-center" data-avatar="{{id_1}}"></a>
+                                    <a href="#" class="start-data-avatar bottom left" data-avatar="{{id_2}}"></a>
+                                </div>
+                                <div class="span45 offset10 avatar-block female" data-fraction="{{fraction_id}}">
+                                    <a href="#" class="start-data-avatar top right" data-avatar="{{id_3}}"></a>
+                                    <a href="#" class="start-data-avatar left v-center" data-avatar="{{id_4}}"></a>
+                                    <a href="#" class="start-data-avatar bottom right" data-avatar="{{id_5}}"></a>
+                                </div>
+                            {{/renderTypes}}
+                            <input type="text" name="nickname" id="nickname" class="center"
+                                   placeholder="{{LANG_START_DATA_NICKNAME_PLACEHOLDER}}">
+                        </div>
+                    </div>
+                </div>
+                <!-- PAGE 2 -->
+                <div class="row-fluid religions start-data-page page2" style="display:none">
+                    {{#religions}}
+                        <a href="#" class="span25 religion" data-religion="{{id}}">
+                            <div class="corners text-corners">
+                                <ul class="news span100">
+                                    <li class="span100 news-item title"><strong>{{name}}</strong></li>
+                                    <li class="span100 news-item news-block pic block-height" data-block-height="15">
+                                        <img src="{{image}}/icons/empty.png" alt="">
+                                    </li>
+                                    <li class="span100 news-item news-block desc">
+                                        <strong>{{LANG_DESCRIPTION}}:</strong> {{description}}
+                                    </li>
+                                    <li class="span100 news-item bonus"><strong>{{LANG_BONUS}}:</strong> {{ARMY_ATTACK}} +{{bonus}}%</li>
+                                </ul>
+                            </div>
+                        </a>
+                    {{/religions}}
+                </div>
+                <!-- PAGE 3 -->
+                <div class="row-fluid city start-data-page page3" style="display:none">
+                    <div class="span50">
+                        <div class="corners text-corners">
+                            <div class="row-fluid block-height" data-block-height="40">
+
+                                <div class="pic">
+                                    <h3>
+                                        {{#titleInPageCity}}
+                                            <span class="grade">{{level}}</span> <span class="nickname">{{nickname}}</span>
+                                        {{/titleInPageCity}}
+                                    </h3>
+
+                                    <div class="start-data-avatar center"></div>
+                                    <div class="start-data-avatar small bottom left"></div>
+                                    <div class="start-data-avatar small bottom right"></div>
+                                </div>
+                                <ul class="bonus-list news span50">
+                                    <li class="span100 news-item">{{LANG_BONUS}}</li>
+                                    <li class="span100 news-item"><span class="green">+1%</span> {{LANG_START_DATA_ATTACK}}</li>
+                                    <li class="span100 news-item"><span class="green">+1%</span> {{LANG_START_DATA_PROTECTION}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span50">
+                        <div class="corners text-corners">
+                            <div class="row-fluid block-height" data-block-height="40">
+                                <div class="span100 pic block-height" data-block-height="30">
+                                    <img src="{{image}}/icons/empty.png" alt="">
+                                </div>
+                                <input type="text" name="city" id="city" placeholder="{{LANG_START_DATA_CITY_PLACEHOLDER}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span100 top-bar">
+        <div class="row-fluid">
+            <div class="span100 block">
+                <div class="corners block-corners block-simple" data-block-height="6">
+                    <div class="span12 corners wood-simple settings-btn-container start-data-page page1 page2 page3"
+                         data-block-height="4.8">
+                        <a href="#"
+                           class="corners block-height btn-enter prev-step block-corners wood-corners-btn-small vcenter"
+                           data-block-height="4">
+                            <div class="btn-text center vcenter text-gradient">{{LANG_START_DATA_BACK}}</div>
+                        </a>
+                    </div>
+                    <div class="span74 offset1 corners wood-simple settings-btn-container start-data-page page1 page2 page3"
+                         data-block-height="4.8">
+                    </div>
+                    <div class="span87 corners wood-simple settings-btn-container start-data-page page0"
+                         data-block-height="4.8">
+                    </div>
+                    <div class="span12 offset1 corners wood-simple settings-btn-container start-data-page page0 page1 page2"
+                         data-block-height="4.8">
+                        <a href="#"
+                           class="corners block-height btn-enter next-step disabled block-corners wood-corners-btn-small vcenter"
+                           data-block-height="4">
+                            <div class="btn-text center vcenter text-gradient">{{LANG_START_DATA_NEXT}}</div>
+                        </a>
+                    </div>
+                    <div class="span12 offset1 corners wood-simple settings-btn-container start-data-page page3"
+                         data-block-height="4.8">
+                        <a href="#"
+                           class="corners block-height btn-enter play disabled block-corners wood-corners-btn-small vcenter"
+                           data-block-height="4">
+                            <div class="btn-text center vcenter text-gradient">{{LANG_START_DATA_PLAY}}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div data-bind="attr:{class: 'wrapper size'+$root.controls.mapToggle.size()}">
+    <header class="header"></header>
+
+    <div class="content">
+        <!-- ko ifnot: updateEnded -->
+        <div class="main-content text-center" style="position: absolute";>
+            <img src="img/interface/ajax-loader.gif" class="animate toggle-animate">
+        </div>
+        <!-- /ko -->
+        <!-- ko if: updateEnded -->
+        <!-- ko if: info() -->
+        <!-- ko  template:{name: isDetail()? 'mapDetailTmpl': isUser()? 'mapUserTmpl': 'mapNoUserTmpl',data: info} -->
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+
+    <footer class="footer"></footer>
+</div>

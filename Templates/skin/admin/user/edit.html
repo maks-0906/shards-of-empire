@@ -1,0 +1,40 @@
+{include="blocks/header"}
+{include="blocks/navbar"}
+    <div class="container-fluid">
+        <form action="/{$sAction}" method="post">
+        <input type="hidden" name="action" value="edit"/>
+        <table class="table  table-bordered table-striped ">
+            <caption><h2>Карточка игрока</h2></caption>
+            <tbody>
+                <tr>
+                    <td>ID:</td>
+                    <td><input type="hidden" name="id" value="{$aEntity.id}"/>{$aEntity.id}</td>
+                </tr>
+                <tr>
+                    <td>UserName:</td>
+                    <td><input type="text" name="login" value="{$aEntity.email|htmlspecialchars}"/></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="text" name="password" value="{$aEntity.password|htmlspecialchars}"/></td>
+                </tr>
+                <tr>
+                    <td>Registration IP:</td>
+                    <td><input type="text" name="reg_ip" value="{$aEntity.reg_ip|htmlspecialchars}"/></td>
+                </tr>
+                <tr>
+                    <td>Last Online:</td>
+                    <td><input type="text" name="last_online" value="{$aEntity.last_online|htmlspecialchars}"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <div class="row-fluid">
+            <div class="span3">
+                <button type="submit" class="btn btn-success" data-target="bodyframe"><i class="icon-pencil"></i> Применить</button>
+                <a href="/{$sAction}" class="btn btn-inverse" data-target="bodyframe"><i class="icon-share-alt"></i> Назад</a>
+            </div>
+        </div>
+        </form>
+    </div> <!-- /container -->
+{include="blocks/footer"}

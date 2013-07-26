@@ -1,0 +1,63 @@
+{include="blocks/header"}
+{include="blocks/navbar"}
+    <div class="container-fluid">
+        <br />
+        <div class="clear"></div>
+        <form id="datagrid" action="/{$sAction}" method="post">
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#datagrid').submit(function(){
+                    if ($('input[name="idlist[]"]:checked').length == 0) return false;
+                    return confirm('Sure to delete?');
+                });
+            });
+        </script>
+        <table class="table table-bordered table-striped ">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="hidden" name="action" value="delete"/>
+                        <button class="btn btn-danger" data-target="bodyframe"><i class="icon-trash"></i></button>
+                    </th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Lang</th>
+                    <th>Users</th>
+                    <th>JSONP Server</th>
+                    <th>Status</th>
+                    <th>
+                        <a href="/{$sAction}/edit/0" class="btn btn-primary" data-target="bodyframe"><i class="icon-plus"></i></a>
+                        <a href="/{$sAction}" class="btn btn-info" data-target="bodyframe"><i class="icon-refresh"></i></a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {loop="List"}
+                <tr>
+                    <td>
+                        <input type="checkbox" name="idlist[]" value="{$value.id}"/>
+                    </td>
+                    <td>{$value.id}</td>
+                    <td><a href="/{$sAction}/edit/{$value.id}">{$value.name|htmlspecialchars}</a></td>
+                    <td>{$value.lang|htmlspecialchars}</td>
+                    <td>0/{$value.max_users|htmlspecialchars}</td>
+                    <td>{$value.server|htmlspecialchars}</td>
+                    <td>
+                        {if="$value.status==1"}
+                            <span class="label label-success">On</span>
+                        {else}
+                            <span class="label label-warning">Off</span>
+                        {/if}
+                    </td>
+                    <td>
+                        <a href="/{$sAction}/edit/{$value.id}" class="btn btn-success" data-target="bodyframe"><i class="icon-edit"></i></a>
+                    </td>
+                </tr>
+                {/loop}
+            </tbody>
+        </table>
+        </form>
+        {include="blocks/pager"}
+        <br />
+    </div> <!-- /container -->
+{include="blocks/footer"}

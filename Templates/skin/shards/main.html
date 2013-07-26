@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+    <title></title>
+    <base href="{$BasePath}"/>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="js/lib/fancybox/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css/jquery.cssemoticons.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css?v1.1">
+    <link rel="stylesheet" href="css/globalmap.css">
+
+	<!-- Add fancyBox -->
+	<link rel="stylesheet" href="css/interface-correct.css" />
+
+
+    <!-- Media Queries For IE8 -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/ie-media-queries.css">
+    <![endif]-->
+    <!-- <script src="js/lib/modernizr-2.6.1.min.js"></script>-->
+
+	<!--fancybox-->
+
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
+    today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+    experience this site.</p>
+<![endif]-->
+
+<div class="emoticon">
+    <div id="emoti-toggle"
+         style="display: none;"
+         data-bind="template: {name: 'emoticonTmpl', data: $root.controls.emoticons }">
+    </div>
+</div>
+
+<div class="leaves top-right"></div>
+<div class="leaves left"></div>
+<div class="leaves right"></div>
+<div class="wrap row-fluid corners wrap-corners invisible main-page locale">
+<div class="span100 top-bar">
+    <div class="row-fluid">
+        <div class="span77 block ">
+            <!-- ko template: {name: 'resourceBarTmpl', data: $root} -->
+            <!-- /ko -->
+        </div>
+        <div class="span16 block">
+            <div class="corner-dot bottom left"></div>
+            <div class="corners block-corners block-simple" data-block-height="5.5">
+                <div class="span100 corners wood-simple row-fluid" data-block-height="4.2">
+                    <span class="digit valign">
+                        <span class="titul" data-bind="text: $root.user.dignity"></span>
+                        <span class="nickname" data-bind="text:  $root.user.nick"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="span7 block">
+            <div class="corner-dot bottom left"></div>
+            <div class="corners block-corners block-simple" data-block-height="5.5">
+                <div class="span98 corners wood-simple settings-btn-container" data-block-height="4.2">
+                    <a href="#"
+                       class="corners block-height settings btn-enter block-corners wood-corners-btn-small center vcenter"
+                       data-block-height="3.3">
+                        <div class="btn-text settings center vcenter text-gradient">{{LANG_MAIN_MENU}}</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="span10 block sidebar main-sidebar">
+    <div class="corners block-corners block-simple add-offset toggle-height" data-block-height="68"
+         data-toggle-height="88">
+        <div class="yantar" data-block-width="100"></div>
+        <div class="corner-dot top right sidebar-dot-top"></div>
+        <div class="corners slot main-slot square center sidebar-icon" data-block-height="82" data-block-width="82">
+            <img src="img/icons/resource/amber300.png" alt="" width="" height="">
+
+            <div class="desc center">{{LANG_MAIN_AMBER}}</div>
+        </div>
+            <div class="left-menu" data-bind="template: {name:'leftMenuItemTmpl',
+                                                         foreach: $root.location.sidebar.items}">
+            </div>
+
+    </div>
+
+    <div class="leaves bottom-left"></div>
+</div>
+
+
+<div class="span100 block content-container">
+    <div class="corners block-corners block-content-container add-offset content toggle-height" data-block-height="68"
+         data-toggle-height="88">
+        <div class="layer layer0 span94" data-bind="with: $root.location">
+            <!-- ko if: $root.map.isOpen -->
+                <!-- ko template:{name:'mapRootTmpl', data: $root.map, afterRender: $root.map.render} -->
+                <!-- /ko -->
+            <!-- /ko -->
+
+            <!-- ko ifnot: $root.map.isOpen -->
+                <div class='city-container' ><img data-bind="attr: {src: myModels.location.city.currentCity().background }"></div>
+            <!-- /ko -->
+        </div>
+        <!-- <div class="span100">       -->
+        <!-- COLUMN -->
+        <div class="layer layer3 span14 offset80">
+            <div class="add-offset column-wrapper block-height toggle-height" data-block-height="68"
+                 data-toggle-height="88">
+                <div class="column-top">
+                    <div class="main pic">
+						<img data-bind="attr: {src: myModels.user.getAvatar()}" src="" alt="" width="" height="">
+                    </div>
+                    <div class="second pic">
+                        <img src="img/icons/test-round.png" alt="" width="" height="">
+                    </div>
+                    <div class="third pic">
+                        <img src="img/icons/test-round.png" alt="" width="" height="">
+                    </div>
+                </div>
+                <div class="column"></div>
+                <div class="column-bottom"></div>
+                <div class="column-block-container sidebar block-height toggle-height" data-block-height="62" data-toggle-height="84">
+                    <a>
+						<div class="slot column-slot">
+							<img src="img/icons/test-round.png" alt="" width="" height="">
+
+							<div class="column-slot-text">{{LANG_MAIN_CHARACTER}}</div>
+						</div>
+					</a>
+					<a>
+						<div class="slot column-slot">
+							<img src="img/icons/arts.png" alt="" width="" height="">
+
+							<div class="column-slot-text">{{LANG_MAIN_ARTIFACTS}}</div>
+						</div>
+					</a>
+					<div class="slot column-slot">
+						<img class="btn-quests" src="img/icons/quests.png" alt="" width="" height="">
+						<div class="column-slot-text">{{LANG_MAIN_QUESTS}}</div>
+					</div>
+					<a>
+						<div class="slot column-slot">
+							<img src="img/icons/unions.png" alt="" width="" height="">
+
+							<div class="column-slot-text">{{LANG_MAIN_GUILD}}</div>
+						</div>
+					</a>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+        <div class="span100 life-honor">
+            <div class="row-fluid">
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar honor"  data-bind="style:{width: ($root.user.fame()/$root.user.amountFame()*100)+'%'}">
+                            <div class="progress-bar-text">
+                                {{LANG_MAIN_HONOUR}}: <span data-bind="text: $root.user.fame"></span> / <span
+                                    data-bind="text: $root.user.amountFame"></span>
+                            </div>
+                            <em></em>
+                        </div>
+                        <em></em>
+                    </div>
+                </div>
+                <div class="timer">
+                    <div class="timer-text">
+                        <span class="hours" data-bind="text: $root.user.time.hours()"></span>&nbsp;:&nbsp;<span class="minutes" data-bind="text: $root.user.time.min()"></span>&nbsp;:&nbsp;<span
+                            class="seconds" data-bind="text: $root.user.time.secs()"></span>
+                    </div>
+                </div>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar red life" data-bind="style:{width: ($root.user.life()/$root.user.maxLife()*100)+'%'}">
+                            <div class="progress-bar-text">{{LANG_MAIN_LIFE}}: <span data-bind="text: $root.user.life"></span> / <span
+                                    data-bind="text: $root.user.maxLife"></span></div>
+                            <em></em>
+                        </div>
+
+                        <em></em>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cities" data-bind="template: {name: 'cityTmpl', foreach: $root.user.cities  }">
+        </div>
+        <div class="corners slot main-slot square container-slot right-top" data-block-height="6">
+        </div>
+        <div class="corners slot main-slot square container-slot right-top" data-block-height="6">
+        </div>
+        <!-- <div class="span100 right-top">
+        </div> -->
+        <div class="span20 left-bottom block-height container-slot" data-block-height="8" data-bind="with: $root.location.interface.process">
+            <div class="query-item">
+                <!-- ko if: buildings().length + new_buildings().length > 0 -->
+                <h4>Здания</h4>
+                <!-- /ko -->
+                <!-- ko template: { name: 'queryBuilding', foreach: buildings }-->
+                <!-- /ko -->
+                <!-- ko template: { name: 'queryBuilding', foreach: new_buildings }-->
+                <!-- /ko -->
+            </div>
+            <div class="query-item">
+                <!-- ko if: improves().length > 0 -->
+                <h4>Улучшения</h4>
+                <!-- /ko -->
+                <!-- ko template: { name: 'queryImprove', foreach: improves }-->
+                <!-- /ko -->
+            </div>
+            <div class="query-item">
+                <!-- ko if: research().length > 0 -->
+                <h4>Иследования</h4>
+                <!-- /ko -->
+                <!-- ko template: { name: 'queryResearch', foreach: research }-->
+                <!-- /ko -->
+            </div>
+            <div class="query-item">
+                <!-- ko if: squads().length > 0 -->
+                <h4>Army</h4>
+                <!-- /ko -->
+                <!-- ko template: { name: 'querySquad', foreach: squads }-->
+                <!-- /ko -->
+            </div>
+        </div>
+        
+       <div data-bind="visible: $root.map.move.personageMove.isMoving" id="personageMoveInfo" style="left: 50px; background-color: rgb(170, 170, 170); border: 2px ridge; width: 200px; top: 100px; text-align:center; position: relative; height: 80px; z-index: 3;">
+            <div style="position: relative; top: -25px;">
+                Character move to (<span data-bind="text: $root.map.move.personageMove.target.x">78</span>; <span data-bind="text: $root.map.move.personageMove.target.y">0</span>)<br>
+                Time: <span data-bind="text: $root.map.move.personageMove.endTime">0</span><br>
+                <input type="button" value="Turn back" data-bind="click: $root.map.move.personageMove.turnBack"/>
+            </div>
+        </div>
+        
+        <!-- <div class="layer layer4 span100">
+
+       
+        
+        </div> -->
+    </div>
+</div>
+<div class="span100 block block-corners block-simple">
+    <div class="block-height toggle-height chat-placeholder" data-block-height="25" data-toggle-height="4.2">
+        <div class="span100 messenger active ui-state-active ui-resizable">
+            <div class="corner-dot top left sidebar-dot-bottom"></div>
+            <div class="row-fluid">
+                <div class="span100 block">
+                    <div class="toggle-chat-btn center placer ui-resizable-handle ui-resizable-n" id="chat-handle"></div>
+                    <div class="avatar spacer">
+                        <img src="img/icons/test-round.png" alt="" width="" height="">
+                    </div>
+                    <div class="corners block-corners block-simple add-offset">
+                        <div class="span99 offset1 corners wood-simple row-fluid toggle-chat" data-block-height="4.2">
+                            <!-- <div class="clear-history"> -->
+                            <a href="#" title="Стереть историю" class="digit orange valign clear-history">{{LANG_MAIN_CHAT_CLEAR_HISTORY}}</a>
+
+                            <div class="divider clear-divider"></div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="span100 row-fluid scrollable toggle-chat unstyle">
+                            <div class="span100 row-fluid corners stone-simple dialog-container" data-block-height="17.5">
+                                <ul id="myTab" class="nav nav-tabs private-on">
+                                    <li class="active"><a href="#main" data-toggle="tab">{{LANG_MAIN_CHAT_GENERAL}}</a></li>
+                                    <li><a href="#trade" data-toggle="tab">{{LANG_MAIN_CHAT_TRADE}}</a></li>
+                                    <li><a href="#guild" data-toggle="tab">{{LANG_MAIN_CHAT_GUILD}}</a></li>
+                                    <li><a href="#private" class="hidden" data-toggle="tab">Wizard</a></li>
+                                </ul>
+                                <div class="span100 corners paper-chat dialog scroll-pane" data-block-height="15.5">
+                                    <div id="myTabContent" class="tab-content">
+                                        <div class="tab-pane fade in active scroll-content" id="main" data-scroll="0">
+                                            <ul class="dialog">
+                                                <li><span class="time-stamp">20:34:23</span> — <a href="#"
+                                                                                                  class="dialog-nickname">Wizard</a>:
+                                                    <span class="phrase">Чат 1. Всем чмоки в этом чяте!</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane fade scroll-content" id="trade">
+                                            <ul class="dialog">
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane fade scroll-content" id="guild">
+                                            <ul class="dialog">
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane fade scroll-content" id="private">
+                                            <ul class="dialog"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scroll-bar-wrap block-height dialog-scroll" data-block-height="17.5"
+                                 data-container="dialog-container">
+                                <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+                                <div class="scroll-bar"></div>
+                                <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+                                <em></em>
+                            </div>
+                        </div>
+                        <div class="span100 corners wood-simple row-fluid input" data-block-height="4.2">
+                            <div class="span88 corners block-height wood-input vcenter" data-block-height="3.6">
+                                <input type="text" id="chat-input" placeholder="Текст сообщения">
+                            </div>
+                            <div class="offset1 span10 corners block-height send btn-enter block-corners wood-corners-btn-small vcenter"
+                                 data-block-height="3.3">
+
+                                <div class="btn-text messages center vcenter">
+                                    <span class="text-gradient">{{LANG_MAIN_CHAT_SEND}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- <div class="span20 block"> -->
+                <div class="unresizable block">
+                    <div class="corner-dot top left"></div>
+                    <div class="corners block-corners block-simple add-offset">
+                        <!-- <div class="span100 corners stone-simple spacer hidden" data-block-height="6"></div> -->
+                        <div class="scrollable">
+                            <div class="toggle-chat users-container">
+                                <div class="span100 corners stone-simple scroll-pane user-list" data-block-height="21.7">
+                                    <div class="users-overflow">
+                                        <ul class="scroll-content active">
+                                            <!-- <li>Рыцарь <span class="list-nickname">Wizard</span></li> -->
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="scroll-bar-wrap block-height users-scroll" data-block-height="21.5"
+                                     data-container="users-container">
+                                    <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+                                    <div class="scroll-bar"></div>
+                                    <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+                                    <em></em>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span100 corners stone-simple users-container-buttons" data-block-height="4.2">
+                            <a class="span12 corners block-height btn-enter block-corners wood-corners-btn-small vcenter" id="emoti-btn" data-bind="click: $root.controls.emoticons.toggle.open" data-block-height="3.3">
+                                <div class="btn-text btn-icon smile center vcenter"></div>
+                            </a>
+                            <div class="span80 mail-btn offset3 corners block-height btn-enter block-corners wood-corners-btn-small vcenter"
+                                 data-bind="click: $root.book.show.mail"
+                                 data-block-height="3.3">
+
+                                <div class="btn-text messages center vcenter">
+                                    <span class="btn-icon envelope"></span>
+                                    <span class="text-gradient">{{LANG_MAIN_CHAT_MESSAGES}}</span>
+                                    <span class="btn-icon message-count" data-bind="text: $root.mail.messages.count"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- POPUP -->
+<div id="c-popup" class="overlay-wrapper row-fluid hidden invisible">
+<div class="overlay overlay-small message-box corners popup-corners hidden locale">
+    <div class="avatar"></div>
+    <a href="#" class="btn close"></a>
+
+    <h3 class="corners wood-simple">{{LANG_POPUP_SMALL_WARNING}}</h3>
+
+    <div class="corners stone-simple">
+        <div class="message-text corners paper-simple">
+        </div>
+    </div>
+    <div class="corners wood-simple message-buttons">
+        <div class="span10 center corners block-height btn-enter block-corners wood-corners-btn-small-cornered take"
+             data-block-height="5">
+            <div class="btn-text accept center vcenter text-gradient">{{LANG_POPUP_SMALL_ACCEPT}}</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="create-personage" class="overlay message-box start-data corners popup-corners unresizable proportion hidden"
+     data-proportion="1.32">
+
+<div class="row-fluid">
+    <div class="logo span50 center block-height" data-block-height="12"></div>
+    <div class="span100 top-bar">
+        <div class="row-fluid">
+            <div class="span100 block">
+                <div class="corners block-corners block-simple" data-block-height="6">
+                    <div class="span100 corners wood-simple settings-btn-container" data-block-height="4.8">
+                        &lt;!&ndash; <a href="#" class="btn close vcenter"></a> &ndash;&gt;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span100 top-bar">
+        <div class="row-fluid">
+            <div class="span100 block">
+                <div class="corners block-corners block-simple" data-block-height="6">
+                    <div class="span100 corners wood-simple settings-btn-container steps" data-block-height="4.8">
+                        <a href="#"
+                           class="span24 offset1 corners block-height btn-enter block-corners wood-corners-btn-small vcenter active step0"
+                           data-block-height="4" data-target="0">
+                            <div class="btn-text center vcenter text-gradient">{{TITLE_FRACTIONS}}</div>
+                        </a>
+
+                        <div class="arrow vcenter"></div>
+                        <a href="#"
+                           class="span24 corners block-height btn-enter block-corners wood-corners-btn-small vcenter disabled step1"
+                           data-block-height="4" data-target="1">
+                            <div class="btn-text center vcenter text-gradient">{{TITLE_IMAGE}}</div>
+                        </a>
+
+                        <div class="arrow vcenter"></div>
+                        <a href="#"
+                           class="span24 corners block-height btn-enter block-corners wood-corners-btn-small vcenter disabled step2"
+                           data-block-height="4" data-target="2">
+                            <div class="btn-text center vcenter text-gradient">{{TITLE_RELIGION}}</div>
+                        </a>
+
+                        <div class="arrow vcenter"></div>
+                        <a href="#"
+                           class="span24 corners block-height btn-enter block-corners wood-corners-btn-small vcenter disabled step3"
+                           data-block-height="4" data-target="3">
+                            <div class="btn-text center vcenter text-gradient">{{TITLE_CITY}}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span100 block">
+        <div class="corners block-corners wish-paper-corners block-height" data-block-height="60">
+            <div class="corners paper-corners block-height" data-block-height="54">
+                {{!PAGE 0}}
+                <div class="row-fluid fractions start-data-page page0">
+                    {{#fractions}}
+                    <a href="#" class="span25 fraction" data-fraction="{{id}}">
+                        <div class="corners text-corners">
+                            <ul class="news span100">
+                                <li class="span100 news-item title"><strong>{{name}}</strong></li>
+                                <li class="span100 news-item news-block pic block-height" data-block-height="15">
+                                    <img src="img/icons/{{name_image}}.png" alt="">
+                                </li>
+                                <li class="span100 news-item news-block desc">
+                                    <strong>{{LANG_DESCRIPTION}}:</strong> {{description}}
+                                </li>
+                                <li class="span100 news-item bonus"><strong>{{LANG_BONUS}}:</strong> {{ARMY_ATTACK}}
+                                    +{{bonus}}%
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                    {{/fractions}}
+                </div>
+                {{!PAGE 1}}
+                <div class="row-fluid avatars start-data-page page1" style="display:none">
+                    <div class="span100 corners text-corners">
+                        <div class="row-fluid block-height" data-block-height="40">
+                            <h3>{{LANG_START_DATA_SELECT_CHARACTER_IMAGE}}</h3>
+                            {{#renderTypes}}
+                            <div class="span45 avatar-block male" data-fraction="{{fraction_id}}">
+                                <a href="#" class="start-data-avatar top left" data-avatar="{{id_0}}"></a>
+                                <a href="#" class="start-data-avatar right v-center" data-avatar="{{id_1}}"></a>
+                                <a href="#" class="start-data-avatar bottom left" data-avatar="{{id_2}}"></a>
+                            </div>
+                            <div class="span45 offset10 avatar-block female" data-fraction="{{fraction_id}}">
+                                <a href="#" class="start-data-avatar top right" data-avatar="{{id_3}}"></a>
+                                <a href="#" class="start-data-avatar left v-center" data-avatar="{{id_4}}"></a>
+                                <a href="#" class="start-data-avatar bottom right" data-avatar="{{id_5}}"></a>
+                            </div>
+                            {{/renderTypes}}
+                            <input type="text" name="nickname" id="nickname" class="center"
+                                   placeholder="{{LANG_START_DATA_NICKNAME_PLACEHOLDER}}">
+                        </div>
+                    </div>
+                </div>
+                {{!PAGE 2}}
+                <div class="row-fluid religions start-data-page page2" style="display:none">
+                    {{#religions}}
+                    <a href="#" class="span25 religion" data-religion="{{id}}">
+                        <div class="corners text-corners">
+                            <ul class="news span100">
+                                <li class="span100 news-item title"><strong>{{name}}</strong></li>
+                                <li class="span100 news-item news-block pic block-height" data-block-height="15">
+                                    <img src="img/icons/empty.png" alt="">
+                                </li>
+                                <li class="span100 news-item news-block desc">
+                                    <strong>{{LANG_DESCRIPTION}}:</strong> {{description}}
+                                </li>
+                                <li class="span100 news-item bonus"><strong>{{LANG_BONUS}}:</strong> {{ARMY_ATTACK}}
+                                    +{{bonus}}%
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                    {{/religions}}
+                </div>
+                {{PAGE 3}}
+                <div class="row-fluid city start-data-page page3" style="display:none">
+                    <div class="span50">
+                        <div class="corners text-corners">
+                            <div class="row-fluid block-height" data-block-height="40">
+
+                                <div class="pic">
+                                    <h3>
+                                        {{#titleInPageCity}}
+                                        <span class="grade">{{level}}</span> <span
+                                            class="nickname">{{nickname}}</span>
+                                        {{/titleInPageCity}}
+                                    </h3>
+
+                                    <div class="start-data-avatar center"></div>
+                                    <div class="start-data-avatar small bottom left"></div>
+                                    <div class="start-data-avatar small bottom right"></div>
+                                </div>
+                                <ul class="bonus-list news span50">
+                                    <li class="span100 news-item">{{LANG_BONUS}}</li>
+                                    <li class="span100 news-item"><span class="green">+1%</span>
+                                        {{LANG_START_DATA_ATTACK}}
+                                    </li>
+                                    <li class="span100 news-item"><span class="green">+1%</span>
+                                        {{LANG_START_DATA_PROTECTION}}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span50">
+                        <div class="corners text-corners">
+                            <div class="row-fluid block-height" data-block-height="40">
+                                <div class="span100 pic block-height" data-block-height="30">
+                                    <img src="img/icons/empty.png" alt="">
+                                </div>
+                                <input type="text" name="city" id="city"
+                                       placeholder="{{LANG_START_DATA_CITY_PLACEHOLDER}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span100 top-bar locale">
+        <div class="row-fluid">
+            <div class="span100 block">
+                <div class="corners block-corners block-simple" data-block-height="6">
+                    <div class="span12 corners wood-simple settings-btn-container start-data-page page1 page2 page3"
+                         data-block-height="4.8">
+                        <a href="#"
+                           class="corners block-height btn-enter prev-step block-corners wood-corners-btn-small vcenter"
+                           data-block-height="4">
+                            <div class="btn-text center vcenter text-gradient">{{LANG_START_DATA_BACK}}</div>
+                        </a>
+                    </div>
+                    <div class="span74 offset1 corners wood-simple settings-btn-container start-data-page page1 page2 page3"
+                         data-block-height="4.8">
+                    </div>
+                    <div class="span87 corners wood-simple settings-btn-container start-data-page page0"
+                         data-block-height="4.8">
+                    </div>
+                    <div class="span12 offset1 corners wood-simple settings-btn-container start-data-page page0 page1 page2"
+                         data-block-height="4.8">
+                        <a href="#"
+                           class="corners block-height btn-enter next-step disabled block-corners wood-corners-btn-small vcenter"
+                           data-block-height="4">
+                            <div class="btn-text center vcenter text-gradient">{{LANG_START_DATA_NEXT}}</div>
+                        </a>
+                    </div>
+                    <div class="span12 offset1 corners wood-simple settings-btn-container start-data-page page3"
+                         data-block-height="4.8">
+                        <a href="#"
+                           class="corners block-height btn-enter play disabled block-corners wood-corners-btn-small vcenter"
+                           data-block-height="4">
+                            <div class="btn-text center vcenter text-gradient">{{LANG_START_DATA_PLAY}}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- BOOK POPUP -->
+<div class="overlay message-box book hidden">
+<a href="#" class="btn close"></a>
+
+<div class="row-fluid" id="message-box">
+<!-- ko if: book.selected -->
+    <!-- ko template: { name: book.selected().template, data: book.selected } -->
+    <!-- /ko -->
+<!-- /ko -->
+<!-- RESEARCH PAGE -->
+<div class="span50 book-column column-left research-page">
+    <div class="categories">
+        <h3 class="text-corners-title span100">{{LANG_RESEARCH_GLOBAL_RESEARCH}}</h3>
+
+        <div class="scroll-pane">
+            <ul class="news span100 scroll-content active" id="list_research">
+                {{#list_research}}
+                <li class="span100 news-item" data-research-id="{{id}}">
+                    <!-- <a href="#"> -->
+                    <div class="corners slot main-slot square" data-block-height="26" data-block-width="26">
+                        <!--<img src="{{image}}/interface/sidebar-slot720.png">-->
+                    </div>
+                    <h4 class="text res-header">{{name_research}}</h4>{{LANG_LEVEL}} {{current_level}}
+                    <!-- </a> -->
+                </li>
+                {{/list_research}}
+            </ul>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="categories">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<div class="span50 book-column column-right research-page">
+    <div class="description">
+        <div class="empty-book-text hidden">Нажмите на один из элементов слева, чтобы прочесть о нем</div>
+        <div class="scroll-pane">
+            <div class="description-container scroll-content active">
+                <div class="header block-height" data-block-height="10">
+                    <h4 class="text res-header">{{first.name_research}}</h4>{{LANG_LEVEL}}
+                    {{first.current_level}}
+                    <div class="corners slot main-slot square" data-block-height="24" data-block-width="24"></div>
+                </div>
+                <div class="desc">
+                    <p><strong>{{LANG_DESCRIPTION}}</strong>: {{first.description}}
+                    </p>
+                    <h5>{{LANG_RESEARCH_NEXT_LEVEL}} {{next_level}}</h5>
+                    {{LANG_RESEARCH_AVAILIABLE_FOR_RESEARCH}}:
+                    <ul>
+                        {{#upgrade}}
+                            <li>{{.}}</li>
+                        {{/upgrade}}
+                    </ul>
+                    <h5>{{LANG_RESEARCH_REQUIRED_FOR_RESEARCH}}:</h5>
+                    <table>
+                        <tr>
+                            <th>Название</th>
+                            <th>Необходимо</th>
+                            <th>Имеется</th>
+                        </tr>
+                        <tr>
+                            <td>{{name_building}}</td>
+                            <td>Уровень {{level_upgrade}}</td>
+                            <td>Уровень {{current_level}}</td>
+                        </tr>
+                        <!--{{#list_research_resource}}-->
+                            <tr>
+                                <td><img class="res-icon" src="img/icons/resource/{{image_name}}25.png" alt="" width="32" height="32"> {{name_resource}}
+                                </td>
+                                <td>{{price}}</td>
+                                <td>{{personage_resource_value}}</td>
+                            </tr>
+                        <!--{{/list_research_resource}}-->
+                    </table>
+                    <h5 class="research-time">
+                        {{LANG_RESEARCH_TIME_FOR_RESEARCH}}:
+                        <span class="hours">{{research_hours}}</span> {{LANG_TIME_HOURS}}
+                        <span class="mins">{{research_minutes}}</span> {{LANG_TIME_MINUTES}}
+                        <span class="secs">{{research_seconds}}</span> {{LANG_TIME_SECONDS}}
+                    </h5>
+                    <h5 class="research-countdown hidden" data-updating="false">
+                        {{LANG_RESEARCH_TIME_FOR_RESEARCH_LEFT}}: <span class="hours"></span> {{LANG_TIME_HOURS}} <span
+                            class="mins"></span> {{LANG_TIME_MINUTES}} <span class="secs"></span> {{LANG_TIME_SECONDS}}
+                    </h5>
+                    <div class="description-buttons">
+                                            <!--
+                        <a href="#" id="learn" class="span33 btn-flex">{{LANG_RESEARCH_LEARN}}<em></em></a>
+                        <a href="#" id="learn-now" class="span45 offset4 btn-flex">{{LANG_RESEARCH_LEARN_NOW}}<em></em></a>
+                                            -->
+                        {{#access_learn}}
+                            <a id="learn_research" class="span33 btn-flex">{{LANG_RESEARCH_LEARN}}<em></em></a>
+                        {{/access_learn}}
+                        <a id="stop_learn_research" class="span33 btn-flex hidden">Отменить<em></em></a>
+                        {{#access_learn_now}}
+                            <a id="learn_now_research" class="span45 offset4 btn-flex" onclick="return false">
+                                {{LANG_RESEARCH_LEARN_NOW}}<em></em>
+                            </a>
+                        {{/access_learn_now}}
+                    </div>
+                    {{#access_learn_full}}
+                        <div class="description-buttons"><span>Изучение не доступно</span></div>
+                    {{/access_learn_full}}
+                    {{#access_learn_now}}
+                        <div class="learn-cost">{{LANG_RESEARCH_LEARN_FOR}}
+                            <strong>
+                                {{getPriceAmber}}
+                            </strong>
+                            <img class="res-icon" src="img/icons/resource/amber25.png" alt="" width="32" height="32">
+                        </div>
+                    {{/access_learn_now}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="description">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<!-- /RESEARCH PAGE -->
+
+<!-- QUEST PAGE -->
+<div class="span50 book-column column-left quest-page">
+    <div class="categories quest-categories">
+        <h3 class="text-corners-title span100">{{LANG_QUESTS_QUESTS}}</h3>
+
+        <div class="scroll-pane">
+            <div class="span100 scroll-content active">
+                <div class="span100">
+                    <div class="desc">
+                        <div class="corners slot main-slot square" data-block-height="26" data-block-width="26">
+                        </div>
+                        <h4 class="text res-header">{{LANG_QUESTS_MAIN_QUEST}}</h4>Произвести разведку территории<br/>
+                        <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span>
+                    </div>
+                    <table class="quests-table">
+                        <tr>
+                            <th>{{LANG_QUESTS_DAILY_QUESTS}}</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Найти артефакт <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <th>{{LANG_QUESTS_SINGLE_QUESTS}}</th>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="quest-categories">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<div class="span50 book-column column-right quest-page">
+    <div class="description quest-description">
+        <div class="empty-book-text active">Нажмите на один из элементов слева, чтобы прочесть о нем</div>
+        <div class="scroll-pane">
+            <div class="description-container scroll-content active">
+                <div class="header">
+                    <h5>Найти артефакт</h5>
+                </div>
+                <div class="desc">
+                    <p><strong>{{LANG_DESCRIPTION}}</strong>: Явление, процесс, предмет, свойство предмета или процесса,
+                        появление которого в наблюдаемых условиях по естественным причинам невозможно или маловероятно.
+                        Появление артефакта, следовательно, является признаком целенаправленного вмешательства.</p>
+                    <h5>{{LANG_QUESTS_CURRENT_PROGRESS}}:</h5>
+
+                    <p>Найден артефакт: <span class="quest-items">1</span> / <span class="quest-items-total">1</span>
+                    </p>
+                    <h5>{{LANG_QUESTS_REWARD}}:</h5>
+
+                    <div class="desc">
+                        <div class="span50 reward-item">
+                            <img class="reward-icon" src="img/icons/empty.png" alt="" width="64" height="64">
+
+                            <div class="reward-text">Золото<br/>150 000</div>
+                        </div>
+                        <div class="span50 reward-item">
+                            <img class="reward-icon" src="img/icons/empty.png" alt="" width="64" height="64">
+
+                            <div class="reward-text">Дерево<br/>150 000</div>
+                        </div>
+                        <div class="span50 reward-item">
+                            <img class="reward-icon" src="img/icons/empty.png" alt="" width="64" height="64">
+
+                            <div class="reward-text">Артефакт<br/>Шляпа</div>
+                        </div>
+                    </div>
+
+                    <div class="description-buttons">
+                        <a href="#" id="take-reward" class="span70 btn-flex">{{LANG_QUESTS_TAKE_REWARD}}<em></em></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="quest-description">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<!-- /QUEST PAGE -->
+
+
+<!-- RESOURCE PAGE -->
+<div class="span50 book-column column-left resource-page">
+    <div class="categories resource-categories">
+        <h3 class="text-corners-title span100">{{LANG_RESOURCES_RESOURCES}}</h3>
+
+        <div class="scroll-pane">
+            <div class="span100 scroll-content active">
+                <div class="span100">
+                    <div class="desc">
+                        <h4 class="text res-city"><span>{{LANG_RESOURCES_CITY}}:</span> {{city_name}}</h4>
+                        <table class="city-stats">
+                            <tr>
+                                <td colspan="2">{{LANG_RESOURCES_POPULATION}}: {{population}}
+                                    {{LANG_RESOURCES_PEOPLE}}<br/>
+                                    {{LANG_RESOURCES_INFLOW}} {{population_influx}} / {{LANG_RESOURCES_OUTFLOW}} {{population_outflow}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">{{LANG_RESOURCES_POPULATION_FREE}}: {{free_people}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{LANG_RESOURCES_GROWTH}}: {{growth}}</td>
+                                <td>{{LANG_RESOURCES_DISEASE}}: {{number_epidemic}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{LANG_RESOURCES_HAPPINESS}}: {{happiness}}</td>
+                                <td>{{LANG_RESOURCES_FAITH}}: {{faith}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{LANG_RESOURCES_TAX}}: {{tax}}</td>
+                                <td>{{LANG_RESOURCES_CRIMINALITY}}: {{crime}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <table class="resource-table">
+                        <tr>
+                            <th>{{LANG_RESOURCES_CHARACTER_RESOURCES}}</th>
+                        </tr>
+
+                        <!--{{#list_resource_personage}}-->
+                        <tr>
+                            <td data-resource-id="{{id}}" style="cursor: pointer">
+                                <img class="res-icon" src="img/icons/resource/{{name_resource}}50.png" alt="" width="64" height="64">
+
+                                <div class="reward-text">{{name}}</div>
+                            </td>
+                        </tr>
+                        <!--{{/list_resource_personage}}-->
+
+                        <tr>
+                            <th>{{LANG_RESOURCES_MAIN_RESOURCES}}</th>
+                        </tr>
+
+                        <!--{{#list_resource_basic}}-->
+                        <tr>
+                            <td data-resource-id="{{id}}" style="cursor: pointer">
+                                <img class="res-icon" src="img/icons/resource/{{name_resource}}50.png" alt="" width="64" height="64">
+
+                                <div class="reward-text">{{name}}</div>
+                            </td>
+                        </tr>
+                        <!--{{/list_resource_basic}}-->
+
+                        <tr>
+                            <th>{{LANG_RESOURCES_SPECIAL_RESOURCES}}</th>
+                        </tr>
+
+                        <!--{{#list_resource_special}}-->
+                        <tr>
+                            <td data-resource-id="{{id}}" style="cursor: pointer">
+                                <img class="res-icon" src="img/icons/resource/{{name_resource}}50.png" alt="" width="64" height="64">
+
+                                <div class="reward-text">{{name}}</div>
+                            </td>
+                        </tr>
+                        <!--{{/list_resource_special}}-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="resource-categories">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<div class="span50 book-column column-right resource-page">
+    <div class="description resource-description">
+        <div class="empty-book-text hidden">Нажмите на один из элементов слева, чтобы прочесть о нем</div>
+        <div class="scroll-pane">
+            <div class="description-container scroll-content active">
+                <div class="header block-height" data-block-height="10" style="min-height: 90px;">
+                    <h4 class="text res-header">{{resource_name}}</h4>
+
+                    <div class="corners slot main-slot square" data-block-height="24" data-block-width="24">
+                        <img src="img/icons/resource/{{name_resource}}100.png" alt="" style="width: 100%;height: 100%;">
+                    </div>
+                </div>
+                <div class="desc">
+                     <p><strong class="resource-name">{{resource_name}}</strong>: {{resource_description}}</p>
+
+                <div class="resource-information">
+                    <h5>{{LANG_RESOURCES_RESOURCE_INFORMATION}}:</h5>
+                    <table>
+                        <tr>
+                            <th>{{LANG_RESOURCES_REVENUE}}</th>
+                            <th>{{LANG_RESOURCES_EXPENDITURE}}</th>
+                            <th>{{LANG_RESOURCES_TOTAL}}</th>
+                        </tr>
+                        <tr>
+                            <td>{{income}}</td>
+                            <td>{{resource_consumption}}</td>
+                            <td>{{in_total_resources}}</td>
+                        </tr>
+                    </table>
+                </div>
+
+                    <table class="city-stats">
+
+                        <tr>
+                            <td  class="resource-in-city" colspan="2">{{LANG_RESOURCES_RESOURCE_IN_CITY}}: {{total_number_resources_city}}</td>
+                        </tr>
+                        <tr>
+                            <td class="resource-in-rome" colspan="2">{{LANG_RESOURCES_RESOURCE_IN_ROME}}: 0</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">{{LANG_RESOURCES_RESOURCE_TOTAL}}: {{total_number_resources}}</td>
+                        </tr>
+                    </table>
+                    <h5>{{LANG_RESOURCES_PRODUCING_BONUS}}:</h5>
+                    {{LANG_RESOURCES_FOR_THIS_CITY}} <br>
+                    5% советник
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="resource-description">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<!-- /RESOURCE PAGE -->
+</div>
+</div>
+</div>
+
+<!-- RESOURCE BUILDINGS PAGE -->
+<script type="text/html" id="ResourceBuildingPageTmpl" src="templates/book/resource_building/default.html"></script>
+<script type="text/html" id="NewBuildingTmpl" src="templates/book/shared/new_building_item.html"></script>
+<!-- /RESOURCE BUILDINGS PAGE -->
+
+<!-- MAIN BUILDINGS PAGE -->
+<script type="text/html" id="BuildingItemTmpl" src="templates/book/shared/building_item.html"></script>
+<script type="text/html" id="FieldItemTmpl" src="templates/book/shared/field_item.html"></script>
+<script type="text/html" id="BaseBookTabTmpl" src="templates/book/tabs/base_tab.html"></script>
+<script type="text/html" id='ImproveTabTmpl' src="templates/book/tabs/improve_tab.html"></script>
+<script type="text/html" id="UnitsTabTmpl" src="templates/book/tabs/units_tab.html"></script>
+<script type="text/html" id="TabItemTmpl" src="templates/book/shared/tab_item.html"></script>
+<script type="text/html" id="TimeItemTmpl" src="templates/book/shared/time_item.html"></script>
+<script type="text/html" id="ImproveSelectedTmpl" src="templates/book/tabs/improve_selected.html"></script>
+<script type="text/html" id="UnitHireTmpl" src="templates/book/main_building/unit_hire.html"></script>
+<script type="text/html" id="MainBuildingPageTmpl" src="templates/book/main_building/default.html"></script>
+<!-- /MAIN BUILDINGS PAGE -->
+
+<!-- Mail template -->
+<script type="text/html" id="MailItemTmpl" src="templates/book/mail/items/mail_item.html"></script>
+<script type="text/html" id="MailBaseTmpl" src="templates/book/mail/default.html"></script>
+<script type="text/html" id="privateMailTmpl" src="templates/book/mail/private.html"></script>
+<script type="text/html" id="MailItemsBaseTmpl" src="templates/book/mail/items/mail_items.html"></script>
+<script type="text/html" id="sendMailTmpl" src="templates/book/mail/send_page.html"></script>
+<!-- /Mail -->
+
+<!-- map item template -->
+<script type="text/html" id="mapItemTmpl" src="templates/map/map_item.html"></script>
+<script type="text/html" id="mapRootTmpl" src="templates/map/root.html"></script>
+<!-- /map -->
+
+<!-- toggle templates-->
+<script type="text/html" id="mapBaseTmpl" src="templates/map/controls/toggle/default.html"></script>
+<script type="text/html" id="mapUserTmpl" src="templates/map/controls/toggle/user.html"></script>
+<script type="text/html" id="mapNoUserTmpl" src="templates/map/controls/toggle/no_user.html"></script>
+<script type="text/html" id="mapDetailTmpl" src="templates/map/controls/toggle/detail.html"></script>
+
+<script type="text/html" id="emoticonTmpl" src="templates/interface/_emoticon.html"></script>
+<!--/toggle-->
+
+<script type="text/html" id="leftMenuItemTmpl" src="templates/aside/left_menu_item.html"></script>
+<script type="text/html" id="cityTmpl" src="templates/interface/city_item.html"></script>
+<script type="text/html" id="queryBuilding" src="templates/interface/query_building.html"></script>
+<script type="text/html" id="queryImprove" src="templates/interface/query_improve.html"></script>
+<script type="text/html" id="queryResearch" src="templates/interface/query_research.html"></script>
+<script type="text/html" id="querySquad" src="templates/interface/query_squad.html"></script>
+<script type="text/html" id="resourceBarTmpl" src="templates/interface/resource_bar.html"></script>
+
+<!-- move units -->
+<script type="text/html" id="moveUnitTmpl" src="templates/map/move_units/blocks/unit.html"></script>
+<script type="text/html" id="moveResourceTmpl" src="templates/map/move_units/blocks/resource.html"></script>
+<script type="text/html" id="moveLocationTmpl" src="templates/map/move_units/blocks/location.html"></script>
+
+<script type="text/html" id="moveUnitTabTmpl" src="templates/map/move_units/tabs/units.html"></script>
+<script type="text/html" id="moveResourceTabTmpl" src="templates/map/move_units/tabs/resources.html"></script>
+<script type="text/html" id="moveLocationTabTmpl" src="templates/map/move_units/tabs/locations.html"></script>
+<script type="text/html" id="moveManagerTmpl" src="templates/map/move_units/manager.html"></script>
+<!-- /move units-->
+
+
+<div class="preloader wrap row-fluid corners wrap-corners close-corners">
+    <div class="corners-content">
+        <div class="span100">
+            <div class="row-fluid">
+                <div class="logo preload"></div>
+
+                <div class="span100 block logo-bar">
+                    <div class="corners block-corners wood add-offset" data-block-height="10">
+                    </div>
+                </div>
+
+                <div class="preloader-bottom">
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar-container">
+                            <!-- <div class="progress-bar honor">
+                                <div class="progress-bar-text"></div>
+                                <em></em>
+                            </div> -->
+                            <em></em>
+
+                        </div>
+                    </div>
+
+                    <div class="span100 corners stone-simple advice" data-block-height="16.5">
+                        <div class="corners-content">
+                            <div class="span100 corners paper-chat" data-block-height="14.5">
+                                <div class="corners-content">
+                                </div>
+                                <div class="tr"></div>
+                                <div class="bl"></div>
+                                <div class="br"></div>
+                            </div>
+                        </div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tr"></div>
+    <div class="bl"></div>
+    <div class="br"></div>
+    <div class="tl"></div>
+</div>
+
+<!-- <script src="js/lib/jquery-1.8.2.min.js"></script> -->
+<script src="lang/ru_RU.js"></script>
+<script src="js/lib/jquery-1.9.1.min.js"></script>
+<script src="js/lib/jquery-migrate-1.1.1.min.js"></script>
+<script src="js/lib/jquery.placeholder.min.js"></script>
+<script src="js/lib/jquery.jsonp.min.js"></script>
+<script src="js/lib/jquery-ui-1.10.2.custom.min.js"></script>
+<script src="js/lib/jquery.ui.touch-punch.min.js"></script>
+<script src="js/lib/jquery.mousewheel.js"></script>
+<script src="js/lib/jquery.queryloader2.js"></script>
+<script src="js/lib/jquerymx-3.2.custom.min.js"></script>
+<script src="js/lib/fancybox/jquery.fancybox.js"></script>
+<script src="js/lib/md5.min.js"></script>
+<script src="js/lib/mustache.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/bootstrap-dropdown.js"></script>
+<script src="js/lib/jquery.cssemoticons.min.js"></script>
+<script src="js/tools.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="lang/tips-ru_RU.js"></script>
+<script src="js/lib/raphael-min.js"></script>
+<script src="js/lib/timescufon.js"></script>
+
+<script src="js/book/book.js"></script>
+<script src="js/book/research.js"></script>
+<script src="js/book/resource.js"></script>
+
+<!-- Load component window-book_pages buildings -->
+
+
+<script src="js/book/FactoryBook.js"></script>
+
+
+
+<script src="js/interface.js?v1.1"></script>
+<!--<script src="js/buttons.js"></script>-->
+<script>
+    document.write(unescape('%3Cscript src="' + langUrl + '.js"%3E%3C/script%3E'));
+</script>
+<script>
+    $('.locale').each(function () {
+        var el = $(this);
+        el.html(Mustache.render(el.html(), lang));
+    });
+</script>
+
+
+
+<script src="js/createpers.js"></script>
+<script src="js/book/quest.js"></script>
+
+<!--<script src="http://46.249.52.227:8856/socket.io/socket.io.js"></script>
+<script src="js/socket/observer-socket.js"></script>
+<script src="js/socket/client.js"></script>-->
+
+<script src="js/lib/knockout-2.2.1.js"></script>
+<script src="js/lib/knockout.mapping.js"></script>
+<script src="js/helper/knockout.array.callbacks.js"></script>
+<script src="js/book/update/updateInterval.js"></script>
+<script src="js/models.js"></script>
+<script src="js/book/models.book.js"></script>
+<script src="js/controls/map.toggle.js"></script>
+<script src="js/controls/emoticons.js"></script>
+<script src="js/models.map.js"></script>
+<script src="js/models.map.move.js"></script>
+<script src="js/models.user.js"></script>
+<script src="js/models.location.js"></script>
+<script src="js/models.location.city.js"></script>
+<script src="js/book/models.book.mail.js"></script>
+<script src="js/book/building/models.book.mainBuilding.js"></script>
+<script src="js/book/building/models.book.resourceBuilding.js"></script>
+<script src="js/chat.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    $(".fancybox").click(function(event) {
+        event.preventDefault();
+        $.fancybox.open({
+            href : $(this).attr('href'),
+            type : 'iframe',
+            padding : 0,
+            width: 1024,
+            height: 1000,
+            hideOnOverlayClick : true,
+            enableEscapeButton : true,
+            autoResize : true,
+            onClose : function() {redrawInterface();}
+        });
+    });
+});
+</script>
+</body>
+</html>

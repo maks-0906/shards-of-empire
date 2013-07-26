@@ -1,0 +1,72 @@
+.carousel-wrapper {
+    margin: 0 auto;
+    position: relative;
+    border: 0 none;
+}
+
+
+.carousel-wrapper .photo-credits {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    font-size: 13px;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
+    opacity: .66;
+}
+
+.carousel-wrapper .photo-credits a {
+    color: #fff;
+}
+
+/** Carousel **/
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 444px;
+    height: 128px;
+	margin-left: 25px;
+}
+
+.carousel ul {
+    width: 20000em;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel li {
+    float: left;
+	margin-left: 23px;
+}
+
+/** Carousel Controls **/
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 0;
+    width: 27px;
+    height: 128px;
+    text-align: center;
+    background: url('../images/carousel/carousel-control-bg.png') no-repeat 0 0;
+    color: #5a3a30;
+    text-decoration: none;
+    font: 24px/27px Arial, sans-serif;
+	padding: 50px 0 0 0;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.carousel-control-prev:hover span,
+.carousel-control-next:hover span {
+    display: block;
+}

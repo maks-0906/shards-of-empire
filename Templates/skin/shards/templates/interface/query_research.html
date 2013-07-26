@@ -1,0 +1,18 @@
+<div class="corners slot main-slot square container-slot" data-block-height="6" style="height: 40px; width: 40px;"><div class="corners-content">
+    <span style="color:white!important; font-size: 0.7em!important;margin-bottom: 20px">
+        <span data-bind="text: research.name"></span>
+        "<span data-bind="text: lvl"></span>" уровня
+    </span>
+    <div class="desc center" style="margin-left: -21px;">
+        <div class="slot-timer" style="width:110%">
+            <span class="hours" data-bind="text: processTime.hours"></span>:
+            <span class="mins" data-bind="text: processTime.min"></span>:
+            <span class="secs" data-bind="text: processTime.secs"></span>
+
+            <div class="slot-progress-bar-container center" style="margin-left: -22px;">
+                <div class="slot-progress-bar" data-bind="style:{width: processTime.current() / time.current()*100+'%'}"></div>
+            </div>
+        </div>
+
+    </div>
+</div><div class="tr"></div><div class="bl"></div><div class="br"></div></div>

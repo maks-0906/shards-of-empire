@@ -1,0 +1,12 @@
+<div id="main-build-tabs-improve" data-bind="with: improve">
+    <table class="build-table-general" data-bind="foreach: renderImprove">
+        <tr >
+            <td data-bind="attr:{class: buildStyle}, text: improve.name"></td>
+            <td data-bind="attr:{class: style}">
+                <span data-bind="text:$root.lang().LANG_REQUIRED_LEVEL_SHORT"></span>
+                <span data-bind="text: required_level_building"></span>
+            </td>
+            <td><a href="#" class="btn-arrow gt" data-bind="click: $root.book.selected().improve.onclick"></a></td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,12 @@
+<!-- ko foreach: items -->
+
+<li class="span100 news-item" data-bind="click: enable? $parent.onclick : function(){}, style:{opacity: enable? 1 : .25}">
+
+    <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style='height: 83px; width: 83px;'>
+        <div class="tr"></div><div class="bl"></div><div class="br"></div>
+    </div>
+    <h4 class="text main-header"
+        data-bind="title: name, text: name">
+    </h4>
+</li>
+<!-- /ko -->

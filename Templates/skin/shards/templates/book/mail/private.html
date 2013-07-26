@@ -1,0 +1,39 @@
+<!-- ko with: selected.mail-->
+    <!-- ko if: is_notice == "0" && from != null -->
+        <div class="btn50">
+            <a href="#" class="span50 btn-flex" data-bind="click: function(){$parent.sendMessage.sendToPage($data);}">
+                Ответить
+                <em></em>
+            </a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="from">
+            <span class="left vert">От кого</span>
+
+            <div class="btn33">
+                <a href="#" class="span33 btn-flex" data-bind="click: $parent.sendMessage.openPage, text: from.nick">
+                    <em></em>
+                </a>
+            </div>
+        </div>
+    <!-- /ko -->
+    <!-- ko if: is_notice == "1" -->
+       <h2>Уведомление</h2>
+    <!-- /ko -->
+    <!-- ko if: is_notice == "0" && from == null -->
+       <h2>Отправленное сообщение</h2>
+    <!-- /ko -->
+    <table class="mail-content">
+        <tbody>
+        <tr>
+            <td class="mail-header"><i data-bind="text: subject"></i></td>
+        </tr>
+        <tr>
+            <td class="mail-body">
+                <p class="l" data-bind="html: body">
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+<!-- /ko -->

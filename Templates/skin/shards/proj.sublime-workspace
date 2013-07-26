@@ -1,0 +1,1387 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"auth",
+				"auth-page"
+			],
+			[
+				"blo",
+				"blockHeight"
+			],
+			[
+				"no",
+				"noresize"
+			],
+			[
+				"pap",
+				"paper"
+			],
+			[
+				"ad",
+				"addClass"
+			],
+			[
+				"paper",
+				"paperMinHeight"
+			],
+			[
+				"pape",
+				"paper-chat"
+			],
+			[
+				"corne",
+				"corners-content"
+			],
+			[
+				"popup",
+				"popupHeader"
+			],
+			[
+				"show",
+				"showMessagePopup"
+			],
+			[
+				"block",
+				"blockHeight"
+			],
+			[
+				"sq",
+				"sqEl"
+			],
+			[
+				"scrollStep",
+				"scrollStepMultiplier"
+			],
+			[
+				"max",
+				"maxValue"
+			],
+			[
+				"remove",
+				"removeAttr"
+			],
+			[
+				"btn-",
+				"btn-flex"
+			],
+			[
+				"fa",
+				"fancybox"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"pre",
+				"preventDefault"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"padding-",
+				"padding-left"
+			],
+			[
+				"colum",
+				"column-right"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"la",
+				"largePath"
+			],
+			[
+				"new",
+				"news"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"backg",
+				"background-position"
+			],
+			[
+				"cart",
+				"cartOffset"
+			],
+			[
+				"img",
+				"imgOffset"
+			],
+			[
+				"offse",
+				"imgOffset"
+			],
+			[
+				"ap",
+				"appendTo"
+			],
+			[
+				"item",
+				"item-info"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"size",
+				"size-table"
+			],
+			[
+				"u",
+				"podrobno-cart-ui-sprite"
+			],
+			[
+				"a",
+				"active"
+			],
+			[
+				"zoom",
+				"zoomPosition"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"co",
+				"column-right"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"bac",
+				"background-position"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"window",
+				"windowLoad"
+			],
+			[
+				"td",
+				"td-n	text-decoration: none;"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"next",
+				"nextEl"
+			],
+			[
+				"select",
+				"selectVal"
+			],
+			[
+				"se",
+				"selected"
+			],
+			[
+				"set",
+				"setVal"
+			],
+			[
+				"expa",
+				"expand"
+			],
+			[
+				"br",
+				"br	border-right"
+			],
+			[
+				"resea",
+				"researchId"
+			],
+			[
+				"in",
+				"inside"
+			],
+			[
+				"list",
+				"list-style-position"
+			],
+			[
+				"column-",
+				"column-right"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"repe",
+				"repeat-y"
+			],
+			[
+				"handl",
+				"handleSize"
+			],
+			[
+				"news",
+				"news-item"
+			],
+			[
+				"reve",
+				"reverseResizeData"
+			],
+			[
+				"resizeS",
+				"reverseResizeSelector"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"start",
+				"start-data"
+			],
+			[
+				"toggle",
+				"toggleClass"
+			],
+			[
+				"scroll",
+				"scrollData"
+			],
+			[
+				"scroll-bar",
+				"scroll-bar-wrap"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"ori",
+				"originalSize"
+			],
+			[
+				"d",
+				"direction"
+			],
+			[
+				"bloc",
+				"block-height"
+			],
+			[
+				"hide",
+				"hideHeight"
+			],
+			[
+				"toggleCha",
+				"toggleChatData"
+			],
+			[
+				"toggl",
+				"toggling"
+			],
+			[
+				"col",
+				"column-block-container"
+			],
+			[
+				"rever",
+				"reverseResizeHeight"
+			],
+			[
+				"side",
+				"sidebarSelector"
+			],
+			[
+				"input",
+				"inputTimeout"
+			],
+			[
+				"sta",
+				"startData"
+			],
+			[
+				"star",
+				"startData"
+			],
+			[
+				"rem",
+				"removeClass"
+			],
+			[
+				"stat",
+				"start-data-avatar"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"outer",
+				"outerHeight"
+			],
+			[
+				"pro",
+				"proportion"
+			],
+			[
+				"corner",
+				"corners-content"
+			],
+			[
+				"dat",
+				"data"
+			],
+			[
+				"conten",
+				"Content"
+			],
+			[
+				"s",
+				"span"
+			],
+			[
+				"paddi",
+				"padding-counted"
+			],
+			[
+				"data",
+				"data-scroll"
+			],
+			[
+				"con",
+				"container"
+			],
+			[
+				"hi",
+				"hidden"
+			],
+			[
+				"scrollbar",
+				"scrollbarWrap"
+			],
+			[
+				"han",
+				"handleSize"
+			],
+			[
+				"hand",
+				"handleHelper"
+			],
+			[
+				"mo",
+				"moveTo"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"botto",
+				"bottomElem"
+			],
+			[
+				"left",
+				"leftBottom"
+			],
+			[
+				"oute",
+				"outerHeight"
+			],
+			[
+				"scrollb",
+				"scrollbarWrap"
+			],
+			[
+				"also",
+				"alsoResizeSelector"
+			],
+			[
+				"to",
+				"toggleClass"
+			],
+			[
+				"slot",
+				"slotCount"
+			],
+			[
+				"sc",
+				"scrollbar"
+			],
+			[
+				"orderWay",
+				"orderWayNum"
+			],
+			[
+				"index",
+				"indexOf"
+			],
+			[
+				"buttn",
+				"buttonsArray"
+			],
+			[
+				"butto",
+				"buttonsArray"
+			],
+			[
+				"but",
+				"buttonsArray"
+			],
+			[
+				"conaine",
+				"containerTop"
+			],
+			[
+				"corners",
+				"corners-content"
+			],
+			[
+				"scrollC",
+				"scrollContentHeight"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"hea",
+				"headerText"
+			],
+			[
+				"pop",
+				"popup"
+			],
+			[
+				"remo",
+				"removeClass"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"scr",
+				"scroll-bar"
+			],
+			[
+				"scrol",
+				"scrollValue"
+			],
+			[
+				"stone",
+				"stone-simple"
+			],
+			[
+				"rep",
+				"repeat-y"
+			],
+			[
+				"backgro",
+				"background-repeat"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 17262,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.html",
+			"settings":
+			{
+				"buffer_size": 81342,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "locations.html",
+			"settings":
+			{
+				"buffer_size": 13012,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/interface.css",
+			"settings":
+			{
+				"buffer_size": 104161,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "var wrapOffsetTop, wrapOffsetLeft; // Смещение span100 относительно враппера\nvar mqPrefix='mq-'; // Префикс для классов Media Queries в IE\n// Разрешения для Media Queries \nvar mqWidthArray=[1920, 1600, 1366, 1280, 1024, 980];\nvar mqHeightArray=[960, 720, 640];\nvar currentHeight=0;\nvar currentWidth=0;\nvar locale='ru_RU', // Язык локализации. Должен приходить с сервера\n	langUrl='lang/';\n// var timesCufonData={\n// 	TG-gradient=\"90-#F3FF24-#AAD826:30-#99CE24:50-#F3FF24\",\n// 	TG-font-family=\"timesCufon\",\n// 	TG-font-size=\"12px\",\n// 	TG-font-weight=\"700\",\n// 	TG-font-style=\"normal\",\n// 	TG-text-top=\"50\",\n// 	TG-text-left=\"50\",\n// }\n	//Localization\n	langUrl+=locale;\n\n// preloader ini	\n	if($('.main-page')[0]){		\n		$(document).on('ready', function(){\n			var tipNum=parseInt(Math.random()*tips.length, 10)\n			$('.advice').find('.paper-chat').children('.corners-content').html(tips[tipNum]);\n			$(\"body\").queryLoader2({\n				percentage: true,\n				onComplete: function(){\n					// console.log('loaded')\n					windowLoad();\n				}\n			});\n		});\n	} else {\n		$(window).on('load', windowLoad);\n	}\n\nfunction  windowLoad(){\n	// создание блоков с закругленными углами\n	createCorners();\n\n	wrapOffsetTop=$('.wrap').children('.corners-content').position().top/2\n	wrapOffsetLeft=$('.wrap').children('.corners-content').position().left/2;\n\n	$('input[placeholder],textarea[placeholder]').placeholder();\n	if(lteIE8()){ // Если IE8 - классы для Media Queries\n		mediaQueriesClass();\n	}\n\n\n\n	// перерисовываем интерфейс\n	redrawInterface();\n\n	\n	// В окне начальных данных открываем первую страницу\n	openStartDataPage(0); \n\n\n	// Обработчики событий\n	\n	// Скроллить вниз при открытии таба\n	$('#myTab a').on('shown', function (e) {\n		e.preventDefault()\n	  	// var scrollValue=$($(this).attr('href')).data('scroll');\n	  	// if(!scrollValue){	  \n	  		scrollValue=0;\n	  	// }\n	  	scrollInit($('.dialog-scroll'));\n	  	$('.dialog-scroll').children('.scroll-bar').slider('value', scrollValue);\n	})\n	// перерисовка интерфейса\n	$(window).on('resize', function(e) {\n  		if (e.target == window)	{  			\n		   var windowHeight = $(window).height();\n		   var windowWidth = $(window).width();\n\n		   if (currentHeight != windowHeight || currentWidth != windowWidth) {\n\n		      if(lteIE8()){ // Если IE8 - классы для Media Queries\n					mediaQueriesClass();\n				}\n				// CHAT RESIZE\n				if($('.messenger')[0]){\n					chatResizeDestroy();\n				}\n				// перерисовываем интерфейс\n				redrawInterface();\n				// убираем класс, чтобы пересчитать паддинг скроллбара, если он изменился в media queries\n				$('.scroll-bar-wrap').removeClass('padding-counted');\n				// реинициализируем скроллы\n				// scrollInit($('.scroll-bar-wrap'));\n\n		      currentHeight = windowHeight;\n		      currentWidth = windowWidth;\n		   }\n  		}\n	});\n\n	$('#register-button').on('click', function(e){\n		e.preventDefault();\n		switchFormType('register');\n	});\n	$('#already-registered, #authorize').on('click', function(e){\n		e.preventDefault();\n		switchFormType('login');\n	});\n	$('#restore-pass').on('click', function(e){\n		e.preventDefault();\n		switchFormType('restore');\n	});\n	function switchFormType(type){\n		$('#form-login').fadeOut(function(){\n			$('[class*=\"form-\"]:not(.form-label, .wrap-form-btn)').addClass('hidden');\n			$('.form-'+type).removeClass('hidden');\n			$('#form-login').fadeIn();\n		});\n	}\n\n	// Регистрация - Готово\n	// $('.done').on('click', function(){		\n	// 		// Отправить запрос\n	// 				var data={\n	// 					key:0,\n	// 					message:'text',\n	// 					captcha:'image url'\n	// 				}\n	// 				showMessagePopup(data.key, data.message);\n				\n	//});\n\n\n	// Close Popup\n	$('.message-box').find('.close, .accept').on('click', function(e){\n		e.preventDefault();\n		$('.overlay-wrapper').addClass('hidden');\n	});\n\n\n\n\n	// Глобальные исследования\n	$('.book-column').find('.news-item').on('click', function(){\n		$('.book-column').find('.news-item.active').removeClass('active');\n		$(this).addClass('active');\n		var researchId=$(this).data('research-id');\n		openResearchPage(researchId);\n	});\n	$('#learn, #learn-now').on('click', function(){\n		var researchId=$('.book-column').find('.news-item.active').data('research-id'),\n			now=false;\n		if($(this).attr('id')==\"learn-now\"){\n			now=true;			\n		}\n		learnRequest(researchId, now);\n	});\n	function openResearchPage(id){\n		$('.description-buttons, .learn-cost, .research-time').removeClass('hidden');\n		$('.research-countdown. .empty-book-text').addClass('hidden');\n		//TODO: Получать с сервера все данные для страницы исследования и выводить в странице\n	}\n	function learnRequest(id, now){\n		$('.description-buttons, .learn-cost, .research-time').addClass('hidden');\n		$('.research-countdown').removeClass('hidden');\n		// TODO: Отправлять запрос на изучение\n		// По окончанию запроса:\n		if(now){\n			// Если «Изучить сейчас», получать эту же страницу следующего уровня\n			openResearchPage(id);\n		} else{\n			// Иначе запускать таймер изучения\n			//TODO: requiredTime должно приходить с сервера в секундах\n			var requiredTime=10;\n			startResearchTimer(requiredTime, id);\n			\n		}	\n	}\n	function startResearchTimer(requiredTime, id){\n		var countdownInterval=setInterval( function(){\n				var time= new Date(0, 0, 0, 0, 0, 0, 0 );\n				time.setSeconds(requiredTime);\n				$('.research-countdown').children('.hours').html(time.getHours());\n				$('.research-countdown').children('.mins').html(time.getMinutes());\n				$('.research-countdown').children('.secs').html(time.getSeconds());\n				if(requiredTime*1000>0){\n					requiredTime--;\n				}\n				else {\n					clearInterval(countdownInterval)\n					openResearchPage(id);\n				}\n			},1000);\n	}\n\n\n// Открытие окна ресурсов\n	$('.resources').children('.corners-content').on('click', function(){\n		openBook('resource-page');\n	})\n\n}\n\n\n// перерисовка интерфейса\nfunction redrawInterface() {\n\n	var wIndex = widthIndex($(window)),\n		hIndex = heightIndex($(window));\n\n	var blockHeightArray=[],\n		squareArray=[],\n		sidebarSquareArray=[],\n		centerArray=[],\n		vcenterArray=[],\n		formBtnArray=[]\n		cornersDotArray=[];\n\n	// Пересчет высоты враппера относительно окна\n	$('.preloader').show();\n	$('.wrap').addClass('hidden invisible'); // Скрываем, чтобы полоса прокрутки не искажала размер окна в рассчетах\n	var height=$(window).height()-$('.wrap').children('.bl').height();\n	var width=$(window).width()-$('.wrap').children('.tr').width();\n	$('.wrap').height(height);\n	$('.wrap').width(width);\n	$('.wrap').removeClass('hidden'); // снова показываем\n	var hidden=$('.hidden');\n	hidden.removeClass('hidden'); 	// Показываем все элементы, чтобы правильно их просчитать\n	$('.corners, .block-height').each(function(i,elem) { // пересчет высоты всех блоков относительно враппера\n		var el=$(this);\n		var bhEl={\n			el:el,\n			height:blockHeight(el)\n		}\n		blockHeightArray.push(bhEl);\n	});\n\n	// Пересчет квадратных блоков\n	$('.wrap-form-btn').children('.square').each( function(){\n		var el=$(this);\n		var btnEl={\n			el:el,			\n			outerHeight:$('.input-btn-container').height()-el.find('.bl').height()\n		}\n		formBtnArray.push(btnEl);\n	});\n\n	for(var i in formBtnArray){\n		formBtnArray[i].el.outerHeight(formBtnArray[i].outerHeight);\n		formBtnArray[i].el.outerWidth(formBtnArray[i].outerHeight);\n	}\n\n	for(var i in blockHeightArray){\n		blockHeightArray[i].el.css('height', blockHeightArray[i].height);\n	}\n	$('.main-sidebar').each(function(){\n		var sidebar=$(this),\n			height=sidebar.height(),\n			slotCount,\n			width;\n\n		slotCount=sidebar.find('.slot').length;\n		width=height/slotCount*0.85;\n		sidebar.width(width);\n		$('.content-container').removeAttr('style').width($('.content-container').width() - sidebar.outerWidth()-1);\n		var cornersContent=sidebar.children('.corners').children('.corners-content')\n		cornersContent.height(cornersContent.height()+cornersContent.nextAll('.bl').height());\n	});\n	$('.square').each(function(i,elem) {\n		var el=$(this);\n		var sqEl={\n			el:el,\n			width:blockWidth(el)\n		}\n		if(el.hasClass('container-slot')){\n			sqEl.width=blockHeight(el);\n		}\n		squareArray.push(sqEl);\n	});\n	for(var i in squareArray){\n		squareArray[i].el.width(squareArray[i].width);\n		squareArray[i].el.height(squareArray[i].el.width());\n	} \n	\n\n	$('.column-block-container').each( function(){\n		$(this).height($(this).height()-$(this).position().top);\n	});\n\n	// Пересчет высоты (чтобы кнопки помещались в панели)\n	$('.btn-enter:not(.square)').each(function(){\n		$(this).height($(this).height()-$(this).find('.bl').height()/4); // /2\n	})\n	// обработка нетянущихся элементов\n	$('.unresizable').each(function(){\n		var el=$(this);\n		if(el.hasClass('proportion')){\n			var proportion=el.data('proportion');\n			el.width(el.outerHeight()*proportion);\n		}\n		else {\n			var	width=el.outerWidth(),\n				prev=el.prev(),\n				offset;\n			prev.css({'padding-right':'', 'margin-right': ''});\n			offset=parseInt(prev.css('padding-right'), 10)+width;\n			prev.css({'padding-right':offset, 'margin-right': -width});\n		}\n	});\n	// центирование блоков (по горизонтали)\n	$('.center').each(function(i,elem) {\n		var el=$(this);		\n		// el.removeAttr('style');\n		var cEl={\n				el:el,\n				mrgnLeft:0 \n			},\n			offset = wrapOffsetLeft,\n			fullWidth=el.outerWidth()+el.find('.tr').width(),\n			pCornerWidth=0; // parent corner width\n\n		if(el.hasClass('btn-text') || el.hasClass('main-slot')){\n			pCornerWidth=el.closest('.corners').find('.tr').width();\n		}\n		if(!el.closest('.sidebar')[0] || el.hasClass('desc')){\n			offset=0;\n		}\n		cEl.mrgnLeft=-offset-(fullWidth)/2+pCornerWidth;\n		centerArray.push(cEl);\n	});\n\n	// центирование блоков (по вертикали)\n	$('.vcenter, .btn-text .corners-content').each(function(i,elem) {\n		var el=$(this);		\n		// el.removeAttr('style');\n		var vcEl={\n				el:el,\n				mrgnTop:'0' // margin-top\n			},\n			offset =0,\n			fullHeight=el.outerHeight()+el.find('.bl').height(),\n			containerHeight=el.parent('.corners-content').parent('.corners').height()+el.parent('.corners-content').parent('.corners').children('.bl').height();\n			// containerTop=el.parent('.corners-content').position().top;\n\n		if(el.closest('.sidebar')[0]){\n			offset= wrapOffsetTop;\n		}\n		vcEl.mrgnTop=offset+(containerHeight-fullHeight)/2;\n		vcenterArray.push(vcEl);\n	});\n\n	// Выравнивание блоков в сайдбаре по вертикали\n	$('.sidebar').each(function(){\n		var sidebar=$(this),\n			El={\n				sidebar:sidebar,\n				mrgnTop:'0',\n				mrgnBottom:'0'\n			},\n			blocksCount=sidebar.find('.slot').length,\n			totalHeight=sidebar.height(),\n			squareHeight=0,\n			diff,\n			margin;\n\n			if(sidebar.hasClass('main-sidebar')){\n				var cornersContent=sidebar.children('.corners').children('.corners-content');\n				cornersContent.removeAttr('style');\n				totalHeight=cornersContent.height();\n			}\n\n			for(var i=0; i<blocksCount; i++){\n				var block=$(sidebar.find('.slot')[i]);\n				squareHeight+=block.height()+parseInt(block.css('padding-top'),10)/*+$(block).find('.bl').height()*/;\n			}\n			diff=totalHeight-squareHeight;\n			margin=diff/(blocksCount+1);\n			El.mrgnTop=(margin-sidebar.find('.slot').find('.bl').height())+'px';\n			El.mrgnBottom=margin+'px';\n		sidebarSquareArray.push(El);\n	});\n\n	$('.corner-dot').each(function(){\n		var el=$(this),\n			parent=el.parent('.corners-content'),\n			vOffset=0,\n			hOffset=0,\n			cornerEl={\n				el: el,\n				elPosition:{}\n			};\n			el.removeAttr('style')\n			if(parent[0]){\n				hOffset=parent.position().left;\n				vOffset=parent.position().top;\n			}\n\n			if(el.hasClass('top')){\n				cornerEl.elPosition.top=el.position().top-vOffset;\n			}\n			\n			if(el.hasClass('bottom')){\n				cornerEl.elPosition.bottom=parseInt(el.css('bottom'), 10)-vOffset - parent.parent('.corners').children('.br').height();\n			}\n				\n\n			if(el.hasClass('left'))\n				cornerEl.elPosition.left=el.position().left-hOffset;\n\n			if(el.hasClass('right'))\n				cornerEl.elPosition.right=parseInt(el.css('right'), 10)-vOffset - el.closest('.corners').children('.br').width()/2;\n			cornersDotArray.push(cornerEl);\n	});\n	             	\n\n	for(var i in centerArray){\n		centerArray[i].el.css('margin-left',centerArray[i].mrgnLeft);\n	}\n	for(var i in vcenterArray){\n		vcenterArray[i].el.css('margin-top', vcenterArray[i].mrgnTop);\n	}\n	for(var i in sidebarSquareArray){\n		sidebarSquareArray[i].sidebar.find('.slot').css({ 'margin-bottom': sidebarSquareArray[i].mrgnBottom }).filter(':eq(0)').css({'margin-top': sidebarSquareArray[i].mrgnTop});\n	}\n\n	for(var i in cornersDotArray){\n		var elPosition=cornersDotArray[i].elPosition;\n		for(var j in elPosition){\n			cornersDotArray[i].el.css(j, elPosition[j]);			\n		}\n		$('.sidebar-dot-bottom').css('left', $('.sidebar-dot-top').position().left+$('.sidebar-dot-bottom').width()/2);\n	}\n		// расчет scroll-content для locations\n	if($('.location-scroll')[0]){\n		var scrollContent=$('.location-scroll').find('.scroll-content'),\n			scrollContentHeight=0;\n	     	scrollContent.children('.corners').each(function(){\n	     		scrollContentHeight+=$(this).height() + $(this).children('.bl').height();\n	     	});\n	     	scrollContent.height(scrollContentHeight);\n\n	     	// расчет scroll-pane для locations\n		var scrollPane=$('.location-scroll').find('.scroll-pane'),\n			parentLeft=scrollPane.parent().position().left;\n		scrollPane.css('left',parentLeft/2);\n	}\n	// RaphaelJS gradient for text\n	$('.text-gradient').each(function(i,el){\n        var $el = $(el)\n            \n            if($el.hasClass('TextGradientDone'))\n            	$el.text($el.data('text')).removeClass('TextGradientDone');\n            else\n            	$el.data('text', $el.text());\n            var hiddenContainer=$el.closest('.hidden');\n            	hiddenContainer.removeClass('.hidden');\n		var text = $el.text() || '',\n			gradient = \"90-#7f786f-#fff8f0\" ,\n			// gradient = \"90-#F3FF24-#AAD826:30-#99CE24:50-#F3FF24\",\n            anchor = \"middle\",\n            glowWidth=4,\n            offset=2,\n            modifier=0.2,\n            fontFamily = 'timesCufon',\n            fontWeight =parseInt($el.css('font-weight'))|| '700',\n            fontStyle = $el.css('font-style') || 'normal',\n            fontSize = parseInt($el.css('font-size'), 10) || $el.data('tgFontSize') || '20',\n            textTop = $el.data('tgTextTop') && $el.data('tgTextTop').toString() || Math.floor(parseInt($el.css('font-size'), 10)*0.6) || '14',\n            textLeft = -Math.floor(parseInt($el.css('font-size'), 10)/2),\n            paper;\n            glowWidth=Math.floor(fontSize*modifier);\n            offset=offset*modifier\n            paper = Raphael(el, $el.width()+glowWidth*2, $el.height()+glowWidth); //600×200 — размеры области отрисовки текста\n\n        paper.\n            print(textLeft, textTop, text, paper.getFont(fontFamily, fontWeight, fontStyle), fontSize, 'middle', -1).\n            attr({\n                'fill': gradient,\n                'text-anchor': anchor\n            }).\n            glow({\n            	width: glowWidth,\n            	opacity: 0.3,\n            	color: '#000',\n            	offsetx: offset,\n            	offsety: offset\n            });\n        $(el).children().css({\n            position: 'absolute'\n        });\n        $el.addClass('TextGradientDone');\n        hiddenContainer.addClass('.hidden');\n    });\n	$('path').each(function(){\n		var fill=$(this).attr('fill'),\n			fillUrl=fill.substring(fill.indexOf('(')+1,fill.indexOf(')'));\n		if(fillUrl!='none'){\n			$(this).attr('fill', 'url(\\''+document.location.href+fillUrl+'\\')');\n		}\n	});\n\n	// vertical align for bar text \n	$('.valign').each(function(){\n		var el=$(this),\n			span;\n		if(el.hasClass('valign-wrapped'))\n		{\n			span=el.children('span');\n			span.height(el.height());\n		}\n		else{\n			span=$('<span />').height(el.height());		\n			el.addClass('valign-wrapped').wrapInner(span);\n		}\n	});\n/*	$('.unresizable').each(function(){\n		var el=$(this);\n		if(el.hasClass('proportion')){\n			var proportion=el.data('proportion');\n			el.width(el.outerHeight()*proportion);\n		}\n		else {\n			var	width=el.outerWidth(),\n				prev=el.prev(),\n				offset;\n			prev.css({'padding-right':'', 'margin-right': ''});\n			offset=parseInt(prev.css('padding-right'), 10)+width;\n			prev.css({'padding-right':offset, 'margin-right': -width});\n		}\n	});*/\n// рассчет полос жизни и славы\n	$('.life-honor').css('width','100%');\n	$('.life-honor').width($('.life-honor').width()-$('.column-top').width()+20);\n	$('.life-honor').find('.progress-bar-wrapper, .progress-bar-text').width(Math.floor(($('.life-honor').width()-$('.life-honor').find('.timer').width())/2));\n\n	hidden.addClass('hidden'); 	// Скрываем всё, что должно быть hidden\n	$('.invisible').removeClass('invisible');\n	$('.preloader').hide();\n\n	if($('.scroll-bar-wrap')[0]){		\n		scrollInit($('.wrap').find('.scroll-bar-wrap'));\n	}\n	// CHAT RESIZE\n	if($('.messenger')[0]){\n		chatResizeInit();\n	}\n	// Фиксирование верхних иконок контента\n	$('.city, .right-top').each(function(){\n		$(this).css('top', $(this).position().top)\n	});\n	//Сворачивание/разворачивание чата\n	// $('.toggle-chat-btn').on('click', function(e){\n	// 	if(messenger.hasClass('chat-hide'))\n	// 		messenger.resizable('option', 'toggleChat')(false);	\n	// });\n\n}\n\nfunction createCorners() {\n	$(\".corners\").each(function(i,elem) {\n		$(this).wrapInner(\"<div class='corners-content'></div>\");\n		$(this).append(\"<div class='tr'></div><div class='bl'></div><div class='br'></div>\"); \n	});\n	$('.wrap-corners').append(\"<div class='tl'></div>\"); \n}\n\nfunction widthIndex(container){\n	return index = container.width()/100;\n}\nfunction heightIndex(container){\n	return index = container.height()/100;;\n}\n\nfunction blockHeight(block){\n	var offset=0,\n		blockHeight=block.data(\"block-height\");\n\n	if(block.hasClass('add-offset')){\n		offset=wrapOffsetTop;\n	}\n	if(block.hasClass('toggle')){\n		blockHeight=block.data(\"toggle-height\");\n	}\n	return height = Math.round(blockHeight*heightIndex($('.wrap')))-block.children('.bl').height()-offset; \n}\nfunction blockWidth(block){\n	// var parent=block.parent();\n	return width = Math.ceil(block.data(\"block-width\")*widthIndex(block.parent()))-block.find('.tr').width(); \n}\n\nfunction lteIE8(){\n	if($.browser.msie && parseInt($.browser.version, 10)<=8)\n		return true;\n	else return false;\n}\nfunction mediaQueriesClass(){	\n	var height=$(window).height(),\n		width=$(window).width(),\n		mqClass='';\n	for(i in mqWidthArray){\n		mqClass=mqPrefix+'width'+mqWidthArray[i]\n		if(width<=mqWidthArray[i])\n			$('html').addClass(mqClass);\n		else\n			$('html').removeClass(mqClass);\n	}\n	for(i in mqHeightArray){\n		mqClass=mqPrefix+'height'+mqHeightArray[i];\n		if(height<=mqHeightArray[i])\n			$('html').addClass(mqClass);\n		else\n			$('html').removeClass(mqClass);\n	}\n}\n\nfunction scrollInit(el){\n	el.each(function(){\n		var minValue=0,\n			maxValue=100,\n			currValue=maxValue,\n			scrollStep=1,\n			// multiplier for mousewheel and scrollbar buttons. If scrollStep=1, scrollStepMultiplier is the number of pixels to be scrolled in one step on mousewheel or scrollbar button click event\n			scrollStepMultiplier=50,\n			scrollbarWrap=$(this),\n			scrollbar=scrollbarWrap.children( \".scroll-bar\" ),\n		   	handle=scrollbar.find('.ui-slider-handle'),\n	   		// scrollWrapHeight=parseInt(scrollbarWrap.css('height'), 10),\n	   		scrollWrapHeight=scrollbarWrap.outerHeight(),\n	   		scrollMinHeight=scrollbarWrap.find('.scroll-btn').height(),\n\n	       	container=$('.'+scrollbarWrap.data('container')),\n	        scrollPane = container.find('.scroll-pane'),\n	        scrollContent = container.find('.scroll-content.active');\n\n		// scrollStep=scrollStepPx/scrollContent.height()*100\n		maxValue=parseInt(scrollContent.height());\n		currValue=maxValue;\n		// Scroll to bottom if no saved data-scroll\n	  	if(scrollContent.data('scroll')!=undefined){	  \n	  		// currValue=scrollContent.data('scroll');\n	  	} else{\n	  		scrollContent.data('scroll', currValue);\n	  	}\n\n	  	if(container.parent().hasClass('scrollable')){\n	  		container.parent().data('scrollable', true);\n	  	}\n\n	   	handle.children('.ui-slider-handle-inner').remove();\n	   		\n		// Count scrollBarWrap vertical paddings once\n	   	if(!scrollbarWrap.hasClass('padding-counted')){\n   			scrollWrapHeight=	blockHeight(scrollbarWrap) - \n								Math.abs(parseInt(scrollbarWrap.children('em').css('bottom'),10)) - \n								parseInt(scrollbarWrap.css('padding-top'), 10) - \n								parseInt(scrollbarWrap.css('padding-bottom'), 10) ;\n			scrollbarWrap.addClass('padding-counted');\n	   	} else\n	   		scrollWrapHeight-=parseInt(scrollbarWrap.css('padding-top'), 10) + parseInt(scrollbarWrap.css('padding-bottom'), 10);\n\n		scrollbarWrap.height(scrollWrapHeight);\n	  	scrollbar.slider({\n	        orientation: \"vertical\",\n	        range: \"min\",\n	        min: minValue,\n	        max: maxValue,\n	        step: scrollStep,\n	        value: currValue,\n	        slide: moveSlider,\n	        change: moveSlider\n	   	});\n\n	  	var handleHelper=$('<div class=\"ui-slider-handle-inner\"><em></em><i></i></div>')\n	   	scrollbar.find('.ui-slider-handle').append(handleHelper);\n\n		sizeScrollbar();\n	   	handleHeight=handleHelper.height();\n		scrollbar.height(scrollbarWrap.height() - handleHeight).css('margin-top', handleHeight/2);\n		handleHelper.css({ 'max-height':scrollWrapHeight});\n		\n\n	  	// обработчики событий\n	  	// Стрелки вверх-вниз\n	  	scrollbarWrap.find('.scroll-btn').on('click', function(e){\n	  		e.preventDefault();\n	  		var value=scrollbar.slider('value'),\n	  			direction=1;\n	  		if($(this).hasClass('scroll-btn-bottom'))\n	  			direction=-1; // reverse for bottom button\n	  		value+=scrollStep*scrollStepMultiplier*direction;\n	  		if(value<=maxValue && value>=minValue)\n	  			scrollbar.slider('value', value);\n	  	});\n\n	  	// Скролл колесом\n	  	$('.'+scrollbarWrap.data('container')).on('mousewheel',mouseWheelScrollHandler);\n	  	scrollbarWrap.on('mousewheel',mouseWheelScrollHandler);\n	  	function mouseWheelScrollHandler(e, delta, deltaX, deltaY){\n			var value=scrollbar.slider('value');\n			value+=scrollStep*scrollStepMultiplier*delta;\n			if(value<=maxValue && value>=minValue){\n	  			scrollbar.slider('value', value);				\n			} else {\n				if(value>maxValue)\n					scrollbar.slider('value', maxValue);\n				else\n					scrollbar.slider('value', minValue);\n			}\n		}\n\n		function moveSlider( event, ui ) {\n				if ( scrollContent.height() > scrollPane.height() ) {\n	                scrollContent.css( \"margin-top\", Math.round(\n	                    (maxValue - ui.value) / maxValue * ( scrollPane.height() - scrollContent.height() ) ) + \"px\");\n	            } else {\n	                scrollContent.css( \"margin-top\", 0 );                    \n	            }\n	            scrollContent.data('scroll',ui.value);\n	    }\n\n	    function sizeScrollbar() {\n	    	\n            var remainder = scrollContent.height() - scrollPane.outerHeight();\n            if(remainder>=0){\n	            var proportion = remainder / scrollContent.height();\n	            var handleSize = scrollPane.height() - ( proportion * scrollPane.height() );\n	            if(scrollbarWrap.hasClass('handle-fixed')){\n	            	handleSize=handleHelper.height();\n	            }\n	            scrollbarWrap.removeClass('hidden');\n	            if(container.parent().data('scrollable'))\n            		container.parent().addClass('scrollable');\n	            if(handleSize<=scrollMinHeight)\n	            	handleSize=scrollMinHeight;\n	            handleHelper.css({\n	                height: handleSize,\n	                \"margin-top\": -handleSize / 2\n	            });\n	            handleHelper.children('i').css('margin-top', (handleSize-handleHelper.children('i').height())/ 2);\n	            scrollbarWrap.show();\n	            // handleHelper.height( \"\" ).height( scrollbar.height() - handleSize );\n            } else{\n            	if (container.parent().hasClass('scrollable')){\n	            	container.parent('.scrollable').removeClass('scrollable').addClass('invisible');\n	            	container.hide();\n	            	scrollbarWrap.hide(function(){\n	            		container.show().parent().removeClass('invisible');\n	            	});\n	            } else{\n	            	scrollbarWrap.hide();\n	            }\n			}\n        }\n	});\n}\n\nfunction chatResizeInit(){\n		var messenger= $('.messenger'),\n			minHeight=messenger.height(),\n			maxHeight=$('.wrap').height()-$('.top-bar').height(),\n			height=minHeight,\n\n			hideHeight=0,\n			alsoResizeSelector = \".dialog-container,.user-list,.unstyle\",\n			reverseResizeSelector=\".toggle-height:not(.chat-placeholder, .column-block-container)\",\n			reverseResizeData=[],\n			chatPlaceholder=$('.chat-placeholder'),\n			chatPlaceholderHeight=$('.chat-placeholder').height(),\n			scrollData=[],\n			toggleChatData=[],\n			// .left-bottom — элементы интерфейса в нижнем-левом углу контентной части\n			bottomElem={\n				el:$('.left-bottom'),\n				elTop:$('.left-bottom').position().top,\n				toggleWithChat: function(){\n						if(!isNaN( parseInt( bottomElem.el.css('top'), 10 ) ) ) {\n						var top=bottomElem.el.position().top;\n							bottomElem.el.data('top', top).css('top', '');						\n						}\n						else{\n							bottomElem.el.css('top', bottomElem.el.data('top'));\n						}\n				},\n				alignToChat: function(diff){\n				    if(bottomElem.elTop-diff >= bottomElem.el.outerHeight()*2.5){\n					    bottomElem.el.css('top',bottomElem.elTop-diff);\n				    }\n				}\n			}\n		$('.toggle-chat').each(function(){\n			var item={\n				el:$(this),\n				elHeight:$(this).height()\n			}\n			if($(this).data('block-height'))\n				item.elHeight=blockHeight($(this));\n			toggleChatData.push(item);\n		});\n		$('.scroll-bar-wrap').each(function(){\n			var item={\n				el:$(this),\n				height:$(this).outerHeight()-parseInt($(this).css('padding-top'), 10) - parseInt($(this).css('padding-bottom'), 10)\n			}\n			scrollData.push(item);\n		});\n		$(reverseResizeSelector).each(function(){\n			var item={\n				el:$(this),\n				height:$(this).height()\n			}\n			reverseResizeData.push(item);\n		});\n		messenger.resizable({ \n			handles: {'n': '#chat-handle'},\n			minHeight: minHeight/2,\n			maxHeight: maxHeight,\n			alsoResize: alsoResizeSelector,\n			// helper: \"resizable-helper\",\n			start: function(event, ui){\n				$('.scroll-bar').addClass('invisible');\n			},\n			resize: function(event, ui) {\n			    ui.element.css(\"width\", '');\n			    $(alsoResizeSelector).css(\"width\", '');\n			    \n			    var diff=messenger.height()- height,\n			    	direction= ui.size.height - ui.originalSize.height;\n			    bottomElem.alignToChat(diff);\n\n			    var paper=$('.paper-chat'),\n			    	paperHeight=paper.outerHeight(),\n			    	paperDefaultHeight=blockHeight(paper);\n			    	paperMinHeight=parseFloat(paper.css('min-height'), 10);\n			    	// paper.data('height', paperHeight+direction);\n			    paper.height(paperDefaultHeight + diff-6)\n			    // if(paperHeight <= paperMinHeight){\n			    // 	paper.addClass('noresize');\n			    // } else{\n			    // 	if(paper.hasClass('noresize') && paperHeight + direction >= blockHeight(paper)){\n			    // 		paper.height(paperDefaultHeight).removeClass('noresize');\n			    // 	}\n			    // }\n\n\n			    if(ui.size.height <= minHeight){				    		    	\n			    	for (var i in reverseResizeData){\n			    		reverseResizeData[i].el.height(reverseResizeData[i].height - diff);\n			    	}\n			    	chatPlaceholder.height(chatPlaceholderHeight + diff);\n			    } else{\n			    	for(var i in scrollData){\n				    	var newHeight=scrollData[i].height+diff;\n				    	scrollData[i].el.height(newHeight);	    	\n				    }\n			    }    	\n		    },\n		    stop: function(event, ui) {\n			    ui.element.css({\n			    				'position': '',\n			    				'top':'',\n			    				'height':''\n								});\n			    if(!messenger.hasClass('chat-hide')){\n			    	scrollInit($('.scroll-bar-wrap'));	\n			    }	\n			    $('.scroll-bar').removeClass('invisible');\n			    /*if($('.paper-chat').hasClass('noresize'))\n			    	$('.paper-chat').removeClass('noresize')*/\n			},	\n			toggleChat: function(hide){\n				// // hide==true — hide chat else show chat\n				// if(!$('.messenger').hasClass('toggling')){					\n				// 	$('.messenger').resizable('disable');\n				// 	$('.messenger').addClass('toggling');\n\n				// 	$('.toggle-height').each(function(){\n				// 		$(this).toggleClass('toggle').height(blockHeight($(this)));\n				// 	});\n				// 	if(hide)\n				// 		$('.scroll-bar-wrap').addClass('invisible');\n				// 	else\n				// 		$('.scroll-bar-wrap').removeClass('invisible');\n\n				// 	for(i in toggleChatData){\n				// 		var height='toggle';\n				// 		toggleChatData[i].el.animate({\n				// 	    	height: height\n				// 		}, 500, function(){\n				// 			$('.messenger').resizable('enable');\n				// 			$('.messenger').removeClass('toggling');\n				// 			if(!hide)\n				// 	    		scrollInit($('.scroll-bar-wrap'));\n				// 		});\n				// 	}\n				// 	bottomElem.toggleWithChat();\n				// 	$('.messenger').toggleClass('chat-hide');\n				// 	$('.messenger').find('.spacer, .hidden').toggleClass('hidden');\n\n				// }\n			}\n		});\n	\n}\nfunction chatResizeDestroy(){\n	var enabled=true,\n		helper=$('.toggle-chat-btn')\n		// clear inline style for chat resizable elements\n		try{\n			$('.messenger').resizable( \"destroy\" );\n		}\n		catch (err){\n			enabled=false;\n		}\n		if (enabled){\n			$('.dialog-container,.paper-chat,.user-list,.unstyle,.toggle-height:not(.chat-placeholder, .column-block-container)').removeAttr('style');	\n			$('.messenger').children('.row-fluid:eq(0)').children('.span100.block').prepend(helper);\n		}\n}\n\n\n/*START DATA WINDOW*/\nfunction openStartDataPage(num){\n	var currStep = $('.steps').find('a.active').data('target');\n	// for (var i=0; i<=currStep; i++){\n	// 	$('.step'+i).addClass('passed');\n	// }\n\n	$('.start-data-page').hide();\n	$('.steps').find('a').addClass('disabled').removeClass('active');\n	for (var i=0; i<=num; i++){\n		$('.step'+i).removeClass('disabled');\n	}\n	$('.start-data-page.page'+num).show();\n	$('.step'+num).removeClass('disabled').addClass('active');\n\n	if($('.step'+num).hasClass('passed'))\n		$('.next-step').removeClass('disabled');\n	else \n		$('.next-step').addClass('disabled');\n}\n\nfunction showPopup(popupClass){\n	$('.overlay-wrapper').removeClass('hidden');\n	$('.'+popupClass).removeClass('hidden');\n}\nfunction hidePopup(popupClass){\n	$('.overlay-wrapper').addClass('hidden');\n	$('.'+popupClass).addClass('hidden');\n}\nvar flag=\nfunction openBook(pagename){\n	showPopup('book');	\n	$('.book-column').hide();\n	$('.'+pagename).show().find('.scroll-bar-wrap').show();\n	scrollInit($('.'+pagename).find('.scroll-bar-wrap'));\n}",
+			"file": "js/interface.js",
+			"file_size": 32409,
+			"file_write_time": 130046947411644145,
+			"settings":
+			{
+				"buffer_size": 30090,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Филипп/Desktop/main-absolute-positioning.html",
+			"settings":
+			{
+				"buffer_size": 470972,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Филипп/Desktop/shards-правки",
+			"settings":
+			{
+				"buffer_size": 818,
+				"line_ending": "Windows",
+				"name": "А так же:"
+			}
+		},
+		{
+			"file": "js/authorization.js",
+			"settings":
+			{
+				"buffer_size": 7053,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"gi",
+				"Gist: Insert Gist"
+			],
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 394.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Dropbox/Shards of Empire/interface/shards2/css/main.css",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/lib/jquery.queryloader2.js",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/lib/jquery.preloader.js",
+		"/C/Users/Филипп/Downloads/jquery.imgpreload-master/jquery.imgpreload.js",
+		"/C/Users/Филипп/Downloads/jquery.imgpreload-master/README.md",
+		"/D/Dropbox/sinel/html/css/main.css",
+		"/D/Dropbox/sinel/html/mainPanel.php",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/interface.js",
+		"/D/Dropbox/Shards of Empire/interface/shards2/lang/tips-ru_RU.js",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/lib/queryLoader.js",
+		"/C/Users/Филипп/Desktop/main.css",
+		"/D/Dropbox/sinel/html/js/script.js",
+		"/D/Dropbox/sinel/html/header.php",
+		"/D/Dropbox/sinel/html/footer.php",
+		"/D/Dropbox/sinel/html/shtory-podrobno.php",
+		"/D/Dropbox/sinel/html/odezhda-podrobno.php",
+		"/D/Dropbox/sinel/html/css/jquery.fancybox-buttons.css",
+		"/D/Dropbox/sinel/html/css/jquery.fancybox.css",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/chat.js",
+		"/D/Dropbox/sinel/html/contacts.php",
+		"/D/Dropbox/sinel/html/js/scroll.js",
+		"/D/Dropbox/sinel/html/img/section-top.png",
+		"/D/Dropbox/sinel/html/catalog-rascvetok-shtory.php",
+		"/D/Dropbox/sinel/html/catalog-rascvetok.php",
+		"/D/Dropbox/sinel/html/clothes-halaty.php",
+		"/D/Dropbox/sinel/html/css/ie-9.css",
+		"/D/Dropbox/sinel/html/css/ie7.css",
+		"/D/Dropbox/sinel/html/css/print.css",
+		"/D/Dropbox/sinel/html/body-head.php",
+		"/D/Dropbox/sinel/html/css/ie-all.css",
+		"/D/Dropbox/sinel/html/company.php",
+		"/D/Dropbox/sinel/html/css/info.css",
+		"/D/WebServers/home/localhost/www/sinel/www/js/lib/jquery.jqzoom-core-pack.js",
+		"/D/WebServers/home/localhost/www/sinel/www/contacts.php",
+		"/D/WebServers/home/localhost/www/sinel/www/odezhda-podrobno.php",
+		"/D/WebServers/home/localhost/www/sinel/www/shtory-podrobno.php",
+		"/D/Dropbox/sinel/html/css/inner.css",
+		"/D/WebServers/home/localhost/www/sinel/www/css/info.css",
+		"/D/Dropbox/sinel/html/contacts-print-krasnoyarsk.html",
+		"/D/Dropbox/sinel/html/contacts-print-moscow.html",
+		"/D/Dropbox/sinel/html/contacts-print-novosib.html",
+		"/D/WebServers/home/localhost/www/sinel/www/css/inner.css",
+		"/D/WebServers/home/localhost/www/sinel/www/css/main.css",
+		"/D/WebServers/home/localhost/www/sinel/www/js/lib/html5shiv.js",
+		"/D/WebServers/home/localhost/www/sinel/www/js/script.js",
+		"/D/Dropbox/Shards of Empire/interface/shards2/locations.html",
+		"/D/WebServers/home/localhost/www/sinel/www/footer.php",
+		"/D/Dropbox/frontco (1).de/!Оценить/Оксана Дяченко/gameTopSep2012/www/css/style.css",
+		"/D/Dropbox/frontco (1).de/!Оценить/Оксана Дяченко/Loange/www/js/louange.js",
+		"/D/Dropbox/frontco (1).de/!Оценить/Оксана Дяченко/Loange/www/index.html",
+		"/D/Dropbox/frontco (1).de/!Оценить/Оксана Дяченко/Loange/www/css/louange.css",
+		"/D/Dropbox/iGivings/Apps2/page/js/script.js",
+		"/D/WebServers/home/localhost/www/sinel/www/header.php",
+		"/D/WebServers/home/localhost/www/sinel/www/body-head.php",
+		"/D/WebServers/home/localhost/www/sinel/www/index.php",
+		"/D/Dropbox/sinel/html/cart.html",
+		"/D/Dropbox/sinel/html/catalog-rascvetok-shtory.html",
+		"/D/Dropbox/sinel/html/catalog-rascvetok.html",
+		"/D/Dropbox/sinel/html/gotovye-shtory.html",
+		"/D/Dropbox/sinel/html/clothes.html",
+		"/D/Dropbox/sinel/html/odezhda-podrobno.html",
+		"/D/Dropbox/sinel/html/shtory-podrobno.html",
+		"/D/Dropbox/sinel/html/clothes-halaty.html",
+		"/D/Dropbox/sinel/html/contacts.html",
+		"/D/Dropbox/sinel/html/index.html",
+		"/D/Dropbox/sinel/html/company.html",
+		"/D/Dropbox/sinel/html/index.php",
+		"/D/Dropbox/sinel/html/js/print.js",
+		"/D/Dropbox/sinel/html/css/main - копия.css",
+		"/D/Dropbox/Shards of Empire/interface/shards2/css/ie-media-queries.css",
+		"/D/Dropbox/frontco (1).de/dropList/v.0.2.5/index.html",
+		"/D/Dropbox/frontco (1).de/dropList/v.0.2.5/dropList/dropList.js",
+		"/d/dropbox/sinel/html/js/script.js",
+		"/D/Dropbox/frontco (1).de/dropList/v.0.2.5/dropList/dropList.css",
+		"/D/Dropbox/Shards of Empire/interface/shards2/lang/language-ru.js",
+		"/D/index.html",
+		"/D/Dropbox/sinel/html/js/lib/jquery.nivo.slider.js",
+		"/D/Dropbox/sinel/html/js/height.js",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/authorization.js",
+		"/D/Dropbox/Shards of Empire/interface/shards2/index.html",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/language-ru.js",
+		"/D/WebServers/home/localhost/www/kakyavam/www/js/script.js",
+		"/D/Dropbox/Shards of Empire/interface/jsonp/index.html",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/main.js",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/authorisation.js",
+		"/D/WebServers/home/localhost/www/rospil/www/js/script.js",
+		"/D/WebServers/home/localhost/www/rospil/www/index.php",
+		"/D/Dropbox/Shards of Empire/interface/shards2/css/world.css",
+		"/D/Dropbox/Shards of Empire/interface/shards2/css/ftpsync.settings",
+		"/D/Dropbox/Sublime Text 2/Sublime Text Portable/Data/Packages/FTPSync/ftpsync.sublime-settings",
+		"/D/Dropbox/Sublime Text 2/Sublime Text Portable/Data/Packages/User/FTPSync.sublime-settings",
+		"/D/Dropbox/Sublime Text 2/Sublime Text Portable/Data/Packages/Package Control/Package Control.sublime-settings",
+		"/D/WebServers/home/localhost/www/rospil/www/css/style.css",
+		"/D/WebServers/home/localhost/www/rospil/www/style.css",
+		"/D/Dropbox/Shards of Empire/interface/jsonp/js/script.js",
+		"/D/WebServers/home/localhost/www/kakyavam/www/HTML/profile/js/istylist.js",
+		"/D/Dropbox/Shards of Empire/interface/shards2/css/grid.css",
+		"/D/Dropbox/frontco (1).de/foot_size/index.html",
+		"/D/Dropbox/Shards of Empire/interface/shards2/js/plugins.js",
+		"/D/WebServers/home/localhost/www/kakyavam/www/HTML/profile/js/profile.js",
+		"/D/WebServers/home/localhost/www/kakyavam/www/HTML/profile/js/istylist2.js",
+		"/C/Users/Филипп/Desktop/kakyavam детализация.txt",
+		"/C/Users/14BA~1/AppData/Local/Temp/Rar$DRa0.174/js/bootstrap.js",
+		"/C/Users/14BA~1/AppData/Local/Temp/Rar$DRa0.323/css/bootstrap.css",
+		"/C/Users/14BA~1/AppData/Local/Temp/Rar$DRa0.338/css/bootstrap.css",
+		"/D/WebServers/home/localhost/www/kakyavam/www/HTML/profile/inStyle.html",
+		"/D/WebServers/home/localhost/www/kakyavam/www/HTML/look/script.js",
+		"/D/Dropbox/Shards of Empire/todo",
+		"/D/WebServers/home/localhost/www/kakyavam/www/HTML/js/script.js",
+		"/D/Projekt/shards/html5-shards/index2.html",
+		"/D/Projekt/shards/html5-shards/index.html",
+		"/D/Projekt/shards/index.html",
+		"/D/Projekt/shards/html5-shards/js/main.js",
+		"/D/Projekt/shards/html5-shards/js/interface",
+		"/D/Projekt/shards/html5-shards/js/vendor/modernizr-2.6.1.min.js",
+		"/D/Projekt/shards/html5-shards/js/plugins.js",
+		"/D/Projekt/shards/css/interface.css",
+		"/D/Projekt/shards/js/app/interface.js",
+		"/D/Projekt/shards/css/style.css",
+		"/D/Projekt/shards/css/reset.css",
+		"/C/Users/Kostya/Desktop/Новая папка/index.html",
+		"/E/GitHub/hr360/markup/company-new.html",
+		"/E/GitHub/hr360/markup/company.html",
+		"/E/GitHub/hr360/markup/scripts/app/ui.modal.js",
+		"/E/GitHub/hr360/markup/styles/form.css",
+		"/E/GitHub/hr360/markup/scripts/app/application.js",
+		"/E/GitHub/hr360/markup/styles/pane.css",
+		"/E/GitHub/hr360/markup/company-private-look.html"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"<open files>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"paper-chat",
+			"toggleChat",
+			"unstyle",
+			"chat-hide",
+			"resize",
+			"soe",
+			"done",
+			"regis",
+			"message-box",
+			"messageBox",
+			".message-buttons",
+			".message-box .stone-simple > .corners-content { ",
+			"showMessagePopupVal",
+			"обязательно для заполнения",
+			"Поле пароль обязательно для заполнения",
+			".send",
+			"send",
+			"cancel",
+			";cancel",
+			"жсфтсуд",
+			"успешно",
+			"message-box",
+			"captcha",
+			"message-text corners paper-simple",
+			"popup",
+			"container-slot",
+			"honor",
+			"square",
+			"slot",
+			"square",
+			"box-sizing: border-box;",
+			"    box-sizing: border-box;",
+			"    box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    -webkit-box-sizing: border-box;",
+			"box-sizing",
+			"data-scroll",
+			"scroll",
+			"data-scroll",
+			"100",
+			"slider",
+			"unresiz",
+			"scrollStep",
+			"если заголовок, например \"исследованные миры\" проходит через нижние или верхние границы, то под ним появляется светлый слой",
+			"mouseWheelScrollHandler",
+			"delta",
+			"mousewheel",
+			".main-page .text-gradient",
+			".main-page .text-gradient,",
+			".main-page .btn-text.text-gradient",
+			"chatResizeDestroy",
+			"alsoRes",
+			"messages",
+			"menu",
+			"btn-text messages center vcenter",
+			"bottom-auth",
+			"bottom auth",
+			"redraw",
+			"scrollInit",
+			"scrollable",
+			"gradient",
+			"max-height",
+			"preload",
+			"left-bottom",
+			"path",
+			"message-box",
+			"message",
+			"start",
+			"1100px",
+			"#mainPanel",
+			"mainP",
+			"clear-history",
+			"clear",
+			"life",
+			"left-bottom",
+			"-color",
+			"fancy",
+			"gallery",
+			"gallery ",
+			"fancy",
+			"color",
+			"goods",
+			"gallery",
+			"life-honor",
+			"layer",
+			"empty",
+			"scroll-btn",
+			"scroll",
+			"media",
+			"square",
+			"main-slot ",
+			" main-slot ",
+			"mainslot",
+			"layer",
+			" ight-top",
+			" right-top",
+			"right-top",
+			"resize",
+			"corner-dot",
+			"main-sidebar",
+			"corner-dot bottom right",
+			"span88",
+			"text-gradient",
+			"gradie",
+			"4498",
+			".yantar",
+			"70",
+			"65",
+			"main-sidebar",
+			"empty",
+			"ymaps",
+			"tab",
+			"ul",
+			"гд",
+			"plash",
+			"slid1",
+			"<a href=\"images/cloth-templates/",
+			"javascript",
+			"fancybox",
+			"fancybox3",
+			"#fancybox",
+			"#fancybox-img",
+			"stile",
+			"inactive",
+			"input",
+			"homepage",
+			"animate",
+			"slider-wrapper",
+			".size",
+			"footer .feedback"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"    -moz-box-sizing: border-box;\n    -webkit-box-sizing: border-box;\n    box-sizing: border-box;",
+			"",
+			"80",
+			"70",
+			"<a href=\"images/cloth-templates/large/",
+			"shtor-templates",
+			"shtor",
+			"div",
+			"contenteditable=\"true\" class=\"number\"",
+			"div",
+			"cloth-templates/halat",
+			"description-buttons",
+			"book-column",
+			"categories",
+			"{{LANG_LOCATIONS_LAST_VISIT}}",
+			"{{LANG_LOCATIONS_LEVEL}}",
+			"Рыцарь",
+			"{{LANG_BONUS}}",
+			"{{LANG_DESCRIPTION}}",
+			":",
+			"26",
+			"25",
+			"24",
+			"20",
+			"4",
+			"5",
+			"18",
+			"23",
+			"5",
+			"2",
+			"4",
+			"8",
+			"4",
+			"height960",
+			".scroll-bar-wrap > em",
+			"height",
+			".mq-width1024 .",
+			".mq-height720 .",
+			".mq-width1280 .",
+			".mq-width1366 .",
+			".mq-height900 .",
+			".mq-width1600 .",
+			".mq-width1920 .",
+			".mq-width1920 ",
+			"el",
+			"65",
+			"68",
+			"70",
+			".regfield:first-child",
+			"height900",
+			"46",
+			"90",
+			"13",
+			"4",
+			"top",
+			"margin-top",
+			".height(",
+			"90",
+			"chat",
+			"10",
+			"wood-input",
+			"60",
+			"70",
+			"main-slot",
+			"75",
+			"80",
+			"10px",
+			".sidebar-slot",
+			".wood-corners-btn-small",
+			"24",
+			"block-simple",
+			"widthIndex",
+			"corners",
+			"widget",
+			".pane-rating"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 17262,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8134,
+								8134
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1556.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "main.html",
+					"settings":
+					{
+						"buffer_size": 81342,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										49117,
+										49117
+									],
+									[
+										50469,
+										50469
+									],
+									[
+										59362,
+										59362
+									],
+									[
+										79566,
+										79566
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								25355,
+								25355
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4997.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "locations.html",
+					"settings":
+					{
+						"buffer_size": 13012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								403,
+								403
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/interface.css",
+					"settings":
+					{
+						"buffer_size": 104161,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										24502,
+										24502
+									],
+									[
+										28714,
+										28714
+									],
+									[
+										51789,
+										51789
+									],
+									[
+										64455,
+										64455
+									],
+									[
+										80379,
+										80379
+									],
+									[
+										102303,
+										102303
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								90729,
+								90729
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 63617.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/interface.js",
+					"settings":
+					{
+						"buffer_size": 30090,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										3735,
+										3735
+									],
+									[
+										8106,
+										8106
+									],
+									[
+										18425,
+										18425
+									],
+									[
+										23860,
+										23860
+									],
+									[
+										25865,
+										25865
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								29899,
+								29899
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 13988.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/Филипп/Desktop/main-absolute-positioning.html",
+					"settings":
+					{
+						"buffer_size": 470972,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1443,
+								1443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/Филипп/Desktop/shards-правки",
+					"settings":
+					{
+						"buffer_size": 818,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								818,
+								818
+							]
+						],
+						"settings":
+						{
+							"auto_name": "А так же:",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/authorization.js",
+					"settings":
+					{
+						"buffer_size": 7053,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7026,
+								7026
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3450.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 187.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				".gitignore"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 201.0,
+	"status_bar_visible": true
+}

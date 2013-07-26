@@ -1,0 +1,10 @@
+1-world_id
+2-fraction_id
+3-type_personage_id
+4-nick
+5-religion_id
+6-city
+
+
+
+showPopup('start-data');

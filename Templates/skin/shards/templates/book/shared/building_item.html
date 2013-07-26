@@ -1,0 +1,12 @@
+<!-- ko foreach: items -->
+<li class="span100 news-item" data-bind="click: $parent.onclick, css:{'news-item-active': selected}">
+    <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style='height: 83px; width: 83px;'>
+        <div class="tr"></div><div class="bl"></div><div class="br"></div>
+    </div>
+    <h4 class="text main-header"
+        data-bind="title: description, text: name">
+    </h4>
+    <span data-bind="text:$root.lang().LANG_LEVEL"></span>
+    <span data-bind="text: current_level"></span>
+</li>
+<!-- /ko -->

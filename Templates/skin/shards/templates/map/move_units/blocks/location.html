@@ -1,0 +1,19 @@
+<li class="span100 news-item">
+    <a href="#" data-bind="click: $parent.locationClick">
+        <span class="span15">
+            <div class="corners slot main-slot square"
+                 data-block-height="50" data-block-width="50">
+                <div class="tr"></div>
+                <div class="bl"></div>
+                <div class="br"></div>
+            </div>
+        </span>
+        <span class="span24 offset3">
+            <ul class="units-list">
+                <li data-bind="text: city_name"></li>
+                <li class="level">Уровень: <span data-bind="text: 'неизвестно'"></span></li>
+            </ul>
+        </span>
+        <span class="span50 offset3 units-in-garnizon">Войск в гарнизоне: <span data-bind="text: count"></span></span>
+    </a>
+</li>

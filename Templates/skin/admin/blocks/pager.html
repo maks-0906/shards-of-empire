@@ -1,0 +1,42 @@
+{ignore}
+<!--
+   Simple pager by al
+    v. 0.1 07/11/2012
+    TODO: CSS class define in params,
+    TODO: Maybe GET var page define in params?
+    TODO: Locale define in params
+    TODO: Add last id to params
+    TODO: Maybe page interval in params?
+         $pager - StdObject
+         int $pager.count - count of page
+         int $pager.current - current page
+         str $pager.route - route path
+    API:
+
+        $pager = array('per_page' => 50);
+        $pager['current'] = $this->GetVar('page') ? $this->GetVar('page') : 1;
+        $pager['count'] = ceil($this->mMapper->GetCount()/$pager['per_page']);
+        $this->Viewer_Assign('pager', $pager);
+        $this->Viewer_Assign('List', $this->mMapper->GetList(($pager['current']-1)*$pager['per_page'], $pager['per_page']));
+
+    Abstract:
+        function Mapper:GetCouunt()
+        function Mapper:GetList($from, $count)
+
+ -->
+{/ignore}
+{if="$pager.count > 1"}
+    <div class="pagination pagination-centered">
+      <ul>
+        {if="$pager.current!=1"}
+            <li><a class="first" href="{$pager.route}">Первая</a>&nbsp;</li>
+            <li><a class="prev" href="{$pager.route}?page={$pager.current-1}">Предыдущая</a></li>
+        {/if}
+        <li><a class="active disabled">&nbsp;&nbsp;{$pager.current}&nbsp;&nbsp;</a></li>
+        {if="$pager.current!=$pager.count"}
+            <li><a  class="next" href="{$pager.route}?page={$pager.current+1}">Следующая</a>&nbsp;</li>
+            <li><a  class="last" href="{$pager.route}?page={$pager.count}">Последняя</a></li>
+        {/if}
+      </ul>
+    </div>
+{/if}

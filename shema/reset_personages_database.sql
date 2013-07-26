@@ -1,0 +1,20 @@
+TRUNCATE `personages`;
+TRUNCATE `personages_artifacts`;
+TRUNCATE `personages_buildings`;
+TRUNCATE `personages_building_bonus_state`;
+TRUNCATE `personages_building_improve`;
+TRUNCATE `personages_cities`;
+TRUNCATE `personages_cities_epidemic`;
+TRUNCATE `personages_research_state`;
+TRUNCATE `personages_resources_state`;
+TRUNCATE `personages_state`;
+TRUNCATE `personages_units`;
+TRUNCATE `personages_guilds`;
+TRUNCATE `personages_guilds_request_invitation`;
+TRUNCATE `personages_units_locations`;
+TRUNCATE `personages_locations`;
+TRUNCATE `personages_units_moving`;
+TRUNCATE `personages_mail`;
+TRUNCATE `personages_units_fights`;
+
+UPDATE `map_cells` SET `map_pattern`=8 WHERE `map_pattern`=9;

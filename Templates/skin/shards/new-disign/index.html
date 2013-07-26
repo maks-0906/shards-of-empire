@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+	<title>SoE</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+	<link rel="stylesheet" href="css/new.css">
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<!-- carousel include -->
+	<link rel="stylesheet" type="text/css" href="css/jcarousel.simple.css">
+	<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+
+	<script>
+		(function($) {
+			$(function() {
+				$('[data-jcarousel]').each(function() {
+					var el = $(this);
+					el.jcarousel(el.data());
+				});
+
+				$('[data-jcarousel-control]').each(function() {
+					var el = $(this);
+					el.jcarouselControl(el.data());
+				});
+			});
+		})(jQuery);
+	</script>
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="languages">
+			<select name="" id="" class="languages">
+				<option value="">Русский</option>
+				<option value="">English</option>
+				<option value="">Українська</option>
+			</select>
+		</div>
+		<div class="main-bg"></div>
+		<div class="shadow-left"></div>
+		<div class="shadow-right"></div>
+		<div class="languages">
+			<button><span class="rus">Русский</span></button>
+			<ul>
+				<li class="usa"><a href="">English</a></li>
+				<li class="ukr"><a href="">Українська</a></li>
+			</ul>
+			<!--<select name="" id="" class="languages">
+				<option value=""></option>
+				<option value="">English</option>
+				<option value="">Українська</option>
+			</select>-->
+		</div>
+		<div class="container">
+			<header>
+			<!--interface start-->
+				<div class="interface-corners interface-top lt"><a href="#" class="game-portal">Игровой<br/><span>портал</span></a></div>
+				<div class="interface-top span54 top-repeat"></div>
+				<div class="interface-corners interface-top rt"><a href="#" class="forum">Форум</a></div>
+			<!--interface end-->
+			</header>
+			<div class="interface-left-repeat lm absolute">
+				<ul class="icons-box">
+					<li><a href=""><img src="images/icons/android.png" alt="" /></a></li>
+					<li><a href=""><img src="images/icons/iOS.png" alt="" /></a></li>
+					<li><a href=""><img src="images/icons/windows.png" alt="" /></a></li>
+				</ul>
+			</div>
+			<div class="interface-right-repeat rm absolute">
+				<ul class="icons-box">
+					<li><a href=""><img src="images/icons/facebook.png" alt="" /></a></li>
+					<li><a href=""><img src="images/icons/vk.png" alt="" /></a></li>
+					<li><a href=""><img src="images/icons/mail.png" alt="" /></a></li>
+					<li><a href=""><img src="images/icons/odnoklassniki.png" alt="" /></a></li>
+				</ul>
+			</div>
+			<div class="content span54">
+				<ul class="box-wrap">
+					<li class="box">
+						<div class="top"></div>
+						<div class="bottom"></div>
+						<div class="auth-box">
+							<form action="">
+								<ul class="auth mb30">
+									<h2>Авторизация</h2>
+									<li><label for="email">E-mail:</label><input name="email" id="email" type="email" placeholder="dkarts2009@gmail.com" /></li>
+									<li><label for="pass">Пароль:</label><input name="pass" id="pass" type="password" placeholder="●●●●●●●●●●" /></li>
+									<li>
+										<button type="submit" class="auth-btn" id="auth-submit-btn">ВОЙТИ</button>
+									</li>
+									<li class="last">
+										<ul class="auth-reg-box l">
+											<li class="l"><button id="registration" class="auth-btn" type="button">Регистрация</button></li>
+											<li class="l"><button id="forgot-pass" class="auth-btn">Напомнить пароль?</button></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="reg mb30">
+									<h2>Авторизация</h2>
+									<li><label for="email">E-mail:</label><input name="email" id="email-reg" type="email" placeholder="dkarts2009@gmail.com" /></li>
+									<li><label for="pass">Пароль:</label><input name="pass" id="pass-reg" type="password" placeholder="●●●●●●●●●●" /></li>
+									<li>
+										<button type="submit" class="auth-btn" id="auth-submit-registration-btn">ВОЙТИ</button>
+									</li>
+									<li class="last">
+										<ul class="auth-reg-box l">
+											<li style="padding-left: 25%;"><button id="already-registered" class="auth-btn" type="button">Я уже зарегистрирован</button></li>
+										</ul>
+									</li>
+								</ul>
+							</form>
+							
+						</div>
+						<script type="text/javascript">
+							$('#registration').click(function() {
+								$(this).closest('ul').hide(100);
+								$('.auth-box .reg').show(300);
+							});
+							$('#already-registered').click(function() {
+								$(this).closest('ul').css('display', 'none');
+								$('.auth-box .auth').show(100);
+							});
+						</script>
+					</li>
+					<li class="box">
+						<div class="top"></div>
+						<div class="auth-btn">
+								<button class="auth-btn">ЕДИНАЯ СИСТЕМА АВТОРИЗАЦИИ</button>
+							</div>
+						<div class="bottom"></div>
+						
+						<div class="slider mb30">
+							<div class="carousel-wrapper">
+								<div data-jcarousel="true" data-wrap="circular" class="carousel">
+									<ul>
+										<li><img src="images/carousel/img01.jpg" width="124" height="124" alt=""></li>
+										<li><img src="images/carousel/img02.jpg" width="124" height="124" alt=""></li>
+										<li><img src="images/carousel/img03.jpg" width="124" height="124" alt=""></li>
+										<li><img src="images/carousel/img01.jpg" width="124" height="124" alt=""></li>
+										<li><img src="images/carousel/img02.jpg" width="124" height="124" alt=""></li>
+										<li><img src="images/carousel/img03.jpg" width="124" height="124" alt=""></li>
+									</ul>
+								</div>
+								<a data-jcarousel-control="true" data-target="-=1" href="#" class="carousel-control-prev">&lsaquo;</a>
+								<a data-jcarousel-control="true" data-target="+=1" href="#" class="carousel-control-next">&rsaquo;</a>
+							</div>
+						</div>
+						<div class="news mb30">
+							<ul>
+								<h2>Новости</h2>
+								<li>
+									<ul class="news-elements">
+										<li><span class="date">12.09.2012</span></li>
+										<li>Обновлена глобальная карта <a href="" class="more">Подробности</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul class="news-elements">
+										<li><span class="date">12.09.2012</span></li>
+										<li>Обновлена глобальная карта <a href="" class="more">Подробности</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul class="news-elements">
+										<li><span class="date">12.09.2012</span></li>
+										<li>Обновлена глобальная карта <a href="" class="more">Подробности</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul class="news-elements">
+										<li><span class="date">12.09.2012</span></li>
+										<li>Обновлена глобальная карта <a href="" class="more">Подробности</a></li>
+									</ul>
+								</li>
+								<li>
+									<ul class="news-elements">
+										<li><span class="date">12.09.2012</span></li>
+										<li>Обновлена глобальная карта <a href="" class="more">Подробности</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="about-game">
+							<h2>Об игре</h2>
+							<p>К этому классу можно отнести игры, имитирующие настольные игры, такие как шахматы, нарды, и карточные игры. В такие игры можно играть вдвоём (друг против друга) или с несколькими партнёрами. Браузер обеспечивает связь игроков между собой посредством игрового сервера. Игра может требовать одновременного присутствия всех участвующих в игровой партии игроков, или нет. В последнем случае ходы делаются каждым игроком по-очереди в удобное им время и сохраняются на игровом сервере.</p>
+							<p>В таких играх сотни, тысячи, или десятки тысяч игроков взаимодействуют друг с другом. В большинстве игр этого класса интерфейс выполнен в виде обычных HTML-страниц с текстом и изображениями. Минимальная интерактивность (обычно различные таймеры и чат) обеспечивается с помощью JavaScript. Ряд игр использует технологию Flash, что до появления HTML5 позволяло сделать игру более привлекательной внешне, однако вносит в игровой процесс присущие флэш-приложениям ограничения и недостатки, такие как перекрытие стандартных функций браузера (переход вперёд и назад, обновление страницы), задержки, связанные с загрузкой флэш-роликов, требующих, как правило, больший (чем HTML и изображения) объём передаваемых в браузер данных. В последнее время все чаще стали появляться игры в основе которых лежит бесплатный игровой движок Unity 3D, позволивший поднять планку качества исполнения браузерных игр на новый уровень и вплотную приблизить их графически к полноценным MMOG. Такие игры полностью трехмерны (PlaneWars, Battlestar Galactica Online) и при этом не требовательны к ресурсам персонального компьютера, однако, как и игра на Flash, требуют установки проприетарного ПО. Также существуют игры с клиентами на Java, способными работать как через браузерный плагин, так и через JRE, запускаемую отдельно.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<footer class="absolute">
+				<div class="interface-corners interface-bottom lb l"></div>
+				<div class="interface-bottom span54 bottom-repeat"></div>
+				<div class="interface-corners interface-bottom rb r"></div>
+			</footer>
+			<!--interface end-->
+			<div class="logo"></div>
+			<div class="copyright">&copy; 2013 Shards of Empire. Все права защищены.</div>
+		</div>
+	</div>
+<script>
+/*$(function(){
+
+var resize = (function(){
+    var content=$('.content');
+ var obj= $('.lm, .rm');
+    return function(){
+     var h = content.height();
+  obj.css('height', h-18);
+ };
+})();
+$(window).resize(function() {
+ resize()
+});
+resize();
+});*/
+</script>
+<script>
+	//console.log();
+	var body_height = $('body').height();
+	$('.wrap').height(body_height-250);
+</script>
+<script>
+var email_validation = $('#email').val;
+var pass_validation = $('#pass').val;
+$('#auth-submit-btn').click(function(){
+	if (email_validation == "" || pass_validation == "") alert("ВВЕДИТЕ ПОЧТУ И ПАРОЛЬ");
+})
+</script>
+</body>
+</html>

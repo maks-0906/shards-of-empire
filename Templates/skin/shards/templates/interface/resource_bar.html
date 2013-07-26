@@ -1,0 +1,57 @@
+<div class="corners block-corners block-simple" data-block-height="5.5"
+     data-bind="with: $root.user.resource">
+    <div class="span12 corners wood-simple row-fluid" data-block-height="4.2">
+        <!-- ko if: $root.location.selected.type() == 'userCity' -->
+        <div class="digit span72 offset28 orange valign people hiddenable"><img src="img/icons/resource/people25.png"> 0 / 0</div>
+        <!-- /ko -->
+    </div>
+    <div class="span12 offset1 corners wood-simple row-fluid" data-block-height="4.2">
+        <!-- ko if: $root.location.selected.type() == 'userCity' -->
+        <div class="digit span25 offset16 orange valign happy hiddenable"><img src="img/icons/resource/happy25.png"> 0</div>
+        <div class="digit span25 offset16 orange valign religia blessing"><img src="img/icons/resource/blessing25.png">
+            <span data-bind="text: blessing"></span>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="span62 offset1 corners wood-simple row-fluid resources" data-block-height="4.2">
+        <!-- ko if: $root.location.selected.type() == 'userCity' -->
+        <div class="digit span10 orange offset4 valign hiddenable food"><img src="img/icons/resource/food25.png">
+            <span data-bind="text: food"></span>
+        </div>
+        <div class="divider span1 offset1"></div>
+        <div class="digit span10 orange offset4 valign hiddenable wood tree"><img src="img/icons/resource/tree25.png">
+            <span data-bind="text: tree"></span>
+        </div>
+        <div class="divider span1 offset1"></div>
+        <div class="digit span10 orange offset4 valign hiddenable stone"><img src="img/icons/resource/stone25.png">
+            <span data-bind="text: stone"></span>
+        </div>
+        <div class="divider span1 offset1"></div>
+        <div class="digit span10 orange offset4 hiddenable valign iron"><img src="img/icons/resource/iron25.png">
+            <span data-bind="text: iron"></span>
+        </div>
+        <div class="divider span1 offset1"></div>
+        <!-- /ko -->
+        <!-- ko ifnot: $root.location.selected.type() == 'userCity'-->
+        <div class="divider span1 offset63"></div>
+        <!-- /ko -->
+        <div class="digit span10 orange offset4 valign gold"><img src="img/icons/resource/silver25.png">
+            <span data-bind="text: silver"></span>
+        </div>
+        <div class="divider span1 offset1"></div>
+        <div class="digit span10 orange offset4 valign amber"><img src="img/icons/resource/amber25.png">
+            <span data-bind="text: amber"></span>
+        </div>
+
+    </div>
+    <div class="span7 offset1 corners wood-simple row-fluid" data-block-height="4.2">
+        <!-- ko if: $root.location.selected.type() == 'userCity' -->
+        <div class="digit span50 offset25 orange valign hiddenable rogue"><img src="img/icons/resource/rogue25.png">0</div>
+        <!-- /ko -->
+    </div>
+    <div class="span3 offset1 corners wood-simple diseases" data-block-height="4.2">
+        <!-- ko if: $root.location.selected.type() == 'userCity' -->
+        <img class="hiddenable" src="img/icons/diseases.png">
+        <!-- /ko -->
+    </div>
+</div>

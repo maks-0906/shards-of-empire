@@ -1,0 +1,20 @@
+<html><head><title>JSONP</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head><body>
+<div id='list'></div>
+<script type="text/javascript">
+$(document).ready(function() {
+    var url =  "http://{$JSON_Server}/user/login.json";
+    $.getJSON(url + "?callback=?", {'login':'admin','pw':'admin'}, function(data) {
+            console.log(data);
+            //$("#list").append(data.login + "<hr />");
+    });
+});
+</script>
+<pre>
+{loop="RQ"}
+{$key} - {$value}
+{/loop}
+</pre>
+</body>
+</html>

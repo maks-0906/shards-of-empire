@@ -1,0 +1,274 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <base href="{$BasePath}"/>
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="shortcut icon" href="css/images/favicon.png" type="image/png" />
+        <title>Depo: Тайные века"</title>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var current_resourse = 0;
+                $('.resource button').click(function(){
+                    current_resourse = $(this).data('id');
+                    $('.resource button').removeClass('btn-selected');
+                    $(this).addClass('btn-selected');
+
+                    //$('table.map td[data-id='+current_resourse+']').css();
+                });
+                $('table.map td').click(function(){
+                    if (current_resourse == 0) {
+                        alert('Необходимо выбрать ресурс');
+                        return false;
+                    }
+                    id = $(this).data('id');
+                    $(this).removeClass();
+                    $(this).data('resource',current_resourse);
+                    $(this).addClass('resource-i-'+current_resourse);
+                });
+                //generate
+                function setPattern(ctx,oclass) {
+                    col = $(oclass).css("background-color");
+                    //console.log(col);
+                    var parts = col.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+                    delete (parts[0]); // rgb(r,g,b)
+                    point = ctx.createImageData(1,1);
+                    point.data[0] = parts[0];
+                    point.data[1] = parts[1];
+                    point.data[2] = parts[2];
+                    point.data[3] = 255;
+                    /*
+                    point.data[4] = parts[0];
+                    point.data[5] = parts[1];
+                    point.data[6] = parts[2];
+                    point.data[7] = 255;
+                    */
+                    return point;
+                    
+                }
+                $('.create_world').click(function(){
+                    canvas = document.getElementById('bigmap');
+                    ctx = canvas.getContext('2d');
+                    //resource
+                    var point = [];
+                    point[1] = setPattern(ctx,'.resource-i-1');
+                    point[2] = setPattern(ctx,'.resource-i-2');
+                    point[3] = setPattern(ctx,'.resource-i-3');
+                    point[4] = setPattern(ctx,'.resource-i-4');
+                    point[5] = setPattern(ctx,'.resource-i-5');
+                    point[6] = setPattern(ctx,'.resource-i-6');
+                    point[7] = setPattern(ctx,'.resource-i-7');
+                    point[8] = setPattern(ctx,'.resource-i-8');
+                    point[9] = setPattern(ctx,'.resource-i-9');
+                    //pattern
+                    var pattern_size = 10;
+                    var pattern = ctx.createImageData(pattern_size,pattern_size);
+                    for (y=0; y<=pattern_size; y++) {
+                        for (x=0;x<=pattern_size; x++) {
+                            cell = y*pattern_size+x;
+                            col = $('table.map td').eq(cell-1).css("background-color");
+                            if (col != 'transparent' && col != undefined) {
+                                var parts = col.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+                                //delete (parts[0]); // rgb(r,g,b)
+                                console.log(parts);
+                                var addr = 4*(cell);
+                                pattern.data[addr+0]=parts[1];
+                                pattern.data[addr+1]=parts[2];
+                                pattern.data[addr+2]=parts[3];
+                                pattern.data[addr+3]=255; //alpha
+                            } else {
+                                pattern.data[addr+0]=0;//Math.floor(Math.random()*255+1);
+                                pattern.data[addr+1]=0;
+                                pattern.data[addr+2]=0;
+                                pattern.data[addr+3]=0; //alpha
+                            }
+                        }
+                    }
+                    //map
+                    for (y=0; y<=1000; y=y+pattern_size) {
+                        for (x=0;x<=1000; x=x+pattern_size) {
+                            //p = Math.floor(Math.random()*9+1);
+                        ctx.putImageData(/*point[p]*/ pattern, x, y);
+                        }
+                    }
+                });
+            });
+        </script>
+    </head>
+    <div class="container">
+            <div class="span12 row">
+                <h1>Генератор Мира</h1>
+            </div>
+            <div class="span12 row">
+                <div class="btn-toolbar resource">
+                    <div class="btn-group">
+                        <button  class="btn resource-i-1" data-id="1">Лес</button>
+                        <button  class="btn resource-i-2" data-id="2">Горы</button>
+                        <button  class="btn resource-i-3" data-id="3">Камни</button>
+                    </div>
+                    <div class="btn-group">
+                        <button  class="btn resource-i-4" data-id="4">Пшеничные поля</button>
+                        <button  class="btn resource-i-5" data-id="5">Льняные поля</button>
+                        <button  class="btn resource-i-8" data-id="8">Ячменные поля</button>
+                    </div>
+                    <div class="btn-group">
+                        <button  class="btn resource-i-6" data-id="6">Цветущие луга</button>
+                        <button  class="btn resource-i-7" data-id="7">Дикий виноградник</button>
+                    </div>
+                    <div class="btn-group">
+                        <button  class="btn resource-i-9" data-id="9">Руины</button>
+                    </div>
+                </div>
+            <div class="span10 row">
+                <table class="table table-bordered map">
+                    <tbody>
+                        <tr data-id="row1">
+                            <td data-id="1">&nbsp;</td>
+                            <td data-id="2">&nbsp;</td>
+                            <td data-id="3">&nbsp;</td>
+                            <td data-id="4">&nbsp;</td>
+                            <td data-id="5">&nbsp;</td>
+                            <td data-id="13">&nbsp;</td>
+                            <td data-id="14">&nbsp;</td>
+                            <td data-id="15">&nbsp;</td>
+                            <td data-id="16">&nbsp;</td>
+                            <td data-id="1">&nbsp;</td>
+                        </tr>
+                        <tr data-id="row2">
+                            <td data-id="16">&nbsp;</td>
+                            <td data-id="17">&nbsp;</td>
+                            <td data-id="18">&nbsp;</td>
+                            <td data-id="19">&nbsp;</td>
+                            <td data-id="6">&nbsp;</td>
+                            <td data-id="12">&nbsp;</td>
+                            <td data-id="23">&nbsp;</td>
+                            <td data-id="24">&nbsp;</td>
+                            <td data-id="17">&nbsp;</td>
+                            <td data-id="2">&nbsp;</td>
+                        </tr>
+                        <tr data-id="row3">
+                            <td data-id="15">&nbsp;</td>
+                            <td data-id="24">&nbsp;</td>
+                            <td data-id="25">&nbsp;</td>
+                            <td data-id="20">&nbsp;</td>
+                            <td data-id="7">&nbsp;</td>
+                            <td data-id="11">&nbsp;</td>
+                            <td data-id="22">&nbsp;</td>
+                            <td data-id="25">&nbsp;</td>
+                            <td data-id="18">&nbsp;</td>
+                            <td data-id="3">&nbsp;</td>
+                        </tr>
+                        <tr data-id="row4">
+                            <td data-id="14">&nbsp;</td>
+                            <td data-id="23">&nbsp;</td>
+                            <td data-id="22">&nbsp;</td>
+                            <td data-id="21">&nbsp;</td>
+                            <td data-id="8">&nbsp;</td>
+                            <td data-id="10">&nbsp;</td>
+                            <td data-id="21">&nbsp;</td>
+                            <td data-id="20">&nbsp;</td>
+                            <td data-id="19">&nbsp;</td>
+                            <td data-id="4">&nbsp;</td>
+                        </tr>
+                        <tr data-id="row5">
+                            <td data-id="13">&nbsp;</td>
+                            <td data-id="12">&nbsp;</td>
+                            <td data-id="11">&nbsp;</td>
+                            <td data-id="10">&nbsp;</td>
+                            <td data-id="9">&nbsp;</td>
+                            <td data-id="9">&nbsp;</td>
+                            <td data-id="8">&nbsp;</td>
+                            <td data-id="7">&nbsp;</td>
+                            <td data-id="6">&nbsp;</td>
+                            <td data-id="5">&nbsp;</td>
+                        </tr>
+                        <tr data-id="row6">
+                            <td data-id="5">&nbsp;</td>
+                            <td data-id="6">&nbsp;</td>
+                            <td data-id="7">&nbsp;</td>
+                            <td data-id="8">&nbsp;</td>
+                            <td data-id="9">&nbsp;</td>
+                            <td data-id="9">&nbsp;</td>
+                            <td data-id="10">&nbsp;</td>
+                            <td data-id="11">&nbsp;</td>
+                            <td data-id="12">&nbsp;</td>
+                            <td data-id="13">&nbsp;</td>
+                        </tr>
+                        <tr data-id="row7">
+                            <td data-id="4">&nbsp;</td>
+                            <td data-id="19">&nbsp;</td>
+                            <td data-id="20">&nbsp;</td>
+                            <td data-id="21">&nbsp;</td>
+                            <td data-id="10">&nbsp;</td>
+                            <td data-id="8">&nbsp;</td>
+                            <td data-id="21">&nbsp;</td>
+                            <td data-id="22">&nbsp;</td>
+                            <td data-id="23">&nbsp;</td>
+                            <td data-id="14">&nbsp;</td>
+                        </tr>
+                        <tr data-id="row8">
+                            <td data-id="3">&nbsp;</td>
+                            <td data-id="18">&nbsp;</td>
+                            <td data-id="25">&nbsp;</td>
+                            <td data-id="22">&nbsp;</td>
+                            <td data-id="11">&nbsp;</td>
+                            <td data-id="7">&nbsp;</td>
+                            <td data-id="20">&nbsp;</td>
+                            <td data-id="25">&nbsp;</td>
+                            <td data-id="24">&nbsp;</td>
+                            <td data-id="15">&nbsp;</td>
+                        </tr>
+                        <tr data-id="row9">
+                            <td data-id="2">&nbsp;</td>
+                            <td data-id="17">&nbsp;</td>
+                            <td data-id="24">&nbsp;</td>
+                            <td data-id="23">&nbsp;</td>
+                            <td data-id="12">&nbsp;</td>
+                            <td data-id="6">&nbsp;</td>
+                            <td data-id="19">&nbsp;</td>
+                            <td data-id="18">&nbsp;</td>
+                            <td data-id="17">&nbsp;</td>
+                            <td data-id="16">&nbsp;</td>
+                        </tr>
+                        <tr data-id="row10">
+                            <td data-id="1">&nbsp;</td>
+                            <td data-id="16">&nbsp;</td>
+                            <td data-id="15">&nbsp;</td>
+                            <td data-id="14">&nbsp;</td>
+                            <td data-id="13">&nbsp;</td>
+                            <td data-id="5">&nbsp;</td>
+                            <td data-id="4">&nbsp;</td>
+                            <td data-id="3">&nbsp;</td>
+                            <td data-id="2">&nbsp;</td>
+                            <td data-id="1">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+    </div>
+    <div class="container">
+        <div class="span12 row">
+            <div class="btn create_world">Создать</div>
+        </div>
+    </div>
+    <canvas id="bigmap" width="1000" height="1000 "style="margin:10px;border:1px solid black;">
+
+    </canvas>
+    <!--
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.debug').click(function(){
+            $('.debug').toggle();
+        });
+    });
+    </script>
+    <div class="debug span1 btn">Debug</div>
+    <div class="debug span12" style="display:none">{$template_info}</div>
+    -->
+</html>

@@ -1,0 +1,1057 @@
+
+<!DOCTYPE html>
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns="http://www.w3.org/1999/html"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+    <title></title>
+    <base href="{$BasePath}"/>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="http://46.249.52.227/Templates/skin/shards/css/normalize.css">
+    <link rel="stylesheet" href="http://46.249.52.227/Templates/skin/shards/css/main.css?v1.1">
+    <link rel="stylesheet" href="http://46.249.52.227/Templates/skin/shards/css/globalmap.css">
+
+	<!--Jquery UI attach-->
+	<link type="text/css" href="css/soe-main/jquery-ui-1.8.12.custom.css" rel="Stylesheet" />	
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+	
+	<style type="text/css">
+	.left {float: left;}
+	.right {float: right;}
+	.clear {clear: both; height: 0; font-size: 0;}
+	.have {font-size: 0.6em;}
+	</style>
+    <!-- Media Queries For IE8 -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="http://46.249.52.227/Templates/skin/shards/css/ie-media-queries.css">
+    <![endif]-->
+    <!-- <script src="js/lib/modernizr-2.6.1.min.js"></script>-->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser
+    today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better
+    experience this site.</p>
+<![endif]-->
+
+<div class="overlay message-box book">
+<a href="#" class="btn close"></a>
+
+<div class="row-fluid" id="message-box">
+<!-- ko if: book.selected -->
+    <!-- ko template: { name: book.selected().template, data: book.selected } -->
+    <div class="MainBuildingPageTmpl book-tmpl">
+        <div class="span50 ko-book-column column-left main-build-page">
+            <!-- ko if: $root.book.loader.left --><!-- /ko -->
+            <!-- ko ifnot: $root.book.loader.left -->
+                <div class="categories main-build-categories">
+                    <h3 class="text-corners-title span100" data-bind="text:$root.lang().TITLE_MAIN_BUILDING">Основные здания</h3>
+                        <div class="scroll-pane" data-bind="template: {name:'BuildingItemTmpl', data: building}">
+    <ul class="news scroll-content span100 active" data-bind="foreach: items" style=",,,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;">
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Замок</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">1</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Крепость</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">1</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Коллегия Бардов</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">0</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Базар</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">0</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Турнирное поле</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">0</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Дом Лекаря</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">0</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Таверна</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">0</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Библиотека</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">1</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Священная роща</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">1</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Склад</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">1</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Казарма</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">0</span>
+        </li>
+    
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header" data-bind="title: description, text: name">Конюшня</h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL">Уровень</span>
+            <span data-bind="text: current_level">0</span>
+        </li>
+    </ul>
+</div>
+                </div>
+                <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="main-build-categories" style="height: 405px;">
+                    <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+                    <div class="scroll-bar ui-slider ui-widget ui-widget-content ui-corner-all ui-slider-vertical" style="height: 371px; margin-top: 17px;"><div class="ui-slider-range ui-widget-header ui-slider-range-min" style="height: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="bottom: 100%;"><div class="ui-slider-handle-inner" style="height: 34px; margin-top: -17px; max-height: 405px;"><em></em><i style="margin-top: 12px;"></i></div></a></div>
+                    <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+                </div>
+            <!-- /ko -->
+        </div>
+        <div class="span50 ko-book-column column-right main-build-page">
+            <!-- ko if: $root.book.loader.right --><!-- /ko -->
+            <!-- ko ifnot: $root.book.loader.right -->
+                <div class="description main-build-description">
+                   <div class="scroll-pane">
+                        <div class="scroll-content active">
+                            <div data-bind="template: {name:'TabItemTmpl', data: $data}">
+								<ul data-bind="attr:{class: 'nav nav-tabs tabs-'+tab.items.length}, foreach: tab.items" class="nav nav-tabs tabs-3">
+									<li data-bind="attr: { 'class': $data == $parent.selected.tab() ? 'active' : '' }" class="">
+										<a data-bind="click: $parent.tab.onclick, text: name">Общее</a>
+									</li>
+								
+									<li data-bind="attr: { 'class': $data == $parent.selected.tab() ? 'active' : '' }" class="">
+										<a data-bind="click: $parent.tab.onclick, text: name">Улучшения</a>
+									</li>
+								
+									<li data-bind="attr: { 'class': $data == $parent.selected.tab() ? 'active' : '' }" class="active">
+										<a data-bind="click: $parent.tab.onclick, text: name">Юниты</a>
+									</li>
+								</ul>
+							</div>
+
+                            <!-- ko ifnot: improve.open() || unit.open()  -->
+                                <div data-bind="with: selected">
+							<div class="description-container tab-content" data-bind="template: {name: tab().template, data: building }">
+    <div id="main-build-tabs-general" data-bind="with: detail">
+            
+		<div class="desc">
+			
+			<h4 class="improve text res-header">
+				<a href="units.html" class="btn-arrow"></a>
+				<span>Крестьянин</span>
+			</h4>
+			
+			<table>
+				<tr>
+					<td>
+						<div class="corners slot main-slot square" style="height: 83px; width: 83px;">
+							<div class="tr"></div>
+							<div class="bl"></div>
+							<div class="br"></div>
+						</div>
+						<p style="text-align: left; margin: 0;">Явление, процесс, предмет, свойство предмета или процесса появление которого в наблюдаемых условиях покакойто причине</p></td>
+					</td>
+				</tr>
+				<tr>
+					<td>Кол-во юнитов: 45</td>
+				</tr>
+				<tr>
+					<th>Характеристики</th>
+				</tr>
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td><strong>Атака</strong><br class="clear" />150 / 200</td>
+								<td><strong>Защита</strong><br class="clear" />150 / 200</td>
+								<td><strong>Жизнь</strong><br class="clear" />150 / 200</td>
+							</tr>
+							<tr>
+								<td><strong>Кол-во переносимого груза</strong><br class="clear" />150 / 200</td>
+								<td><strong>Стоимость содержания</strong><br class="clear" />150 / 200</td>
+								<td><strong>Занимает места в казарме</strong><br class="clear" />150 / 200</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<ul class="nav nav-tabs tabs-2" style="margin-bottom: 0">
+				<li class="active">
+					<a style="text-align: center;">Нанять</a>
+				</li>
+				<li>
+					<a style="text-align: center;">Распустить</a>
+				</li>
+			</ul>		
+			<table style="margin-top: 0;">
+				<tr>
+					<td>Название</td>
+					<td>Необходимо</td>
+					<td>В наличии</td>
+				</tr>
+				<tr>
+					<td>Технология</td>
+					<td>Кнут</td>
+					<td><img src="" alt="plus" /></td>
+				</tr>
+				<tr>
+					<td class="material">Железо</td>
+					<td>40 000</td>
+					<td>25 000</td>
+				</tr>
+				<tr>
+					<td class="material">Дерево</td>
+					<td>40 000</td>
+					<td>25 000</td>
+				</tr>
+				<tr>
+					<td class="material">Золото</td>
+					<td>40 000</td>
+					<td>25 000</td>
+				</tr>
+				<tr>
+					<td class="material">Ткань</td>
+					<td>40 000</td>
+					<td>25 000</td>
+				</tr>
+			</table>
+			<div data-bind="template:{name: 'TimeItemTmpl', data: $data}" class="left">
+				<h5 class="research-time" data-bind="visible: isFinished" style="margin-top: 0;">
+					<span data-bind="text:$root.lang().LANG_RESEARCH_TIME_FOR_RESEARCH">Время найма</span>: <span class="hours" data-bind="text: time.hours">1</span>
+					<span data-bind="text:$root.lang().LANG_TIME_HOURS">ч.</span>
+							<span class="mins" data-bind="text: time.min">25</span> <span data-bind="text:$root.lang().LANG_TIME_MINUTES">мин.</span><span class="secs" data-bind="text: time.secs">30</span>
+					<span data-bind="text:$root.lang().LANG_TIME_SECONDS">сек.</span>
+				</h5>
+				<h5 class="research-countdown" data-bind="visible: !isFinished()" style="display: none;">
+					<span data-bind="text:$root.lang().LANG_RESEARCH_TIME_FOR_RESEARCH_LEFT">Идет изучение. Осталось</span>
+					: <span class="hours" data-bind="text: processTime.hours">0</span>
+					<span data-bind="text:$root.lang().LANG_TIME_HOURS">ч.</span>
+					<span class="mins" data-bind="text: processTime.min">1</span>
+					<span data-bind="text:$root.lang().LANG_TIME_MINUTES">мин.</span>
+					<span class="secs" data-bind="text: processTime.secs">20</span>
+					<span data-bind="text:$root.lang().LANG_TIME_SECONDS">сек.</span>
+				</h5>
+			</div>
+			<div class="right" style="width: 25%;" >
+				<input type="" style="width: 60%;" /> | 29
+			</div>
+			<div class="description-buttons" style="">
+				<a href="#" id="learn" class="span33 btn-flex" data-bind="">
+					Нанять
+					<em></em>
+				</a>
+			</div>
+			<div>
+			29 |
+			</div>
+			<div class="description-buttons" style="">
+				<a href="#" id="learn" class="span33 btn-flex" data-bind="">
+					Распустить
+					<em></em>
+				</a>
+			</div>
+		</div>		
+
+    </div>
+</div>
+                                </div>
+                            <!-- /ko -->
+                            <!-- ko if: improve.open --><!-- /ko -->
+                            <!-- ko if: unit.open --><!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-bar-wrap description-scroll handle-fixed hidden" data-container="main-build-description" style="">
+                    <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+                    <div class="scroll-bar ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all" style="height: 451px; margin-top: 17px;"><div class="ui-slider-range ui-widget-header ui-slider-range-min" style="height: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="bottom: 100%;"><div class="ui-slider-handle-inner"><em></em><i></i></div></a></div>
+                    <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+                </div>
+            <!-- /ko -->
+        </div>
+    </div>
+<!-- /ko -->
+<!-- /ko -->
+<!-- RESEARCH PAGE -->
+<div class="span50 book-column column-left research-page" style="display: none;">
+    <div class="categories">
+        <h3 class="text-corners-title span100">{{LANG_RESEARCH_GLOBAL_RESEARCH}}</h3>
+
+        <div class="scroll-pane">
+            <ul class="news span100 scroll-content active" id="list_research" style=",,,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;">
+                {{#list_research}}
+                <li class="span100 news-item" data-research-id="{{id}}">
+                    <!-- <a href="#"> -->
+                    <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 20px; width: 20px;"><div class="corners-content">
+                        <!--<img src="{{image}}/interface/sidebar-slot720.png">-->
+                    </div><div class="tr"></div><div class="bl"></div><div class="br"></div></div>
+                    <h4 class="text res-header">{{name_research}}</h4>{{LANG_LEVEL}} {{current_level}}
+                    <!-- </a> -->
+                </li>
+                {{/list_research}}
+            </ul>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="categories">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<div class="span50 book-column column-right research-page" style="display: none;">
+    <div class="description">
+        <div class="empty-book-text hidden">Нажмите на один из элементов слева, чтобы прочесть о нем</div>
+        <div class="scroll-pane">
+            <div class="description-container scroll-content active">
+                <div class="header block-height" data-block-height="10" style="height: 71px;">
+                    <h4 class="text res-header">{{first.name_research}}</h4>{{LANG_LEVEL}}
+                    {{current_level}}
+                    <div class="corners slot main-slot square" data-block-height="24" data-block-width="24" style="height: 0px; width: 0px;"><div class="corners-content"></div><div class="tr"></div><div class="bl"></div><div class="br"></div></div>
+                </div>
+                <div class="desc">
+                    <p><strong>{{LANG_DESCRIPTION}}</strong>: {{first.description}}
+                    </p>
+                    <h5>{{LANG_RESEARCH_NEXT_LEVEL}} {{next_level}}</h5>
+                    {{LANG_RESEARCH_AVAILIABLE_FOR_RESEARCH}}:
+                    <ul>
+                        {{#upgrade}}
+                            <li>{{.}}</li>
+                        {{/upgrade}}
+                    </ul>
+                    <h5>{{LANG_RESEARCH_REQUIRED_FOR_RESEARCH}}:</h5>
+                    <table>
+                        <tbody><tr>
+                            <th>Название</th>
+                            <th>Необходимо</th>
+                            <th>Имеется</th>
+                        </tr>
+                        <tr>
+                            <td>{{name_building}}</td>
+                            <td>Уровень {{building_next_level}}</td>
+                            <td>Уровень {{building_current_level}}</td>
+                        </tr>
+                        <!--{{#list_research_resource}}-->
+                            <tr>
+                                <td><img class="res-icon" src="img/icons/resource/{{image_name}}25.png" alt="" width="32" height="32"> {{name_resource}}
+                                </td>
+                                <td>{{price}}</td>
+                                <td>{{personage_resource_value}}</td>
+                            </tr>
+                        <!--{{/list_research_resource}}-->
+                    </tbody></table>
+                    <h5 class="research-time">
+                                            {{LANG_RESEARCH_TIME_FOR_RESEARCH}}: <span class="hours">{{research_hours}}</span> {{LANG_TIME_HOURS}} <span class="mins">{{research_minutes}}</span> {{LANG_TIME_MINUTES}} <span class="secs">{{research_seconds}}</span>
+                        {{LANG_TIME_SECONDS}}
+                    </h5>
+                    <h5 class="research-countdown hidden" data-updating="false">
+                        {{LANG_RESEARCH_TIME_FOR_RESEARCH_LEFT}}: <span class="hours"></span> {{LANG_TIME_HOURS}} <span class="mins"></span> {{LANG_TIME_MINUTES}} <span class="secs"></span> {{LANG_TIME_SECONDS}}
+                    </h5>
+                    <div class="description-buttons">
+                                            <!--
+                        <a href="#" id="learn" class="span33 btn-flex">{{LANG_RESEARCH_LEARN}}<em></em></a>
+                        <a href="#" id="learn-now" class="span45 offset4 btn-flex">{{LANG_RESEARCH_LEARN_NOW}}<em></em></a>
+                                            -->
+                                            <a href="#" id="learn" class="span33 btn-flex" style="">{{LANG_RESEARCH_LEARN}}<em></em></a>
+                                            <a href="#" id="stop-learn" class="span33 btn-flex" style="display: none;">Отменить<em></em></a>
+                                            <a href="#" id="learn-now" class="span45 offset4 btn-flex" onclick="return false">{{LANG_RESEARCH_LEARN_NOW}}<em></em></a>
+                    </div>
+                    <div class="learn-cost">{{LANG_RESEARCH_LEARN_FOR}} <strong>10</strong> <img class="res-icon" src="img/icons/empty.png" alt="" width="32" height="32"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="description">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<!-- /RESEARCH PAGE -->
+
+<!-- QUEST PAGE -->
+<div class="span50 book-column column-left quest-page" style="display: none;">
+    <div class="categories quest-categories">
+        <h3 class="text-corners-title span100">{{LANG_QUESTS_QUESTS}}</h3>
+
+        <div class="scroll-pane">
+            <div class="span100 scroll-content active" style=",,,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;">
+                <div class="span100">
+                    <div class="desc">
+                        <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 0px; width: 0px;"><div class="corners-content">
+                        </div><div class="tr"></div><div class="bl"></div><div class="br"></div></div>
+                        <h4 class="text res-header">{{LANG_QUESTS_MAIN_QUEST}}</h4>Произвести разведку территории<br>
+                        <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span>
+                    </div>
+                    <table class="quests-table">
+                        <tbody><tr>
+                            <th>{{LANG_QUESTS_DAILY_QUESTS}}</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Найти артефакт <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <th>{{LANG_QUESTS_SINGLE_QUESTS}}</th>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status complete">{{LANG_QUESTS_COMPLETE}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>Разведать <span class="quest-status in-progress">{{LANG_QUESTS_IN_PROGRESS}}</span></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="quest-categories">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<div class="span50 book-column column-right quest-page" style="display: none;">
+    <div class="description quest-description">
+        <div class="empty-book-text hidden">Нажмите на один из элементов слева, чтобы прочесть о нем</div>
+        <div class="scroll-pane">
+            <div class="description-container scroll-content active">
+                <div class="header">
+                    <h5>Найти артефакт</h5>
+                </div>
+                <div class="desc">
+                    <p><strong>{{LANG_DESCRIPTION}}</strong>: Явление, процесс, предмет, свойство предмета или процесса,
+                        появление которого в наблюдаемых условиях по естественным причинам невозможно или маловероятно.
+                        Появление артефакта, следовательно, является признаком целенаправленного вмешательства.</p>
+                    <h5>{{LANG_QUESTS_CURRENT_PROGRESS}}:</h5>
+
+                    <p>Найден артефакт: <span class="quest-items">1</span> / <span class="quest-items-total">1</span>
+                    </p>
+                    <h5>{{LANG_QUESTS_REWARD}}:</h5>
+
+                    <div class="desc">
+                        <div class="span50 reward-item">
+                            <img class="reward-icon" src="img/icons/empty.png" alt="" width="64" height="64">
+
+                            <div class="reward-text">Золото<br>150 000</div>
+                        </div>
+                        <div class="span50 reward-item">
+                            <img class="reward-icon" src="img/icons/empty.png" alt="" width="64" height="64">
+
+                            <div class="reward-text">Дерево<br>150 000</div>
+                        </div>
+                        <div class="span50 reward-item">
+                            <img class="reward-icon" src="img/icons/empty.png" alt="" width="64" height="64">
+
+                            <div class="reward-text">Артефакт<br>Шляпа</div>
+                        </div>
+                    </div>
+
+                    <div class="description-buttons">
+                        <a href="#" id="take-reward" class="span70 btn-flex">{{LANG_QUESTS_TAKE_REWARD}}<em></em></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="quest-description">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<!-- /QUEST PAGE -->
+
+
+<!-- RESOURCE PAGE -->
+<div class="span50 book-column column-left resource-page" style="display: none;">
+    <div class="categories resource-categories">
+        <h3 class="text-corners-title span100">{{LANG_RESOURCES_RESOURCES}}</h3>
+
+        <div class="scroll-pane">
+            <div class="span100 scroll-content active" style=",,,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;,bottom: 100%;,height: 100%;">
+                <div class="span100">
+                    <div class="desc">
+                        <h4 class="text res-city"><span>{{LANG_RESOURCES_CITY}}:</span> {{city_name}}</h4>
+                        <table class="city-stats">
+                            <tbody><tr>
+                                <td colspan="2">{{LANG_RESOURCES_POPULATION}}: {{population}}
+                                    {{LANG_RESOURCES_PEOPLE}}<br>
+                                    {{LANG_RESOURCES_INFLOW}} {{population_influx}} / {{LANG_RESOURCES_OUTFLOW}} {{population_outflow}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">{{LANG_RESOURCES_POPULATION_FREE}}: {{free_people}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{LANG_RESOURCES_GROWTH}}: {{growth}}</td>
+                                <td>{{LANG_RESOURCES_DISEASE}}: {{number_epidemic}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{LANG_RESOURCES_HAPPINESS}}: {{happiness}}</td>
+                                <td>{{LANG_RESOURCES_FAITH}}: {{faith}}</td>
+                            </tr>
+                            <tr>
+                                <td>{{LANG_RESOURCES_TAX}}: {{tax}}</td>
+                                <td>{{LANG_RESOURCES_CRIMINALITY}}: {{crime}}</td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                    <table class="resource-table">
+                        <tbody><tr>
+                            <th>{{LANG_RESOURCES_CHARACTER_RESOURCES}}</th>
+                        </tr>
+
+                        <!--{{#list_resource_personage}}-->
+                        <tr>
+                            <td data-resource-id="{{id}}" style="cursor: pointer">
+                                <img class="res-icon" src="img/icons/resource/{{name_resource}}50.png" alt="" width="64" height="64">
+
+                                <div class="reward-text">{{name}}</div>
+                            </td>
+                        </tr>
+                        <!--{{/list_resource_personage}}-->
+
+                        <tr>
+                            <th>{{LANG_RESOURCES_MAIN_RESOURCES}}</th>
+                        </tr>
+
+                        <!--{{#list_resource_basic}}-->
+                        <tr>
+                            <td data-resource-id="{{id}}" style="cursor: pointer">
+                                <img class="res-icon" src="img/icons/resource/{{name_resource}}50.png" alt="" width="64" height="64">
+
+                                <div class="reward-text">{{name}}</div>
+                            </td>
+                        </tr>
+                        <!--{{/list_resource_basic}}-->
+
+                        <tr>
+                            <th>{{LANG_RESOURCES_SPECIAL_RESOURCES}}</th>
+                        </tr>
+
+                        <!--{{#list_resource_special}}-->
+                        <tr>
+                            <td data-resource-id="{{id}}" style="cursor: pointer">
+                                <img class="res-icon" src="img/icons/resource/{{name_resource}}50.png" alt="" width="64" height="64">
+
+                                <div class="reward-text">{{name}}</div>
+                            </td>
+                        </tr>
+                        <!--{{/list_resource_special}}-->
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="resource-categories">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<div class="span50 book-column column-right resource-page" style="display: none;">
+    <div class="description resource-description">
+        <div class="empty-book-text hidden">Нажмите на один из элементов слева, чтобы прочесть о нем</div>
+        <div class="scroll-pane">
+            <div class="description-container scroll-content active">
+                <div class="header block-height" data-block-height="10" style="min-height: 90px; height: 71px;">
+                    <h4 class="text res-header">{{resource_name}}</h4>
+
+                    <div class="corners slot main-slot square" data-block-height="24" data-block-width="24" style="height: 0px; width: 0px;"><div class="corners-content">
+                        <img src="img/icons/resource/{{name_resource}}100.png" alt="" style="width: 100%;height: 100%;">
+                    </div><div class="tr"></div><div class="bl"></div><div class="br"></div></div>
+                </div>
+                <div class="desc">
+                                        <p><strong class="resource-name">{{resource_name}}</strong>: Явление, процесс, предмет, свойство предмета или процесса, появление которого в наблюдаемых условиях по естественным причинам невозможно или маловероятно. Появление артефакта, следовательно, является признаком целенаправленного вмешательства.</p>
+                    <h5>{{LANG_RESOURCES_RESOURCE_INFORMATION}}:</h5>
+                    <table>
+                        <tbody><tr>
+                            <th>{{LANG_RESOURCES_REVENUE}}</th>
+                            <th>{{LANG_RESOURCES_EXPENDITURE}}</th>
+                            <th>{{LANG_RESOURCES_TOTAL}}</th>
+                        </tr>
+                        <tr>
+                                                <td>{{income}}</td>
+                                                <td>{{resource_consumption}}</td>
+                                                <td>{{in_total_resources}}</td>
+                        </tr>
+                    </tbody></table>
+                    <table class="city-stats">
+                        <tbody><tr>
+                            <td colspan="2">{{LANG_RESOURCES_RESOURCE_IN_CITY}}: 1280
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">{{LANG_RESOURCES_RESOURCE_IN_ROME}}: 1000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">{{LANG_RESOURCES_RESOURCE_TOTAL}}: {{total_number_resources}}</td>
+                        </tr>
+                    </tbody></table>
+                    <h5>{{LANG_RESOURCES_PRODUCING_BONUS}}:</h5>
+                    {{LANG_RESOURCES_FOR_THIS_CITY}} <br>
+                    5% советник
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="resource-description">
+        <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+        <div class="scroll-bar"></div>
+        <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+    </div>
+</div>
+<!-- /RESOURCE PAGE -->
+
+
+<!-- RESOURCE BUILDINGS PAGE -->
+<script type="text/html" id="ResourceBuildingPageTmpl">
+    <div class="ResourceBuildingPageTmpl book-tmpl">
+        <div class="span50 ko-book-column column-left main-build-page">
+            <div class="categories main-build-categories">
+                <h3 class="text-corners-title span100" data-bind="text:$root.lang().TITLE_RESOURCE_BUILDING"></h3>
+
+                <div class="scroll-pane" data-bind="template: {name:'BuildingItemTmpl', data: building}">
+                </div>
+            </div>
+            <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="main-build-categories">
+                <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+                <div class="scroll-bar"></div>
+                <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+            </div>
+        </div>
+        <div class="span50 ko-book-column column-right main-build-page">
+            <div class="description main-build-description">
+                <div class="scroll-pane">
+                    <div class="scroll-content active">
+                        <div style="position: absolute; left: 20%; top: 30%;">
+                            <img src="img/interface/ajax-loader.gif" class="animate hidden">
+                        </div>
+                        <div data-bind="template: {name:'TabItemTmpl', data: $data}"></div>
+
+                        <!-- ko ifnot: improve.open()  -->
+                        <div data-bind="with: selected">
+                            <div class="description-container tab-content"
+                                 data-bind="template: {name: tab().template, data: building }"></div>
+                        </div>
+                        <!-- /ko -->
+                        <!-- ko if: improve.open -->
+                        <div data-bind="template: {name: improve.template, data: selected.improve}"></div>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="main-build-description">
+                <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+                <div class="scroll-bar"></div>
+                <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- /RESOURCE BUILDINGS PAGE -->
+
+<!-- MAIN BUILDINGS PAGE -->
+<script type="text/html" id="BuildingItemTmpl">
+    <ul class="news scroll-content span100 active" data-bind="foreach: items">
+        <li class="span100 news-item" data-bind="click: $parent.onclick">
+            <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style='height: 83px; width: 83px;'>
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+            </div>
+            <h4 class="text main-header"
+                data-bind="title: description, text: name">
+            </h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL"></span>
+            <span data-bind="text: current_level"></span>
+        </li>
+    </ul>
+</script>
+
+<script type="text/html" id="BaseBookTabTmpl">
+    <div id="main-build-tabs-general" data-bind="with: detail">
+        <div class="header block-height" data-block-height="10">
+            <h4 class="text res-header" data-bind="text: $parent.name"></h4>
+            <span data-bind="text:$root.lang().LANG_LEVEL"></span> <span data-bind="text: $parent.current_level"></span>
+            <div class="corners slot main-slot square" data-block-height="24"
+                 data-block-width="24">
+            <div class="tr"></div><div class="bl"></div><div class="br"></div>
+                 </div>
+        </div>
+        <div class="desc">
+            <!-- ko if: typeof $root.book.selected().state != 'undefined' -->
+            <h5>Статус</h5>
+
+            <div class="state" data-bind="with: $root.book.selected().state">
+                <span data-bind="text: isActive() ? $root.lang().LANG_RESEARCH_STATE_MAKING:$root.lang().LANG_RESEARCH_STATE_WAIT"></span>
+                <a href="#" id="stop" class="span33 btn-flex auto" data-bind="visible: isActive, click: activate">Остановить<em></em></a>
+                <a href="#" id="continue" class="span33 btn-flex auto" data-bind="visible: !isActive(), click: activate">Возобновить<em></em></a>
+            </div>
+            <!-- /ko -->
+            <p><strong data-bind="text:$root.lang().LANG_DESCRIPTION"></strong>: <span
+                    data-bind="text: $parent.description"></span>.</p>
+            <h5>Следующий уровень "<span data-bind="text: name_level_building"></span>"</h5>
+            <span data-bind="text:$root.lang().LANG_BONUS_IMPROVEMENT"></span>:
+            <ul data-bind="foreach: renderBonus">
+                <li><span data-bind="text: bonus"></span> <span data-bind="text: improve"></span> <span data-bind="text: measure"></span></li>
+            </ul>
+            <h5 data-bind="text:$root.lang().LANG_REQUIRED_FOR_IMPROVE"></h5>
+            <table>
+                <tr>
+                    <th data-bind="text:$root.lang().LANG_NAME"></th>
+                    <th data-bind="text:$root.lang().LANG_REQUIRED"></th>
+                    <th data-bind="text:$root.lang().LANG_HAS"></th>
+                </tr>
+                <!-- ko foreach: renderResource -->
+                <tr>
+                    <td><img class="res-icon" data-bind="attr:{'src':'img/icons/resource/'+name_image+'25.png'}" alt="" width="32" height="32"> <span data-bind="text:name_resource"></span></td>
+                    <td data-bind="text: required"></td>
+                    <td data-bind="text: has"></td>
+                </tr>
+                <!-- /ko -->
+            </table>
+            <!-- ko if: time -->
+            <div data-bind="template:{name: 'TimeItemTmpl', data: {time: time,processTime:processTime,isFinished:$parent.isFinished }}"></div>
+            <!-- /ko -->
+
+            <div class="description-buttons">
+                <a href="#" id="learn" class="span33 btn-flex" data-bind="visible: $parent.isFinished, click: $root.book.selected().building.update">
+                    Улучшить
+                    <em></em>
+                </a>
+                <a href="#" id="stop-learn" class="span33 btn-flex" data-bind="visible: !$parent.isFinished(), click: $root.book.selected().building.update" >
+                    Остановить
+                    <em></em>
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="ImproveTabTmpl">
+    <div id="main-build-tabs-improve" data-bind="with: improve">
+        <table class="build-table-general" data-bind="foreach: renderImprove">
+            <tr>
+                <td data-bind="attr:{class: buildStyle}, text: improve.name"></td>
+                <td data-bind="attr:{class: style}">
+                    <span data-bind="text:$root.lang().LANG_REQUIRED_LEVEL_SHORT"></span>
+                    <span data-bind="text: required_level_building"></span>
+                </td>
+                <td><a href="#" class="btn-arrow gt" data-bind="click: $root.book.selected().improve.onclick"></a></td>
+            </tr>
+        </table>
+    </div>
+</script>
+
+<script type="text/html" id="UnitsTabTmpl">
+    <div id="main-build-tabs-hire" data-bind="with: unit">
+        <!-- ko if: inQuery().length > 0 -->
+        <table>
+            <tr>
+                <th>Очередность найма</th>
+            </tr>
+            <!-- ko foreach: inQuery -->
+            <tr>
+                <td>
+                    <span data-bind="text: item.unit.name"></span>
+                    <span data-bind="text: count"></span>
+                </td>
+            </tr>
+            <!-- /ko -->
+        </table>
+        <div class="description-buttons">
+            <a href="#" id="cancel-last" class="btn-flex auto"
+               data-bind="click: $root.book.selected().unit.removeLast">Отмена последнего<em></em></a>
+        </div>
+        <!-- /ko -->
+        <table class="units-availiable">
+            <tr>
+                <th colspan="2">Доступные юниты</th>
+            </tr>
+            <!-- ko foreach: items -->
+            <tr>
+                <td>
+                    <div class="corners slot main-slot square" data-block-height="20" data-block-width="20">
+                        <div class="tr"></div><div class="bl"></div><div class="br"></div>
+                    </div>
+                    <h4 class="text main-header" data-bind="text: unit.name">
+                    </h4>
+
+                    <div class="availiable">Доступно: <span data-bind="text: available"></span></div>
+                    <span data-bind="text: unit.description"></span>
+                </td>
+                <td><a href="#" class="btn-arrow gt" data-bind="visible: available()>0, click: $root.book.selected().unit.hire"></a></td>
+            </tr>
+            <!-- /ko -->
+        </table>
+    </div>
+</script>
+
+<script type="text/html" id="TabItemTmpl">
+    <ul data-bind="attr:{class: 'nav nav-tabs tabs-'+tab.items.length}, foreach: tab.items">
+        <li data-bind="attr: { 'class': $data == $parent.selected.tab() ? 'active' : '' }">
+            <a data-bind="click: $parent.tab.onclick, text: name"><em></em></a>
+        </li>
+    </ul>
+</script>
+<script type="text/html" id="TimeItemTmpl">
+    <h5 class="research-time" data-bind="visible: isFinished">
+        <span data-bind="text:$root.lang().LANG_RESEARCH_TIME_FOR_RESEARCH"></span>: <span class="hours" data-bind="text: time.hours"></span>
+        <span data-bind="text:$root.lang().LANG_TIME_HOURS"></span>
+                <span class="mins" data-bind="text: time.min">
+                </span> <span
+            data-bind="text:$root.lang().LANG_TIME_MINUTES"></span><span class="secs" data-bind="text: time.secs"></span>
+        <span data-bind="text:$root.lang().LANG_TIME_SECONDS"></span>
+    </h5>
+    <h5 class="research-countdown" data-bind="visible: !isFinished()">
+        <span data-bind="text:$root.lang().LANG_RESEARCH_TIME_FOR_RESEARCH_LEFT"></span>
+        : <span class="hours" data-bind="text: processTime.hours"></span>
+        <span data-bind="text:$root.lang().LANG_TIME_HOURS"></span>
+        <span class="mins" data-bind="text: processTime.min"></span>
+        <span data-bind="text:$root.lang().LANG_TIME_MINUTES"></span>
+        <span class="secs" data-bind="text: processTime.secs"></span>
+        <span data-bind="text:$root.lang().LANG_TIME_SECONDS"></span>
+    </h5>
+</script>
+
+<script type="text/html" id="ImproveSelectedTmpl">
+    <div class='description-container'>
+            <h4 class="improve text res-header">
+                <a href="#" class="btn-arrow" data-bind="click: $root.book.selected().improve.onclick"></a>
+                <span data-bind="text: improve.name"></span>
+            </h4>
+        <div class="desc">
+
+            <p><strong data-bind="text:$root.lang().LANG_DESCRIPTION"></strong>:
+                <span data-bind="text: improve.description"></span>.</p>
+            <!-- ko if: time -->
+            <div data-bind="template:{name: 'TimeItemTmpl', data: $data}"></div>
+            <!-- /ko -->
+            <!-- ko ifnot: style == 'red' -->
+                <div class="description-buttons">
+                    <a href="#" id="learn" class="span33 btn-flex"
+                       data-bind="visible: isFinished, click: $root.book.selected().improve.update">
+                        Улучшить
+                        <em></em>
+                    </a>
+                    <a href="#" id="stop-learn" class="span33 btn-flex"
+                       data-bind="visible: !isFinished(), click: $root.book.selected().improve.update">
+                        Остановить
+                        <em></em>
+                    </a>
+                </div>
+            <!-- /ko -->
+            <div class="clear"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="UnitHireTmpl">
+    <div class='description-container'>
+        <h4 class="improve text res-header">
+            <a href="#" class="btn-arrow" data-bind="click: $root.book.selected().unit.hire"></a>
+            <span data-bind="text: unit.name"></span>
+        </h4>
+        <div class="availiable">Доступно: <span data-bind="text: available"></span></div>
+        <div class="desc">
+
+            <p><strong data-bind="text:$root.lang().LANG_DESCRIPTION"></strong>:
+                <span data-bind="text: unit.description"></span>.</p>
+            <!-- ko if: time -->
+            <div data-bind="template:{name: 'TimeItemTmpl', data: $data}"></div>
+            <!-- /ko -->
+            <div class="description-buttons">
+                <a href="#" id="learn" class="span33 btn-flex"
+                   data-bind="visible: available()>0, click: $root.book.selected().unit.add">
+                    Нанять 10
+                    <em></em>
+                </a>
+                <a href="#" id="stop-learn" class="span33 btn-flex"
+                   data-bind="visible: !isFinished(), click: $root.book.selected().unit.update">
+                    Отменить
+                    <em></em>
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="MainBuildingPageTmpl">
+    <div class="MainBuildingPageTmpl book-tmpl">
+        <div class="span50 ko-book-column column-left main-build-page">
+            <!-- ko if: $root.book.loader.left -->
+                <div style="position: absolute; left: 40%; top: 40%;">
+                    <img src="img/interface/ajax-loader.gif" class="animate">
+                </div>
+            <!-- /ko -->
+            <!-- ko ifnot: $root.book.loader.left -->
+                <div class="categories main-build-categories">
+                    <h3 class="text-corners-title span100" data-bind="text:$root.lang().TITLE_MAIN_BUILDING"></h3>
+                        <div class="scroll-pane" data-bind="template: {name:'BuildingItemTmpl', data: building}">
+                        </div>
+                </div>
+                <div class="scroll-bar-wrap category-scroll handle-fixed" data-container="main-build-categories">
+                    <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+                    <div class="scroll-bar"></div>
+                    <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+                </div>
+            <!-- /ko -->
+        </div>
+        <div class="span50 ko-book-column column-right main-build-page">
+            <!-- ko if: $root.book.loader.right -->
+                <div style="position: absolute; left: 40%; top: 40%;">
+                    <img src="img/interface/ajax-loader.gif" class="animate">
+                </div>
+            <!-- /ko -->
+            <!-- ko ifnot: $root.book.loader.right -->
+                <div class="description main-build-description">
+                   <div class="scroll-pane">
+                        <div class="scroll-content active">
+                            <div data-bind="template: {name:'TabItemTmpl', data: $data}"></div>
+
+                            <!-- ko ifnot: improve.open() || unit.open()  -->
+                                <div data-bind="with: selected">
+                                    <div class="description-container tab-content"
+                                         data-bind="template: {name: tab().template, data: building }"></div>
+                                </div>
+                            <!-- /ko -->
+                            <!-- ko if: improve.open -->
+                                <div data-bind="template: {name: improve.template, data: selected.improve}"></div>
+                            <!-- /ko -->
+                            <!-- ko if: unit.open -->
+                                <div data-bind="template: {name: unit.template, data: selected.unit}"></div>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-bar-wrap description-scroll handle-fixed" data-container="main-build-description">
+                    <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+                    <div class="scroll-bar"></div>
+                    <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+                </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</script>
+<!-- /MAIN BUILDINGS PAGE -->
+</div>
+</div>
+</body></html>

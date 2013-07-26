@@ -1,0 +1,66 @@
+<div class='description-container'>
+    <h4 class="improve text res-header" style="text-align: left;">
+        <a href="#" class="btn-arrow" data-bind="click: $root.book.selected().improve.onclick"></a>
+        <span data-bind="text: improve.name"></span>
+    </h4>
+
+    <div class="desc">
+
+        <p><strong data-bind="text:$root.lang().LANG_DESCRIPTION"></strong>:
+            <span data-bind="text: improve.description"></span>.</p>
+        <h5 data-bind="text:$root.lang().LANG_BONUS_IMPROVEMENT"></h5>
+        <ul data-bind="foreach: renderBonus">
+            <li><span data-bind="text: bonus"></span> <span data-bind="text: improve"></span> <span
+                    data-bind="text: measure"></span></li>
+        </ul>
+        <!-- ko ifnot: style == '' -->
+        <h5 data-bind="text:$root.lang().LANG_REQUIRED_FOR_IMPROVE"></h5>
+        <table class="build-table-general">
+            <tr>
+                <th data-bind="text:$root.lang().LANG_NAME"></th>
+                <th data-bind="text:$root.lang().LANG_REQUIRED"></th>
+                <th data-bind="text:$root.lang().LANG_HAS"></th>
+            </tr>
+            <!-- ko foreach: building -->
+            <tr>
+                <td data-bind="text:name_resource"></td>
+                <td data-bind="text: required"></td>
+                <td data-bind="text: has, css:{red: !enough}"></td>
+            </tr>
+            <!-- /ko -->
+            <!-- ko foreach: renderResource -->
+            <tr>
+                <td><img class="res-icon" data-bind="attr:{'src':'img/icons/resource/'+name_image+'25.png'}" alt=""
+                         width="32" height="32"> <span data-bind="text:name_resource"></span></td>
+                <td data-bind="text: required"></td>
+                <td data-bind="text: has, css:{red: !enough()}"></td>
+            </tr>
+            <!-- /ko -->
+        </table>
+        <!-- ko if: time -->
+        <div data-bind="template:{name: 'TimeItemTmpl', data: $data}"></div>
+        <!-- /ko -->
+
+        <div class="description-buttons">
+            <a href="#" id="learn" class="span33 btn-flex"
+               data-bind="visible: !$root.location.interface.helpers.canImproveBuildings($root.book.selected().building.items()) == 0 && enough(), click: $root.book.selected().improve.update">
+                Улучшить
+                <em></em>
+            </a>
+            <a href="#" id="stop-learn" class="span33 btn-flex"
+               data-bind="visible: !isFinished(), click: $root.book.selected().improve.update">
+                Остановить
+                <em></em>
+            </a>
+        </div>
+        <!-- ko ifnot: enough -->
+        <h5 class="btn-hidden">Недостаточно ресурсов</h5>
+        <!-- /ko-->
+        <!-- /ko -->
+
+        <!-- ko if: style=='' -->
+        <h5 class="btn-hidden" style="color:#444!important;">Уже изученно</h5>
+        <!-- /ko-->
+        <div class="clear"></div>
+    </div>
+</div>

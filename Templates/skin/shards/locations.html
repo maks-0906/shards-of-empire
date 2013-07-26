@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+        <title></title>
+	<base href="{$BasePath}" />
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/interface-correct.css">
+
+        <!-- Media Queries For IE8 -->
+        <!--[if lt IE 9]>           
+            <link rel="stylesheet" href="css/ie-media-queries.css">
+        <![endif]-->
+    </head>
+    <body class="locations-page">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        <div class="logo span50 center block-height" data-block-height="12"></div>
+        <div class="leaves top-right"></div>            
+        <div class="leaves bottom-left"></div>
+        <div class="wrap row-fluid corners wrap-corners invisible locale">
+            <div class="span100">
+                <div class="row-fluid">
+
+                    <div class="span100 top-bar" data-block-height="100">
+                        <div class="row-fluid">
+                            <div class="span90 block">
+                                 <div class="corners block-corners block-simple add-offset" data-block-height="8">
+		                            <div class="span100 corners wood-simple settings-btn-container" data-block-height="6">
+		                            </div>                                    
+                                </div>  
+                            </div> 
+                            <div class="span10 block">
+		                         <div class="corners block-corners block-simple add-offset" data-block-height="8">
+		                            <div class="span100 corners wood-simple settings-btn-container" data-block-height="6">
+		                                <a href="#" class="corners block-height settings btn-enter btn-profile block-corners wood-corners-btn-small center vcenter"  data-block-height="5">
+		                                    <div class="btn-text profile center vcenter text-gradient">{{LANG_LOCATIONS_PROFILE}}</div>
+		                                </a>
+		                            </div> 
+		                        </div>  
+		                    </div>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="location-scroll block span96">
+                                <div class="corners block-corners wish-paper-corners block-height add-offset" data-block-height="93">
+                                    <div class="corners paper-corners block-height" data-block-height="87">
+										<div class="scroll-pane block-height" data-block-height="78">
+												<div class="scroll-content active span100" style="padding-right: 3%; margin-top: 5% !important;">
+													<div class="corners text-corners pad1">
+														<div class="corners-top"></div>
+														<div class="corners-bottom"></div>
+														<div class="text-corners-title-wrapper">
+															<h3 class="text-corners-title center span100">{{LANG_LOCATIONS_EXPLORED_WORLDS}}</h3>
+														</div>
+														<ul class="news span100" id="worlds-explored-info">
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Наследие камелота</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} сегодня</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Граф</span>
+																</a>
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Долина королей</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} вчера</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Король</span>
+																</a>
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Ущелье драконов</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} 2 дня назад</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Барон</span>
+																</a>
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Наследие камелота</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} сегодня</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Граф</span>
+																</a>
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Долина королей</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} вчера</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Король</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Ущелье драконов</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} 2 дня назад</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Барон</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Наследие камелота</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} сегодня</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Граф</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Долина королей</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} вчера</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Король</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Ущелье драконов</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} 2 дня назад</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Барон</span>
+																</a>	
+															</li>
+														</ul>
+														<div class="clear"></div>
+													</div>
+													<div class="corners text-corners pad1">
+														<div class="corners-top"></div>
+														<div class="corners-bottom"></div>
+														<div class="text-corners-title-wrapper">
+															<h3 class="text-corners-title center span100">{{LANG_LOCATIONS_UNEXPLORED_WORLDS}}</h3><div class="clear"></div>
+														</div>
+														<ul class="news span100" id="worlds-unexplored-info">
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Наследие камелота</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} сегодня</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Граф</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Долина королей</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} вчера</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Король</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Ущелье драконов</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} 2 дня назад</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Барон</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Наследие камелота</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} сегодня</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Граф</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Долина королей</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} вчера</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Король</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Ущелье драконов</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} 2 дня назад</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Барон</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Наследие камелота</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} сегодня</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Граф</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Долина королей</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} вчера</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Король</span>
+																</a>	
+															</li>
+															<li class="span100 world-item">
+																<a href="#">
+																	<span class="span40 location-name">Ущелье драконов</span>
+																	<span class="span40 location-date">{{LANG_LOCATIONS_LAST_VISIT}} 2 дня назад</span>
+																	<span class="span20 location-other">{{LANG_LOCATIONS_LEVEL}}: Барон</span>
+																</a>	
+															</li>
+														</ul>
+														<div class="clear"></div>
+													</div>
+												</div>
+										
+										</div><!--  scroll-pane -->
+                                    </div> <!-- paper corners -->
+                                </div>
+                            </div>    
+							
+							<div class="span4 block">
+								<div class="corners block-corners block-simple add-offset" data-block-height="93">
+
+									<div class="scroll-bar-wrap block-height users-scroll center add-offset"  data-block-height="91.5" data-container="location-scroll">
+										<a href="#" class="scroll-btn scroll-btn-top"></a>
+										<div class="scroll-bar"></div>
+										<a href="#" class="scroll-btn scroll-btn-bottom"></a>
+										<em></em>
+									</div>
+
+								</div>
+							</div> 		
+                        </div>              
+                    </div> 
+                </div>    
+            </div>    
+       </div>
+       <div class="overlay-wrapper hidden message-box-overlay locale">
+	       <div class="overlay overlay-small message-box corners popup-corners">
+                <div class="avatar"></div>
+                <a href="#" class="btn close"></a>
+                <h3 class="corners wood-simple">{{LANG_POPUP_SMALL_WARNING}}</h3>
+                <div class="corners stone-simple">
+                   <div class="message-text corners paper-simple">
+                   </div>
+                 </div>
+                <div class="corners wood-simple message-buttons">
+                        <div class="span10 center corners block-height btn-enter block-corners wood-corners-btn-small-cornered take" data-block-height="5">
+                            <div class="btn-text accept center vcenter text-gradient">{{LANG_POPUP_SMALL_ACCEPT}}</div>
+                        </div>
+                    <div class="clear"></div>
+                </div>
+           </div>
+	   </div>
+
+        <!-- POPUP -->
+       <div id="c-popup" class="overlay-wrapper row-fluid hidden invisible">
+           <div id="create-personage" class="overlay message-box start-data corners popup-corners unresizable proportion hidden center" data-proportion="1.32">
+              <a href="#" class="btn close"></a>
+               <div class="row-fluid">
+               <div class="logo span50 center block-height" data-block-height="12"></div>
+               <div class="span100 top-bar">
+                   <div class="row-fluid">
+                       <div class="span100 block">
+                           <div class="corners block-corners block-simple" data-block-height="6">
+                               <div class="span100 corners wood-simple settings-btn-container" data-block-height="4.8">
+                                   &lt;!&ndash; <a href="#" class="btn close vcenter"></a>                          &ndash;&gt;
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="span100 top-bar">
+                   <div class="row-fluid">
+                       <div class="span100 block">
+                           <div class="corners block-corners block-simple" data-block-height="6">
+                               <div class="span100 corners wood-simple settings-btn-container steps" data-block-height="4.8">
+                                   <a href="#"
+                                      class="span24 offset1 corners block-height btn-enter block-corners wood-corners-btn-small vcenter active step0"
+                                      data-block-height="4" data-target="0">
+                                       <div class="btn-text center vcenter text-gradient">{{TITLE_FRACTIONS}}</div>
+                                   </a>
+
+                                   <div class="arrow vcenter"></div>
+                                   <a href="#"
+                                      class="span24 corners block-height btn-enter block-corners wood-corners-btn-small vcenter disabled step1"
+                                      data-block-height="4" data-target="1">
+                                       <div class="btn-text center vcenter text-gradient">{{TITLE_IMAGE}}</div>
+                                   </a>
+
+                                   <div class="arrow vcenter"></div>
+                                   <a href="#"
+                                      class="span24 corners block-height btn-enter block-corners wood-corners-btn-small vcenter disabled step2"
+                                      data-block-height="4" data-target="2">
+                                       <div class="btn-text center vcenter text-gradient">{{TITLE_RELIGION}}</div>
+                                   </a>
+
+                                   <div class="arrow vcenter"></div>
+                                   <a href="#"
+                                      class="span24 corners block-height btn-enter block-corners wood-corners-btn-small vcenter disabled step3"
+                                      data-block-height="4" data-target="3">
+                                       <div class="btn-text center vcenter text-gradient">{{TITLE_CITY}}</div>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="span100 block">
+                   <div class="corners block-corners wish-paper-corners block-height" data-block-height="60">
+                       <div class="corners paper-corners block-height" data-block-height="54">
+                           {{!PAGE 0}}
+                           <div class="row-fluid fractions start-data-page page0">
+                               {{#fractions}}
+                                   <a href="#" class="span25 fraction" data-fraction="{{id}}">
+                                       <div class="corners text-corners">
+                                           <ul class="news span100">
+                                               <li class="span100 news-item title"><strong>{{name}}</strong></li>
+                                               <li class="span100 news-item news-block pic block-height" data-block-height="15">
+                                                   <img src="img/icons/{{name_image}}.png" alt="">
+                                               </li>
+                                               <li class="span100 news-item news-block desc">
+                                                   <strong>{{LANG_DESCRIPTION}}:</strong> {{description}}
+                                               </li>
+                                               <li class="span100 news-item bonus"><strong>{{LANG_BONUS}}:</strong> {{ARMY_ATTACK}} +{{bonus}}%</li>
+                                           </ul>
+                                       </div>
+                                   </a>
+                               {{/fractions}}
+                           </div>
+                           {{!PAGE 1}}
+                           <div class="row-fluid avatars start-data-page page1" style="display:none">
+                               <div class="span100 corners text-corners">
+                                   <div class="row-fluid block-height" data-block-height="40">
+                                       <h3>{{LANG_START_DATA_SELECT_CHARACTER_IMAGE}}</h3>
+                                       {{#renderTypes}}
+                                           <div class="span45 avatar-block male hidden" data-fraction="{{fraction_id}}">
+                                               <a href="#" class="start-data-avatar top left" data-avatar="{{id_0}}"><img src="../shards/img/avatars/{{id_0}}.png"></a>
+                                               <a href="#" class="start-data-avatar right v-center" data-avatar="{{id_1}}"><img src="../shards/img/avatars/{{id_1}}.png"></a>
+                                               <a href="#" class="start-data-avatar bottom left" data-avatar="{{id_2}}"><img src="../shards/img/avatars/{{id_2}}.png"></a>
+                                           </div>
+                                           <div class="span45 offset10 avatar-block female" data-fraction="{{fraction_id}}">
+                                               <a href="#" class="start-data-avatar top right" data-avatar="{{id_3}}"><img src="../shards/img/avatars/{{id_3}}.png"></a>
+                                               <a href="#" class="start-data-avatar left v-center" data-avatar="{{id_4}}"><img src="../shards/img/avatars/{{id_4}}.png"></a>
+                                               <a href="#" class="start-data-avatar bottom right" data-avatar="{{id_5}}"><img src="../shards/img/avatars/{{id_5}}.png"></a>
+                                           </div>
+                                       {{/renderTypes}}
+                                       <input type="text" name="nickname" id="nickname" class="center"
+                                              placeholder="{{LANG_START_DATA_NICKNAME_PLACEHOLDER}}">
+                                   </div>
+                               </div>
+                           </div>
+                           {{!PAGE 2}}
+                           <div class="row-fluid religions start-data-page page2" style="display:none">
+                               {{#religions}}
+                                   <a href="#" class="span25 religion" data-religion="{{id}}">
+                                       <div class="corners text-corners">
+                                           <ul class="news span100">
+                                               <li class="span100 news-item title"><strong>{{name}}</strong></li>
+                                               <li class="span100 news-item news-block pic block-height" data-block-height="15">
+                                                   <img src="img/icons/religion/1.jpg" alt="">
+                                               </li>
+                                               <li class="span100 news-item news-block desc">
+                                                   <strong>{{LANG_DESCRIPTION}}:</strong> {{description}}
+                                               </li>
+                                               <li class="span100 news-item bonus"><strong>{{LANG_BONUS}}:</strong> {{ARMY_ATTACK}} +{{bonus}}%</li>
+                                           </ul>
+                                       </div>
+                                   </a>
+                               {{/religions}}
+                           </div>
+                           {{PAGE 3}}
+                           <div class="row-fluid city start-data-page page3" style="display:none">
+                               <div class="span50">
+                                   <div class="corners text-corners">
+                                       <div class="row-fluid block-height" data-block-height="40">
+
+                                           <div class="pic">
+                                               <h3>
+                                                   {{#titleInPageCity}}
+                                                       <span class="grade">{{level}}</span> <span class="nickname">{{nickname}}</span>
+                                                   {{/titleInPageCity}}
+                                               </h3>
+
+                                               <div class="start-data-avatar center"></div>
+                                               <div class="start-data-avatar small bottom left"></div>
+                                               <div class="start-data-avatar small bottom right"></div>
+                                           </div>
+                                           <ul class="bonus-list news span50">
+                                               <li class="span100 news-item">{{LANG_BONUS}}</li>
+                                               <li class="span100 news-item"><span class="green">+1%</span> {{LANG_START_DATA_ATTACK}}</li>
+                                               <li class="span100 news-item"><span class="green">+1%</span> {{LANG_START_DATA_PROTECTION}}</li>
+                                           </ul>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="span50">
+                                   <div class="corners text-corners">
+                                       <div class="row-fluid block-height" data-block-height="40">
+                                           <div class="span100 pic block-height" data-block-height="30">
+                                               <img src="img/icons/empty.png" alt="">
+                                           </div>
+                                           <input type="text" name="city" id="city" placeholder="{{LANG_START_DATA_CITY_PLACEHOLDER}}">
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="span100 top-bar locale">
+                   <div class="row-fluid">
+                       <div class="span100 block">
+                           <div class="corners block-corners block-simple" data-block-height="6">
+                               <div class="span12 corners wood-simple settings-btn-container start-data-page page1 page2 page3"
+                                    data-block-height="4.8">
+                                   <a href="#"
+                                      class="corners block-height btn-enter prev-step block-corners wood-corners-btn-small vcenter"
+                                      data-block-height="4">
+                                       <div class="btn-text center vcenter text-gradient">{{LANG_START_DATA_BACK}}</div>
+                                   </a>
+                               </div>
+                               <div class="span74 offset1 corners wood-simple settings-btn-container start-data-page page1 page2 page3"
+                                    data-block-height="4.8">
+                               </div>
+                               <div class="span87 corners wood-simple settings-btn-container start-data-page page0"
+                                    data-block-height="4.8">
+                               </div>
+                               <div class="span12 offset1 corners wood-simple settings-btn-container start-data-page page0 page1 page2"
+                                    data-block-height="4.8">
+                                   <a href="#"
+                                      class="corners block-height btn-enter next-step disabled block-corners wood-corners-btn-small vcenter"
+                                      data-block-height="4">
+                                       <div class="btn-text center vcenter text-gradient">{{LANG_START_DATA_NEXT}}</div>
+                                   </a>
+                               </div>
+                               <div class="span12 offset1 corners wood-simple settings-btn-container start-data-page page3"
+                                    data-block-height="4.8">
+                                   <a href="#"
+                                      class="corners block-height btn-enter play disabled block-corners wood-corners-btn-small vcenter"
+                                      data-block-height="4">
+                                       <div class="btn-text center vcenter text-gradient">{{LANG_START_DATA_PLAY}}</div>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               </div>
+           </div>
+       </div>
+
+        <div class="preloader"></div>
+        <script src="lang/ru_RU.js"></script>
+        <script src="js/lib/jquery-1.8.2.min.js"></script>
+        <script src="js/lib/jquery.placeholder.min.js"></script>
+        <script src="js/lib/jquery.jsonp.min.js"></script>
+		<script src="js/lib/jquery-ui-1.10.2.custom.min.js"></script>
+		<script src="js/lib/jquery.ui.touch-punch.min.js"></script>		
+        <script src="js/lib/jquery.mousewheel.js"></script>
+        <script src="js/lib/jquerymx-3.2.custom.min.js"></script>
+        <script src="js/lib/md5.min.js"></script>
+        <script src="js/lib/mustache.js"></script>
+        <script src="js/tools.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/interface.js"></script>
+        <script src="js/main.js"></script>
+        <!--<script src="js/createpers.js"></script>-->
+        <script src="js/setworld.js"></script>
+        <script src="js/lib/knockout-2.2.1.js"></script>
+        <script src="js/lib/knockout.mapping.js"></script>
+        <script src="js/models.js"></script>
+        <script src="js/models.user.js"></script>
+         <script>
+            document.write(unescape('%3Cscript src="'+langUrl+'.js"%3E%3C/script%3E'));
+        </script>
+        <script>
+			$('.locale').each(function(){
+				var el=$(this);
+				el.html(Mustache.render(el.html(), lang));
+			});
+        </script>       
+        <!--<script src="js/lib/raphael-min.js"></script>
+        <script src="js/lib/timescufon.js"></script>-->
+        <script src="js/createpers.js"></script>
+		<script type="text/javascript">
+/*			$(document).on('hover', '.news>li', function() {
+				$(this).closest('div').children('.lt').css("background", "url('./img/interface/text1024-2h.png') no-repeat right bottom");
+				$(this).closest('div').children('.rt').css("background", "url('./img/interface/text1024-2h.png') no-repeat left bottom");
+				$(this).closest('div').children('.lb').css("background", "url('./img/interface/text1024-2h.png') no-repeat right top");
+				$(this).closest('div').children('.rb').css("background", "url('./img/interface/text1024-2h.png') no-repeat left bottom");
+			});*/
+		</script>
+		<script>
+			
+		</script>
+    </body>
+</html>

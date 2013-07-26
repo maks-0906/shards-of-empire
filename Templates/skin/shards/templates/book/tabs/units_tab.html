@@ -1,0 +1,76 @@
+<div id="main-build-tabs-hire">
+    <!-- ko if: unitsInQuery().length > 0 -->
+    <table>
+        <tr>
+            <th>Очерёдность найма</th>
+        </tr>
+        <!-- ko foreach: unitsInQuery -->
+        <tr>
+            <td>
+                <div style="max-width:30%" class="left">
+                    <span data-bind="text: unit.name"></span>:
+                    <span data-bind="text: count"></span>
+                </div>
+                <div class="slider-horizontal" style="margin-left:30%">
+                    <div class="user-slider slider-green ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                        <div class='text'>
+                            <span>Время найма</span>:
+                            <span class="hours" data-bind="text: time.hours"></span>
+                            <span data-bind="text:$root.lang().LANG_TIME_HOURS"></span>
+                            <span class="mins" data-bind="text: time.min"></span>
+                            <span data-bind="text:$root.lang().LANG_TIME_MINUTES"></span>
+                            <span class="secs" data-bind="text: time.secs"></span>
+                            <span data-bind="text:$root.lang().LANG_TIME_SECONDS"></span>
+                        </div>
+                        <span class="slider-left-bg"></span>
+                        <span class="slider-right-bg"></span>
+                        <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" data-bind="style:{width: (time.current() / production_time * 100)+'%' }"></div></div>
+                </div>
+            </td>
+        </tr>
+        <!-- /ko -->
+    </table>
+    <div class="description-buttons">
+        <a href="#" class="span33 btn-flex" style="margin-top: 10px; margin-bottom: 20px;"
+           data-bind="click: $root.book.selected().unit.removeLast">Отмена<em></em></a>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: unit().length > 0 -->
+    <table class="my_units">
+        <tr>
+            <th colspan="2">Доступные Юниты</th>
+        </tr>
+        <!-- ko foreach: unit -->
+        <tr data-bind="css:{blocked: !isAvailable}">
+            <td style="width: 85%; text-align:left;">
+                <div class="corners slot main-slot square" data-block-height="26" data-block-width="26" style="height: 83px; width: 83px;">
+                    <div class="tr"></div>
+                    <div class="bl"></div>
+                    <div class="br"></div>
+                </div>
+                <div style="margin-left:30%;">
+                    <h4 class="text main-header" style="font-size:1.25em"
+                        data-bind="text: unit.name"></h4>
+
+                    <!-- ko if: isAvailable -->
+                    <div>Нанято: <span data-bind="text: hired"></span></div>
+                    <div>Доступно: <span data-bind="text: available"></span></div>
+                    <!-- /ko -->
+                    <!-- ko ifnot: isAvailable -->
+                    <div class="btn-hidden" style="text-align: left"> Недоступно </div>
+                    <!-- /ko -->
+                </div>
+
+                <!--<p style="text-align: left; margin-top: 0; padding-left: 100px;"-->
+                   <!--data-bind="text: unit.description"></p>-->
+            </td>
+            <td><a class="btn-arrow gt"
+                   data-bind="visible: available()>0, click: $root.book.selected().unit.hire"></a></td>
+        </tr>
+        <!-- /ko -->
+    </table>
+    <!-- /ko -->
+    <!-- ko if: unit().length == 0 -->
+    <h5 class="btn-hidden"> Нет доступных юнитов </h5>
+    <!-- /ko -->
+</div>

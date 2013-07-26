@@ -1,0 +1,103 @@
+﻿<div class="units-manager popups " data-bind="with: $root.map.move">
+    <div class="wrap corners wrap-corners locale">
+        <div class="logo block-height" data-block-height="12"></div>
+        <div class="corners-content">
+            <div data-block-height="100">
+                <div class="row-fluid">
+                    <div class="block">
+                        <div class="corners block-corners wood add-offset">
+                            <div class="corners-content"></div>
+                            <div class="tr"></div>
+                            <div class="bl"></div>
+                            <div class="br"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+
+                    <div class="span100 block fancy-body">
+                        <div class="block-height">
+
+                            <div class="corners-content ko-book-column ">
+                                <div>
+                                    <div class="row-fluid popup-buttons">
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="corners-content fancy-main-content">
+                                        <h2 class="brown" data-bind="text: selected.tab().name"></h2>
+                                        <!-- ko if: $root.book.loader.right -->
+                                        <div class="main-content text-center"
+                                             style="position: absolute; left: 50%; margin-left: -40px; top: 48%;">
+                                            <img src="img/interface/ajax-loader.gif" class="animate toggle-animate">
+                                        </div>
+                                        <!-- /ko -->
+
+                                        <!-- ko ifnot: $root.book.redraw.reloadRight -->
+                                        <div class="container-scroll"
+                                             data-bind="style:{opacity: $root.book.loader.right()?'0':1}">
+                                            <div class="scroll-pane">
+                                                <div class="news scroll-content active">
+                                                    <!-- ko template:{name: selected.tab().template,data: $data } -->
+                                                    <!-- /ko -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="scroll-bar-wrap handle-fixed" data-container="container-scroll">
+                                            <a href="#" class="scroll-btn scroll-btn-top"></a>
+
+                                            <div class="scroll-bar"></div>
+                                            <a href="#" class="scroll-btn scroll-btn-bottom"></a>
+                                        </div>
+                                        <!-- /ko -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-buttons">
+            <div class="span14 settings-btn-container"
+                 data-bind="css:{disabled:  selected.location() == undefined}, attr:{disabled: selected.location() == undefined}"
+                 data-block-height="6">
+                <div class="corners-content">
+                    <a href="#"
+                       data-bind="click: onNextTabClick"
+                       class="corners block-height settings btn-enter btn-profile block-corners wood-corners-btn-small center vcenter"
+                       data-block-height="5">
+                        <div class="corners-content">
+                            <div class="btn-text center vcenter text-gradient">ДАЛЕЕ</div>
+                        </div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="span14 settings-btn-container btn-back"
+                 data-bind="css:{disabled: selected.location() == undefined || canBack() != true}, attr:{disabled: selected.location() == undefined || canBack() != true}"
+                 data-block-height="6">
+                <div class="corners-content">
+                    <a href="#" data-bind="click: onBackTabClick"
+                       class="corners block-height settings btn-enter btn-profile block-corners wood-corners-btn-small center vcenter"
+                       data-block-height="5">
+                        <div class="corners-content">
+                            <div class="btn-text center vcenter text-gradient">НАЗАД</div>
+                        </div>
+                        <div class="tr"></div>
+                        <div class="bl"></div>
+                        <div class="br"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /ko-->
+        <div class="tr"></div>
+        <div class="bl"></div>
+        <div class="br"></div>
+        <div class="tl"></div>
+    </div>
+</div>

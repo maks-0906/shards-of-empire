@@ -1,0 +1,49 @@
+.location-name {
+	color:#54362d;
+    font-size:1.2em;
+}
+.world-item{
+	line-height:3;
+}
+.world-item > a {
+	display: block;
+}
+.world-item:hover{
+	background-position: 0 0;
+}
+
+.world-item .location-date, .world-item .location-other {
+	line-height: 3.5;
+}
+
+.world-item .location-other {
+	text-align: right;
+	padding-right: 2%;
+}
+
+.world-item  .location-name  {
+	padding-left: 2%;
+}
+
+/* location-scroll **********/
+
+.location-scroll .scroll-pane {
+	overflow: hidden;
+	position:absolute;
+	width:100%;
+	left: 30px;
+	top: 100px;
+}
+.location-scroll .scroll-content {
+	margin-right:92px;
+}
+.location-scroll .scroll-content .corners {
+	/*box-sizing:border-box;*/
+}
+.location-scroll .scroll-content .text-corners {
+	/*padding:0 92px 92px 0;*/
+}
+
+.location-scroll .text-corners .corners-content {
+	overflow: visible;
+}

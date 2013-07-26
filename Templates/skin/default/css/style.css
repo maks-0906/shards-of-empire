@@ -1,0 +1,83 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+ .form-signin {
+    max-width: 300px;
+    padding: 19px 29px 29px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+       -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  }
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-signin input[type="text"],
+  .form-signin input[type="password"] {
+    font-size: 16px;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 7px 9px;
+}
+
+.map_template, .map_pad {
+    float: left;
+}
+.map_template {
+    padding: 15px;
+    margin-left: 20px;
+    background: url('../img/main-bg.jpg') repeat top left #005000;
+}
+.map_template ul, .map_pad ul{
+    list-style: none;
+}
+.map_template ul {
+    width: 300px;
+    outline: 1px solid #fff;
+}
+.map_template ul li{
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+.map_pad ul {
+    width: 300px;
+   /* margin: 0 auto;*/
+}
+.map_pad ul li label{
+    overflow: hidden;
+    text-align: left;
+    margin: 2px 0px;
+    width: 290px;
+}
+.map_pad ul li label input {
+    outline: none none;
+    float:right;
+}
+.map_helper {
+    position: absolute;
+    display: none;
+    /*width: 100px;
+    height: 50px;*/
+    margin-left: 10px;
+    margin-top: 10px;
+    z-index: 999;
+}
+
+.pattern0 {background: forestgreen;    /*лес*/}
+.pattern1 {background: azure;          /*горы*/}
+.pattern2 {background: silver;         /*камни*/}
+.pattern3 {background: wheat;          /*пшеница*/}
+.pattern4 {background: goldenrod;      /*лен*/}
+.pattern5 {background: greenyellow;    /*цветущие луга*/}
+.pattern6 {background: violet;         /*дикий виноград*/}
+.pattern7 {background: blanchedalmond; /*ячменные поля*/}
+.pattern8 {background: darkorange;     /*руины*/}

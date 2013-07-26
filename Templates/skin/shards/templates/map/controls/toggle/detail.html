@@ -1,0 +1,16 @@
+<h2><span data-bind="text: city_name"></span> <i>ур. <span data-bind="text: level"></span></i></h2>
+<div class="box with_l_arr main-content">
+    <!-- Start content -->
+    <div class="description">
+        Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+    </div>
+    <ul class="info2">
+        <li>бонус производства: <i><span data-bind="text: production_bonus"></span></i></li>
+        <!-- ko if: typeof time_of_bonus != 'undefined' -->
+        <li>время бонуса: <i><span data-bind="text: time_of_bonus"></span></i></li>
+        <!-- /ko -->
+    </ul>
+    <!-- End content -->
+    
+</div>
+<div class="arrow-left" data-bind="click: $parent.action.details"></div>

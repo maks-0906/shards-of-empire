@@ -1,0 +1,87 @@
+﻿   <!-- /ko -->
+
+  
+				<h2 data-bind="text:$root.lang().TITLE_MAIN_BUILDING" class="span80 c brn norm absolute">Отчет о сражении</h2>
+                <div class="description main-build-description">
+                   <div class="scroll-pane">
+                        <div class="scroll-content active">
+                            <!-- ko ifnot: improve.open() || unit.open()  -->
+                                <div data-bind="with: selected">
+							<div class="description-container tab-content" data-bind="template: {name: tab().template, data: building }">
+    <div id="main-build-tabs-general" data-bind="with: detail">
+            
+		<table class="war-report-units">
+			<tr>
+				<th colspan="2">Войска участвующие в битве</th>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<b>Ваши войны: 100 </b>
+                        <?php
+                        foreach({$units} as $unit){
+                        echo $unit;
+                        }
+                        ?>
+						<li>лучники <span>45</span> </li>
+						<li>лучники <span>45</span> </li>
+						<li>лучники <span>45</span> </li>
+					</ul>
+					<ul>
+						<b>Сумарная</b>
+						<li>Защита <span>45</span></li>
+						<li>Защита <span>45</span></li>
+						<li>Защита <span>45</span></li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<b>Ваши войны: 100 </b>
+						<li>лучники <span>45</span> </li>
+						<li>лучники <span>45</span> </li>
+						<li>лучники <span>45</span> </li>
+					</ul>
+					<ul>
+						<b>Сумарная</b>
+						<li>Защита <span>45</span></li>
+						<li>Защита <span>45</span></li>
+						<li>Защита <span>45</span></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<table class="war-report-rounds">
+			<tr>
+				<th colspan="2">Раунд1</th>
+			</tr>
+			<tr>
+				<td>
+					<ul>
+						<b>Ваши войны</b>
+						<i>(выжившие/потери)</i>
+						<li>Защита <span>45</span></li>
+						<li>Защита <span>45</span></li>
+						<li>Защита <span>45</span></li>
+						<li><b>всего в живых:</b><span></span></li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<b>Войны противника</b>
+						<i>(выжившие/потери)</i>
+						<li>Защита <span>45</span></li>
+						<li>Защита <span>45</span></li>
+						<li>Защита <span>45</span></li>
+						<li><b>всего в живых:</b><span>10</span></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<table class="war-report-status">
+			<tr>
+				<td><span class="green">Победитель</span></td>
+				<td><span class="red">Проигравший</span></td>
+			</tr>
+		</table>
+		
+                            <!-- /ko -->
